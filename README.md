@@ -13,21 +13,22 @@
 
 #### Desenvolvedores:
 
-* Trainee 1
-* Trainee 2
-* Trainee 3
-* Trainee 4
+* Luiz Henrique
+* Anna
+* Rayane
+* Victoria Tieme
+* Gabriel Salles
 
 
 #### Scrum Master:
 
-* [Nome do Scrum](coloque o link do github, se quiser).
+* [João Vitor](https://github.com/Joao-Vitor-Fernandes)
 
 #### Links Úteis:
 
-* [Trello]()
+* [Trello](https://trello.com/b/cIgZKWmK/phonefy)
 
-* [Drive com ID Visual]()
+* [Drive com ID Visual](https://drive.google.com/drive/folders/1d0XBJkOIClmBY0_BeZVAYbgDvK5MjfeW?usp=share_link)
 
 
 
