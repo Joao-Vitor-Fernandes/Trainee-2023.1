@@ -16,7 +16,7 @@
 * Luiz Henrique
 * Anna
 * Rayane
-* Victoria Tieme
+* Victoria Tiemi
 * Gabriel Salles
 
 
