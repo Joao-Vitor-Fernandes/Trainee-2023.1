@@ -2,7 +2,7 @@
 
 # **Phonefy**
 
-## **Projeto Trainee, Code Jr, Grupo 000, 2023.1**
+## **Projeto Trainee, Code Jr, Grupo 004, 2023.1**
 
 | **Sumário** |
 |-------------|
@@ -16,7 +16,7 @@
 * Luiz Henrique
 * Anna
 * Rayane
-* Victoria Tiemi
+* Victoria
 * Gabriel Salles
 
 
