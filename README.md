@@ -2,7 +2,7 @@
 
 # **Phonefy**
 
-## **Projeto Trainee, Code Jr, Grupo 004, 2023.1**
+## **Projeto Trainee, Code Jr, Grupo 4, 2023.1**
 
 | **Sumário** |
 |-------------|
@@ -13,11 +13,11 @@
 
 #### Desenvolvedores:
 
-* Luiz Henrique
-* Anna
-* Rayane
-* Victoria
-* Gabriel Salles
+* Luiz Henrique de Oliveira Pereira
+* Anna Júlia de Almeida Lucas
+* Rayane de Oliveira
+* Victoria Tiemi Ferreira Yamashita
+* Gabriel de Faria Salles
 
 
 #### Scrum Master:
