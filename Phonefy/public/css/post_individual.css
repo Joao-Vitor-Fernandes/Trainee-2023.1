@@ -2,6 +2,13 @@ body {
     background-color: #6c78b6;
 }
 
+ion-icon {
+    color: white;
+    font-size: 35px;
+    display: block;
+    margin-left: 1%;
+}
+
 
 .individual-post {
     /* background-color: red; */
@@ -9,6 +16,10 @@ body {
     color: white;
     margin-top: 200px;
     margin-bottom: 200px;
+    /* margin: auto; */
+
+    animation-name: individual-post-animation;
+    animation-duration: 2s;
 }
 
 
@@ -29,6 +40,7 @@ body {
 
 .data-post img {
     width: 80%;
+    border-radius: 1%;
 }
 
 
@@ -62,6 +74,7 @@ body {
 
 .veja-tambem img {
     width: 80%;
+    border-radius: 1%;
 }
 
 .propaganda {
@@ -84,6 +97,7 @@ body {
 
 .right-content img {
     width: 100%;
+    border-radius: 1%;
 }
 
 
@@ -101,9 +115,31 @@ body {
     /* background-color: yellow; */
     width: 40%;
     text-align: center;
+
+    animation-name: subscribe-post-amination;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
 .coments-post {
     /* background-color: royalblue; */
     width: 59%;
+}
+
+
+
+@keyframes individual-post-animation {
+    0% {
+        opacity: 0;
+        transform: translate(-20px,0px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px,0px);
+    }
+}
+
+@keyframes subscribe-post-amination {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
