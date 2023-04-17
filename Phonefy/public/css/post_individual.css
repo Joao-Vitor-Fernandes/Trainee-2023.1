@@ -1,0 +1,109 @@
+body {
+    background-color: #6c78b6;
+}
+
+
+.individual-post {
+    /* background-color: red; */
+    width: 95%;
+    color: white;
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+
+.data-post {
+    /* background-color: green; */
+    width: 90%;
+    text-align: center;
+}
+
+.data-post h4 {
+    display: inline-block;
+    text-align: justify;
+}
+
+.data-post h1 {
+    text-transform: uppercase;
+}
+
+.data-post img {
+    width: 80%;
+}
+
+
+
+.post-content {
+    /* background-color: blue; */
+    margin-top: 60px;
+}
+
+.post-content div {
+    display: inline-block;
+}
+
+
+.left-content {
+    /* background-color: coral; */
+    width: 20%;
+    text-align: center;
+}
+
+.veja-tambem {
+    width: 100%;
+    background-color: darkcyan;
+    margin-top: 40px;
+    /* text-align: center; */
+}
+
+.veja-tambem ul {
+    list-style: none;
+}
+
+.veja-tambem img {
+    width: 80%;
+}
+
+.propaganda {
+    width: 100%;
+    background-color: darkcyan;
+    margin-top: 20px;
+}
+
+.right-content {
+    /* background-color: blueviolet; */
+    width: 79%;
+    vertical-align: top;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.right-content h2 {
+    text-transform: uppercase;
+}
+
+.right-content img {
+    width: 100%;
+}
+
+
+
+.coments-section {
+    margin-top: 60px;
+}
+
+.coments-section div {
+    display: inline-block;
+}
+
+
+.subscribe-post {
+    /* background-color: yellow; */
+    width: 40%;
+    text-align: center;
+}
+
+.coments-post {
+    /* background-color: royalblue; */
+    width: 59%;
+}
