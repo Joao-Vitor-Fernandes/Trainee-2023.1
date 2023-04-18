@@ -1,18 +1,27 @@
 body {
     background-color: #6c78b6;
+    margin: 0;
 }
 
 ion-icon {
     color: white;
-    font-size: 35px;
+    font-size: 30px;
     display: block;
     margin-left: 1%;
+    opacity: 90;
 }
 
 
 .individual-post {
     /* background-color: red; */
-    width: 95%;
+    /* width: 95%; */
+    width: 100vw;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
     color: white;
     margin-top: 200px;
     margin-bottom: 200px;
@@ -48,6 +57,7 @@ ion-icon {
 .post-content {
     /* background-color: blue; */
     margin-top: 60px;
+    text-align: center;
 }
 
 .post-content div {
@@ -59,13 +69,15 @@ ion-icon {
     /* background-color: coral; */
     width: 20%;
     text-align: center;
+    padding: 20px;
 }
 
 .veja-tambem {
     width: 100%;
-    background-color: darkcyan;
+    background-color: #5e92ca;
     margin-top: 40px;
     /* text-align: center; */
+    border-radius: 1%;
 }
 
 .veja-tambem ul {
@@ -79,13 +91,14 @@ ion-icon {
 
 .propaganda {
     width: 100%;
-    background-color: darkcyan;
+    background-color: #5e92ca;
     margin-top: 20px;
+    border-radius: 1%;
 }
 
 .right-content {
     /* background-color: blueviolet; */
-    width: 79%;
+    width: 70%;
     vertical-align: top;
     text-align: justify;
     font-size: 20px;
@@ -103,6 +116,7 @@ ion-icon {
 
 
 .coments-section {
+    width: 90%;
     margin-top: 60px;
 }
 
@@ -126,6 +140,31 @@ ion-icon {
     width: 59%;
 }
 
+.social-media-icon {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+}
+
+.next-post-icon {
+    position: fixed;
+    bottom: 50%;
+    right: 10px;
+}
+
+.next-post-icon ion-icon {
+    font-size: 40px;
+}
+
+.previous-post-icon {
+    position: fixed;
+    bottom: 50%;
+    left: 10px;
+}
+
+.previous-post-icon ion-icon {
+    font-size: 40px;
+}
 
 
 @keyframes individual-post-animation {
