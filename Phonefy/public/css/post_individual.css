@@ -14,18 +14,14 @@ ion-icon {
 
 .individual-post {
     /* background-color: red; */
-    /* width: 95%; */
     width: 100vw;
-    /* height: 100vh; */
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
 
     color: white;
     margin-top: 200px;
     margin-bottom: 200px;
-    /* margin: auto; */
 
     animation-name: individual-post-animation;
     animation-duration: 2s;
@@ -35,7 +31,9 @@ ion-icon {
 .data-post {
     /* background-color: green; */
     width: 90%;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .data-post h4 {
@@ -50,6 +48,13 @@ ion-icon {
 .data-post img {
     width: 80%;
     border-radius: 1%;
+}
+
+.date-author {
+    /* background-color: darkmagenta; */
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
 }
 
 
@@ -68,20 +73,32 @@ ion-icon {
 .left-content {
     /* background-color: coral; */
     width: 20%;
-    text-align: center;
     padding: 20px;
 }
 
+.cute-icon {
+    width: 80%;
+    /* background-color: yellowgreen; */
+    display: block;
+    margin-top: 10px;
+    opacity: 50%;
+}
+
+.cute-icon ion-icon {
+    display: inline-block;
+    margin-left: 10px;
+}
+
 .veja-tambem {
-    width: 100%;
     background-color: #5e92ca;
-    margin-top: 40px;
-    /* text-align: center; */
+    margin-top: 30px;
     border-radius: 1%;
 }
 
 .veja-tambem ul {
     list-style: none;
+    padding-left: 0;
+    /* height: 10px; */
 }
 
 .veja-tambem img {
@@ -116,6 +133,7 @@ ion-icon {
 
 
 .coments-section {
+    /* background-color: red; */
     width: 90%;
     margin-top: 60px;
 }
@@ -126,18 +144,44 @@ ion-icon {
 
 
 .subscribe-post {
-    /* background-color: yellow; */
-    width: 40%;
+    /* background-color:#5e92ca; */
+    width: 45%;
     text-align: center;
+    border-style: dotted;
+    border-color: #5e92ca;
+    border-radius: 10px;
+}
 
+.subscribe-post h2 {
     animation-name: subscribe-post-amination;
     animation-duration: 2s;
     animation-iteration-count: infinite;
 }
 
+.subscribe-post h3 {
+    text-align: left;
+    margin-left: 10px;
+}
+
 .coments-post {
     /* background-color: royalblue; */
-    width: 59%;
+    width: 45%;
+    padding-left: 5%;
+    vertical-align: top;
+}
+
+.coments-post h2 {
+    margin-top: 5px;
+}
+
+.individual-coment {
+    width: 55%;
+    border-style: double;
+    border-color: #5e92ca;
+    border-radius: 2%;
+    padding-left: 15px;
+    line-height: 5px;
+    margin-bottom: 20px;
 }
 
 .social-media-icon {
@@ -181,4 +225,40 @@ ion-icon {
 @keyframes subscribe-post-amination {
     0% {opacity: 0;}
     100% {opacity: 1;}
+}
+
+
+
+@media (max-width:1000px) {
+    .post-content {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .left-content {
+        visibility: hidden;
+    }
+
+    .cute-icon {
+        visibility: hidden;
+    }
+
+    /* .veja-tambem {
+        display: flex;
+        flex-direction: row;
+    } */
+
+    .veja-tambem img {
+        width: 50%;
+    }
+
+
+
+    .next-post-icon {
+        visibility: hidden;
+    }
+    .previous-post-icon {
+        visibility: hidden;
+}
 }
