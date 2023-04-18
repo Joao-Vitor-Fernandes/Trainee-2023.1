@@ -1,8 +1,14 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-color:#0f0a31cc;
+    background-color:#070231f5;
 }
 div{
-    background-color: #110d30cc;
+    background-color: #0a0623f3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 65px;
+    border-radius: 17px;
 }
 
