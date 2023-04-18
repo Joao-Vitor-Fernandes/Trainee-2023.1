@@ -8,16 +8,20 @@ div{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    padding: 60px;
+    padding: 45px;
     border-radius: 17px;
     color: white;
     text-align: center;
     
 }
 input{
-    padding: 12px;
+    padding: 10px;
     border: none;
     border-radius: 4px;
+    font-size: 13.5px;
+}
+.login{
+    padding-bottom: 17px;
 }
 .entrar{
     background-color: #122f7e;
@@ -36,7 +40,7 @@ button:hover{
     background-color: rgba(0, 0, 0, 0);
     border: none;
     color: white;
-
+    
 }
 
 
