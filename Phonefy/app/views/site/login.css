@@ -28,18 +28,20 @@ input{
     font-size: 13.5px;
 }
 .login{
-    padding-bottom: 5px;
-    padding-top: 3px;
+    padding-bottom: 1px;
+    padding-top: 1px;
+    font-size: 25px;
 }
 .entrar{
     background-color: #1f556b;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 14px;
     color: white;
     width: 100%;
     padding-top: 4px;
     padding-bottom: 4px;
     border-radius: 9px;
+    border-color:rgba(0, 0, 0, 0);
 }
 button:hover{
     background-color:#173ca4 ;
@@ -47,13 +49,18 @@ button:hover{
 .recuperar{
     background-color: rgba(0, 0, 0, 0);
     border: none;
-    color: white;
+    color: #1f556b;
     
 }
 .cadastro{
     background-color: rgba(0, 0, 0, 0);
     border: none;
     color: white;
+}
+.logo{
+    background-color: rgba(0, 0, 0, 0);
+    top: 20%;
+    left: 50%;
 }
 
 
