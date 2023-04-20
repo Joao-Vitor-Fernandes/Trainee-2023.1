@@ -42,25 +42,31 @@ input{
     padding-bottom: 4px;
     border-radius: 9px;
     border-color:rgba(0, 0, 0, 0);
+    
 }
-button:hover{
+.entrar:hover{
     background-color:#173ca4 ;
 }
 .recuperar{
     background-color: rgba(0, 0, 0, 0);
     border: none;
-    color: white;
+    color: #41b6e6;
+    cursor: pointer;
+    padding-top: 4px;
     
 }
 .cadastro{
     background-color: rgba(0, 0, 0, 0);
     border: none;
-    color: white;
+    color: #41b6e6;
+    cursor: pointer;
+    padding-top: 15px;
 }
 .logo{
     background-color: rgba(0, 0, 0, 0);
     top: 2%;
     left: 41.1%;
+    
 }
 
 
