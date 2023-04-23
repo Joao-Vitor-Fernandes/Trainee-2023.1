@@ -192,7 +192,16 @@ ion-icon {
 
 
 @media (max-width:1000px) {
+    .individual-post {
+        position: relative;
+        margin-top: 150px;
+        margin-bottom: 150px;
+    }
+    .data-post {
+        width: 100%;
+    }
     .post-content {
+        width: 100%;
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
@@ -203,25 +212,17 @@ ion-icon {
         display: none;
     }
 
-    /* .cute-icon {
-        visibility: hidden;
+    .right-content {
+        width: 90%;
     }
 
-    .veja-tambem {
-        display: flex;
-        flex-direction: row;
+    .social-media-icon {
+        position: absolute;
+        bottom: -140px;
     }
 
-    .veja-tambem img {
-        width: 50%;
-    } */
-
-
-
-    .next-post-icon {
-        visibility: hidden;
+    ion-icon {
+        font-size: 25px;
     }
-    .previous-post-icon {
-        visibility: hidden;
-    }
+
 }
