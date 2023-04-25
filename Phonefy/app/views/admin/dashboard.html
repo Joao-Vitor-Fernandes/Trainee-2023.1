@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Titulo do Post</title>
+        <link rel="stylesheet" href="../../../public/css/dashboard.css">
+    </head>
+
+    <body>
+        <div class="dashboard">
+            <div class="dashboard-nav">
+                <div class="icon-name">
+                    <ion-icon name="grid"></ion-icon>
+                    <h3>DASHBOARD</h3>
+                </div>
+                <div class="icon-name">
+                    <h6>LOGOUT</h6>
+                    <ion-icon name="log-out-outline"></ion-icon>
+                </div>
+            </div>
+
+            <div class="dashboard-main">
+                    <div class="card-page">
+                        <div class="card-post">
+                            <h2>Posts</h2>
+                        </div>
+        
+                        <div class="card-user">
+                            <h2>Users</h2>
+                        </div>
+        
+                    </div>
+        
+                    <div class="lasted-posts">
+                        <table>
+                            <caption>Posts Recentes</caption>
+                            <tr id="table-th">
+                            <th>#</th>
+                            <th>Title</th>
+                            <th>Autor</th>
+                            <th>Date</th>
+                            <th id="details-tam"></th>
+                            </tr>
+                            <tr>
+                            <td>3</td>
+                            <td>Post 3</td>
+                            <td>Maria</td>
+                            <td>25 de abril</td>
+                            <td  id="details">Detalhes <ion-icon name="chevron-forward-circle-outline"></ion-icon></td>
+                            </tr>
+                            <tr>
+                            <td>2</td>
+                            <td>Post 2</td>
+                            <td>Maria</td>
+                            <td>25 de abril</td>
+                            <td  id="details">Detalhes <ion-icon name="chevron-forward-circle-outline"></ion-icon></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Post 1</td>
+                                <td>Maria</td>
+                                <td>25 de abril</td>
+                                <td  id="details">Detalhes <ion-icon name="chevron-forward-circle-outline"></ion-icon></td>
+                            </tr>
+                        </table>
+                    </div>
+
+            </div>
+        </div>
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    </body>
+</html>
