@@ -133,3 +133,28 @@ img {
     background-color: white;        
 }
 
+
+@media (max-width: 500px) {
+    .footer {
+        flex-direction: column;
+        margin-right: 0;
+        height: 200px;
+
+    }
+    
+    .footer-col {
+        margin-left: 0;
+        margin-bottom: 10px;
+        line-height: 40px;
+        font-size: 16px;
+        opacity: 1;
+    }
+    
+    .footer-col .medias-socias a {
+        padding-left: 20px;
+    }
+
+    .img {
+        padding-left: 20px;
+    }
+}
