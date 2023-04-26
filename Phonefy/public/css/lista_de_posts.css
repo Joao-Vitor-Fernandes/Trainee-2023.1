@@ -1,0 +1,88 @@
+body{
+    background-color: #2B4C63;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    color: white;
+    font-family: 'Monteserrat', sans-serif;
+    font-size: 60px;
+    margin-top: 80px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /*add sombra ao texto*/
+    background: linear-gradient(to right, #ffffff, #faf8f6); 
+    -webkit-background-clip: text; /*def a área do elem q será preenchida com gradiente de cor*/
+    -webkit-text-fill-color: transparent; /*define a cor do texto*/
+}
+
+
+.cabecalho{
+    background-color: rgb(111, 137, 209);
+    color: white;
+    position: sticky; /*fixar cabeçalho - deixar colado*/
+    top: -1px;
+}
+
+caption{ 
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    /*background-color: antiquewhite;*/
+}
+
+
+.add{
+    float: left;
+    margin-top: 10px;
+}
+
+.add img{ 
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+}
+
+
+table {
+    background-color: antiquewhite;
+    width: 600px;
+    height: 300px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    position: relative; /*fixar cabeçalho*/
+}
+
+table td, th{
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+.icon{
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+tbody tr:nth-child(2n){ /*Efeito zebrado na tabela*/
+    background-color:  rgb(216, 202, 202);
+}
+
+
+@media (max-width:1100px){
+    h1{
+        font-size: 30px;;
+    }
+
+    table{
+        max-width: 100%;
+    }
+
+    .add{
+        float: none;
+        text-align: center;
+    }
+}

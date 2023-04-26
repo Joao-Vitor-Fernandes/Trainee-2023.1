@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Lista de Posts</title>
+    <meta name="viewport" content="width=devide" charset="utf-8">
+    <link rel="stylesheet" href="../../../public/css/lista_de_posts.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100@400;500&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    <h1 class="Titulo">Lista de Posts</h1>
+    <table>
+        <caption>
+            <!--Caso queria colocar um caption: insere ele aqui-->
+            <div class="add">
+                <a href="#"> <img src="../../../public/assets/icon_add.png" alt="Visualizar" height="40" width="40"></a>
+            </div>
+        </caption>
+        <tr class="cabecalho"> <!--Primeira linha-->
+            <th>#</th>
+            <th>Nome</th>
+            <th>Autor</th>
+            <th>Data</th>
+            <th colspan="2"></th>
+        </tr>
+        <tr> <!--Segunda linha-->
+            <td>1</td>
+            <td>Lançamento da semana</td>
+            <td>Clara</td>
+            <td>25/02/2023</td>
+            <td class="icon">
+                <a href="#"> <img src="../../../public/assets/icon_view.png" alt="Visualizar" height="40"
+                        width="40"></a>
+                <a href="#"> <img src="../../../public/assets/icon_pencil.png" alt="Editar" height="40" width="40"></a>
+                <!--<a href="#"> <img src="../../../public/assets/icon_delete.png" alt="Deletar" height="40" width="40"></a>-->
+                <a href="#" onclick="return confirm('Tem certeza de que deseja excluir este elemento?')">
+                    <img src="../../../public/assets/icon_delete.png" alt="Deletar" height="40" width="40">
+                </a>
+            </td>
+        </tr>
+        <tr> <!--Terceira linha-->
+            <td>2</td>
+            <td>Album mais ouvido</td>
+            <td>Maria</td>
+            <td>05/03/2023</td>
+            <td class="icon">
+                <a href="#"> <img src="../../../public/assets/icon_view.png" alt="Visualizar" height="40"
+                        width="40"></a>
+                <a href="#"> <img src="../../../public/assets/icon_pencil.png" alt="Editar" height="40" width="40"></a>
+                <a href="#" onclick="return confirm('Tem certeza de que deseja excluir este elemento?')">
+                    <img src="../../../public/assets/icon_delete.png" alt="Deletar" height="40" width="40">
+                </a>
+            </td>
+
+        </tr>
+        <tr> <!--Quarta linha-->
+            <td>3</td>
+            <td>Rit do ano</td>
+            <td>Pedro</td>
+            <td>12/03/2023</td>
+            <td class="icon">
+                <a href="#"> <img src="../../../public/assets/icon_view.png" alt="Visualizar" height="40"
+                        width="40"></a>
+                <a href="#"> <img src="../../../public/assets/icon_pencil.png" alt="Editar" height="40" width="40"></a>
+                <a href="#" onclick="return confirm('Tem certeza de que deseja excluir este elemento?')">
+                    <img src="../../../public/assets/icon_delete.png" alt="Deletar" height="40" width="40">
+                </a>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
