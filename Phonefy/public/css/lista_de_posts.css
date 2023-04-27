@@ -17,9 +17,9 @@ h1{
     -webkit-text-fill-color: transparent; /*define a cor do texto*/
 }
 
-#conteiner {
+/* #conteiner {
     overflow: auto;
-}
+} */
 
 .cabecalho{
     background-color: #369fc9;
@@ -36,16 +36,20 @@ caption{
     /*background-color: antiquewhite;*/
 }
 
-
 .add{
-    float: left;
+    display: flex;
+    align-items: center;
     margin-top: 10px;
 }
 
 .add img{ 
-    display: flex;
-    align-items: center;
     vertical-align: middle;
+}
+
+.add p{
+    color: white;
+    font-size: 16px;
+    padding-left: 10px;
 }
 
 
@@ -76,7 +80,7 @@ tbody tr:nth-child(2n){ /*Efeito zebrado na tabela*/
 }
 
 
-/* @media (max-width:1100px){
+ /* @media (max-width:1100px){
     h1{
         font-size: 30px;;
     }
@@ -91,4 +95,4 @@ tbody tr:nth-child(2n){ /*Efeito zebrado na tabela*/
         float: none;
         text-align: center;
     }
-} */
+}  */
