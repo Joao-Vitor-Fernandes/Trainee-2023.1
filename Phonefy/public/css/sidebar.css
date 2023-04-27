@@ -1,0 +1,33 @@
+body{
+    background-image: linear-gradient(#232330, #297795);
+    background-repeat: no-repeat;
+    height: 100vh;
+    
+}
+.lista{
+    
+    border: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+}
+.offcanvas-header{
+    background-color: #232330;
+}
+.offcanvas-title{
+    color: white;
+}
+
+.imagem{
+   left: 15px;
+}
+
+.offcanvas-body{
+  /*  background-color: #313147dc; */
+  background-image: linear-gradient(#232330, #41b6e6);
+}
+.nome{
+    color: white;
+}
+.btn btn-primary{
+    color: #232330;
+}
