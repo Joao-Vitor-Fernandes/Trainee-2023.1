@@ -1,0 +1,78 @@
+/*Cores
+
+#41b6e6 - Azul
+#2b4c63 - azul mais escuro
+#2f2f3b - Cinza
+#232330 - Preto
+#EEF0F2 - Branco
+*/
+
+body
+{
+    margin-left: 10vw;
+    width: 80vw;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    /*background-image: linear-gradient(#232330, #41b6e6);*/
+    background-color: #2b4c63;
+    box-sizing: border-box;
+    grid-template-areas:
+    "lista lista visualizar editar deletar"
+}
+h1
+{
+    text-align: center;
+    background-color: #232330;
+    color:#EEF0F2;
+}
+ul
+{
+    list-style: none;
+    color: #EEF0F2;
+    background-color: #232330;
+    padding: 1%;
+    display: flex;
+    grid-area: lista;
+    justify-content: space-between;
+}
+li
+{
+    line-height: 0px;
+}
+.content{
+    padding: 0% 1%;
+    background-color: #232330;
+    display: flex;
+    justify-content:space-between;
+
+}
+.content h1{font-size: 20px;}
+.visualizar
+ {
+    padding-top: 10px;
+    display: flex;
+    grid-area: visualizar;
+ }
+ .editar
+ {
+    padding-top: 10px;
+    display: flex;
+    grid-area: editar;
+ }
+ .deletar
+ {
+    padding-top: 10px;
+    display: flex;
+    grid-area: deletar;
+ }
+ .add{
+    text-align: center;
+    width:50px;
+    height:auto;
+    padding-top: 0px;
+    background-color:#41b6e6 ;
+    border-radius: ;
+    color:#EEF0F2;
+    font-size: 30px;
+    margin-bottom: 10px;
+ }
