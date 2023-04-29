@@ -66,8 +66,10 @@ body{
 }
 
 .caixa-selecao input{
-    color: #232330;
+    color: #2b4c63;
+    /* background-color: #2F2F3B; */
     font-size: 18px;    
+    font-weight: bold;
 
     margin-top: 1%;
     display: block;
@@ -78,21 +80,6 @@ body{
 
     padding: 0px 50px 0 20px;
     font-size: 20px;
-}
-
-.caixa-selecao .caixa-senha{
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.caixa-senha .botao-senha{
-    display: flex;
-    align-items: center;
-    margin-left: -45px;
-    background-color: transparent;
-    border: none;
-    transition: .2s;
 }
 
 .container .campo-botoes{
