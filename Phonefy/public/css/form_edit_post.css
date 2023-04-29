@@ -54,6 +54,7 @@ fieldset {
     max-width: 100%; /* Define a largura máxima da textarea em 50% da largura do contêiner pai */
     max-height: 300px; /* Define a altura máxima da textarea em 300 pixels */
     padding-left: 15px;
+
     /* color: #EEF0F2; */
 }
 
