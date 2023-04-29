@@ -161,9 +161,9 @@ label{
     /* background-color: aqua; */
 
     display: flex;
-    justify-content:right;
-    align-items: center;
-    gap: 15%;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 5%;
 
     margin-top: 25px;
     margin-bottom: 60px;
@@ -174,9 +174,9 @@ label{
 
 button{
     /* margin-top: 3%; */
-    font-size:100%;
+    font-size: 14px;
     height: 28px;
-    width: 140px;
+    width: 90px;
     border-radius: 8px;
     background-color: #41B6E6;
     color: #EEF0F2;
