@@ -45,7 +45,7 @@ body{
     font-size: 38px;
     text-align: center;
     /* color: #EEF0F2; */
-    color: #41B6E6;
+    color: #EEF0F2;
 }
 
 .container .caixa-selecao{
@@ -78,12 +78,6 @@ body{
 
     padding: 0px 50px 0 20px;
     font-size: 20px;
-}
-
-.caixa-selecao .caixa-senha{
-    display: flex;
-    align-items: center;
-    position: relative;
 }
 
 .caixa-senha .botao-senha{
