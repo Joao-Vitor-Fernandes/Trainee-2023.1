@@ -18,10 +18,10 @@ body{
     background-color: #2F2F3B;
     margin: 0 auto;
     border: solid #232330;
-    border-radius: 15px;
+    border-radius: 8px;
 
-    height: 90vh;
-    width: 35vw;
+    height: 73vh;
+    width: 25vw;
 
     margin-top: 10%;
     margin-bottom: 10%;
@@ -43,7 +43,10 @@ body{
     margin-left: 10%;
     margin-top: 10%;
     margin-right: 10%;
-    font-size: 38px;
+    
+    
+    font-size: 23px;
+    letter-spacing: 6px;
     color: #EEF0F2;
 }
 
@@ -59,7 +62,7 @@ body{
 }
 
 .caixa-selecao label{
-    font-size: 23px;
+    font-size: 14px;
     display: block;
     color: #EEF0F2;
 }
@@ -67,20 +70,21 @@ body{
 .caixa-selecao input{
     display: block;
     width: 100%;
-    height: 55px;
+    height: 38px;
     margin-top: 1%;
-    border-radius: 15px;
+    border-radius: 8px;
 
     padding: 0px 50px 0 20px;
-    font-size: 20px;
+    font-size: 14px;
 }
 
 .container .caixa-botao{
     /* background-color: aqua; */
 
     display: flex;
-    justify-content:center;
-    align-items: center;
+    justify-content:left;
+    /* align-items: center; */
+    margin-bottom: 5%;
 
     margin-left: 15%;
     margin-right: 15%;
@@ -91,9 +95,9 @@ body{
 .caixa-botao .botao{
     margin-top: 3%;
     font-size:100%;
-    height: 55px;
+    height: 38px;
     width: 140px;
-    border-radius: 15px;
+    border-radius: 8px;
     background-color: #41B6E6;
     color: #EEF0F2;
 }

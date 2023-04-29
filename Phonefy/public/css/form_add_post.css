@@ -10,8 +10,8 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    background-image: linear-gradient(#232330, #41b6e6);
-    /* background-color: #2b4c63; */
+    /* background-image: linear-gradient(#232330, #41b6e6); */
+    background-color: #2b4c63;
 }
 
 fieldset {
@@ -58,7 +58,7 @@ fieldset {
 }
 
 .custom-file-input{
-    background-color: #2b4c63;
+    background-color: #41B6E6;
     color: #EEF0F2;
 }
 
@@ -72,7 +72,7 @@ fieldset {
     margin-left: 10%;
     margin-right: 10%;
 
-    background-color: #2b4c63;
+    background-color: #41B6E6;
     color: #EEF0F2;
 }
 
@@ -166,7 +166,7 @@ label{
     gap: 15%;
 
     margin-top: 25px;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 
     margin-left: 10%;
     margin-right: 10%;
