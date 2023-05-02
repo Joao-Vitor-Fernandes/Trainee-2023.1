@@ -13,6 +13,7 @@ h1{
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /*add sombra ao texto*/
     background: linear-gradient(to right, #ffffff, #faf8f6); 
+    background-clip: border-box;
     -webkit-background-clip: text; /*def a área do elem q será preenchida com gradiente de cor*/
     -webkit-text-fill-color: transparent; /*define a cor do texto*/
 }
@@ -127,9 +128,7 @@ img {
        width: 100%;
    }
 
-   table tr, td{
-       
-   }
+
 
    .add{
        float: none;
