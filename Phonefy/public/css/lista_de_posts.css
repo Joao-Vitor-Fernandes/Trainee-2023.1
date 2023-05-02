@@ -1,6 +1,6 @@
 body{
     background-color: #2B4C63;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 h1{
@@ -26,6 +26,10 @@ h1{
     color: white;
     position: sticky; /*fixar cabeçalho - deixar colado*/
     top: -1px;
+}
+
+.corpo{
+    color: #2B4C63;
 }
 
 caption{ 
@@ -65,10 +69,11 @@ table {
 }
 
 table td, th{
-    border-color: 1px solid black;
     padding: 8px;
     text-align: center;
 }
+
+
 
 tbody tr:nth-child(2n){ /*Efeito zebrado na tabela*/
     background-color:  rgb(216, 202, 202);
@@ -93,8 +98,8 @@ tbody tr:nth-child(2n){ /*Efeito zebrado na tabela*/
     margin: 0 10px 10px 0;
     text-decoration: none;
     border-radius: 50%;
-    color: black;
-    border: 1px solid black;
+    color: #2B4C63;
+    border: 1px solid #2B4C63;
     transition: all 0.5s ease;
 }
 
@@ -131,5 +136,3 @@ img {
        text-align: center;
    }
 }  
-
-
