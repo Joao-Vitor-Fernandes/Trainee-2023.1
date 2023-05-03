@@ -20,6 +20,7 @@ body{
     margin-top: 5%;
     width: 200px;
     height: 100px;
+    opacity: 0.5;
 }
 
 #myBtn-edit {
@@ -181,20 +182,6 @@ fieldset {
     /* color: #EEF0F2; */
 }
 
-.custom-file-input{
-    align-content: center;
-    justify-content: center;
-    text-align: center;
-
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 1%;
-    border-radius: 0.5em;
-
-    background-color: #41B6E6;
-    color: #EEF0F2;
-}
-
 label{
     font-size: 14px;
     display: block;
@@ -202,7 +189,28 @@ label{
 }
 
 input[type="text"]{
-    padding-left: 15px;
+    padding-left: 10px;
+}
+
+input[type="date"]{
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+.custom-file-input{
+    width: 80%;
+
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+
+    /* margin-left: 10%; */
+    margin-right: 10%;
+    margin-top: 1%;
+    border-radius: 0.5em;
+
+    background-color: #41B6E6;
+    color: #EEF0F2;
 }
 
 
