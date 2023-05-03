@@ -61,6 +61,7 @@ button{
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.4); 
 }
+
 .modal-content{
     background-color: #2F2F3B;
     margin: 0 auto;
@@ -151,6 +152,7 @@ fieldset {
     justify-content:center;
     align-content: center;
     align-items: left;
+    
     /* background-color: aquamarine; */
 }
 
