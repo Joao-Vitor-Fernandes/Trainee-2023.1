@@ -3,18 +3,22 @@ body{
     background-repeat: no-repeat;
     height: 100vh;
     
+    
 }
 .lista{
     
     border: none;
     color: white;
     background-color: rgba(0, 0, 0, 0);
+
+
 }
 .offcanvas-header{
     background-color: #232330;
 }
 .offcanvas-title{
     color: white;
+    text-align: center;
 }
 
 .imagem{
@@ -27,7 +31,19 @@ body{
 }
 .nome{
     color: white;
+
+    
 }
-.btn btn-primary{
+.btn-primary{
     color: #232330;
+    background-color: #232330;
+}
+.lista:hover{
+    background: #161a388a;
+    transform: scale(1.1);
+    
+    
+}
+.icon{
+    color: white;
 }
