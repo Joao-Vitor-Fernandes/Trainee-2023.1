@@ -1,6 +1,8 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-color:#2f2f3b;
+    background-image: linear-gradient(#232330, #297795);
+    background-repeat: no-repeat;
+    height: 100vh;
     
 }
 div{
