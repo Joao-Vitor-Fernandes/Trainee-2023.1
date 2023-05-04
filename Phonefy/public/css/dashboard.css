@@ -103,7 +103,7 @@ ion-icon {
 
 .card-post:hover {
 	background:linear-gradient(to bottom, #0e8fc2 5%, #41b7e6 100%);
-	background-color:#0e8fc2;s
+	background-color:#0e8fc2;
 }
 
 .card-post:active {
@@ -113,6 +113,7 @@ ion-icon {
 
 .card-user {
     width: 25%;
+    height: 120px;
     box-shadow: 0px 10px 14px -7px #1f2f47;
 	background:linear-gradient(to bottom, #41b7e6 5%, #0e8fc2 100%);
 	background-color:#41b7e6;
@@ -135,14 +136,6 @@ ion-icon {
 	position:relative;
 	top:1px;
 }
-
-#rcorners3 {
-    border-radius: 50%;
-    background: #73AD21;
-    padding: 20px; 
-    width: 200px;
-    height: 150px;
-} 
 
 .lasted-posts {
     background-color: #ffffff;
@@ -168,12 +161,14 @@ table {
 }
 
 caption {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 th, td {
-    padding: 7px;
+    padding: 8px;
 }
 
 th {
@@ -212,6 +207,14 @@ tr:nth-child(even){
         width: 95%;
     }
 
+    .card-post {
+        padding: 10px;
+    }
+
+    .card-user {
+        padding: 10px;
+    }
+
     .lasted-posts {
         width: 100%;
     }
@@ -221,17 +224,37 @@ tr:nth-child(even){
     .dashboard {
         width: 100%;
     }
-
     .icon-name h3 {
         display: none;
     }
 
+    .card-page {
+        width: 100%;
+    }
+
+    .card-page h2 {
+        font-size: 15px;
+    }
+    
+
     .card-post {
+        width: 40%;
+        height: 90px;
         text-align: center;
     }
 
+    .card-post ion-icon {
+        display: none;
+    }
+
     .card-user {
+        width: 40%;
+        height: 90px;
         text-align: center;
+    }
+
+    .card-user ion-icon {
+        display: none;
     }
 
     #details span {
