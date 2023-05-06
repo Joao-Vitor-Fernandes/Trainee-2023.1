@@ -1,5 +1,7 @@
 body{
     background-color: #2B4C63;
+    /*background: rgb(65,182,230);
+    background: radial-gradient(circle, rgba(65,182,230,1) 30%, rgba(47,47,59,1) 80%); */ 
     font-family: 'Montserrat', sans-serif;
 }
 
