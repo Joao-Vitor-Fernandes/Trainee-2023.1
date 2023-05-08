@@ -1,31 +1,14 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Excluir Post</title>
-
-    <link rel="stylesheet" href="../../../public/css/delete_modal.css">
-
-</head>
-<body>
-    <button id="myBtn">Excluir Post</button>
-    
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1>Excluir Post</h1>
-            </div>
-            <div class="modal-body">
-                <h2>Deseja realmente excluir este post? Essa ação é definitiva</h2>
-            </div>
-            <div class="modal-footer">
-                <button class="close" type="submit" onsubmit="">Cancelar</button> 
-                <button type="submit" onsubmit="">Confirmar</button> 
-            </div>
+<div id="delete-modal" class="modal">
+    <form class="modal-content-delete">
+        <div class="modal-header-delete">
+            <h1>Excluir Post</h1>
         </div>
-    </div>
-    <script src="../../../public/js/modal2.js"></script>
-</body>
-</html>
+        <div class="modal-body-delete">
+            <h2>Deseja realmente excluir este post? Essa ação é definitiva</h2>
+        </div>
+        <div class="modal-footer-delete">
+            <button class="close" type="button" onsubmit="">Cancelar</button> 
+            <button type="submit" onsubmit="">Confirmar</button> 
+        </div>
+    </form>
+</div>
