@@ -1,0 +1,21 @@
+body {
+    background: rgb(65, 182, 230);
+    background: radial-gradient(circle, rgba(65, 182, 230, 1) 25%, rgba(47, 47, 59, 1) 80%);
+    /*
+    #41b6e6 Azul
+    #2f2f3b Cinza
+    #232330 Preto
+    #EEF0F2 branco
+    */
+}
+
+.navbar{
+    background-color: #232330;
+}
+
+
+
+.footer {
+
+    background-color: #232330;
+}
