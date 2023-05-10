@@ -1,63 +1,77 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+
+<html lang="pt-br"></html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Usuários</title>
+    <meta name="viewport" content="width=devide" charset="utf-8">
     <link rel="stylesheet" href="../../../public/css/lista_usuarios.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap">
-
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
+
+
 <body>
-    <!-- <div title="Adicionar Usuário" class="add">
-        <div>+</div>
 
-    </div> -->
-
-    <!-- Botao adicionar usuario -->
-    <button id="myBtn" class="add" onclick="open_modal('myBtn', 'modal-add-user', 'close', 0)">+</button>
     <div class="load_modal"></div>
-    <!-- <button id="myBtn" class="add">+</button> -->
 
-
-    <div class="content">
-        <ul>
-        <li>Gabriel de Faria Salles</li>
-        </ul>
-        <div class="visualizar">  
-            <img title="Visualizar Usuário" src="../../../public/assets/visualizar.png" alt="Visualizar" height="32px" width="32px">
-        </div>
-
-        <div class="editar">  
-            <img title="Editar Usuário" src="../../../public/assets/editar.png" alt="Editar" height="32px" width="32px">
-        </div>
-
-        <div class="deletar">  
-            <img title="Deletar Usuário" src="../../../public/assets/deletar.png" alt="Deletar" height="32px" width="32px">
-        </div>
+    <h1 class="Titulo">Lista de Usuários</h1>
+    <div id="conteiner">
+        <table>
+            <caption>
+                <!--Caso queria colocar um caption: insere ele aqui-->
+                <button id="myBtn" class="add" onclick="open_modal('myBtn', 'modal-add-user', 'close', 0)">
+                    <a href="#"> <img src="../../../public/assets/icon_add.png" alt="Adicionar" height="50"
+                            width="50"></a>
+                    <p>Adicionar Usuário</p>
+                </button>
+            </caption>
+            <tr class="cabecalho"> <!--Primeira linha-->
+                <th>#</th>
+                <th>Nome</th>
+                <th>Opções</th>
+            </tr>
+            <tr class="corpo"> <!--Segunda linha-->
+                <td>1</td>
+                <td>Jõao Vitor</td>
+                <td class="icon">
+                    <a href="#"> <i class="fa fa-eye" alt="Visualiar"></i> </a>
+                    <a href="#"><i class="fa fa-outdent" aria-hidden="true"></i> </a>
+                    <a href="#" onclick="return confirm('Tem certeza de que deseja excluir este elemento?')">
+                        <i class="fa fa-times" alt="Deletar"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr class="corpo"> <!--Terceira linha-->
+                <td>2</td>
+                <td>Anna Júlia</td>
+                <td class="icon">
+                    <a href="#"> <i class="fa fa-eye" alt="Visualiar"></i> </a>
+                    <a href="#"><i class="fa fa-outdent" aria-hidden="true"></i> </a>
+                    <a href="#" onclick="return confirm('Tem certeza de que deseja excluir este elemento?')">
+                        <i class="fa fa-times" alt="Deletar"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr class="corpo"> <!--Quarta linha-->
+                <td>3</td>
+                <td>Helena</td>
+                <td class="icon">
+                    <a href="#"> <i class="fa fa-eye" alt="Visualiar"></i> </a>
+                    <a href="#"><i class="fa fa-outdent" aria-hidden="true"></i> </a>
+                    <a href="#" onclick="return confirm('Tem certeza de que deseja excluir este elemento?')">
+                        <i class="fa fa-times" alt="Deletar"></i>
+                    </a>
+                </td>
+            </tr>
+        </table>
     </div>
 
-    <div class="content">
-        <ul>
-        <li>Luiz Phonefy </li>
-        </ul>
-        <div class="visualizar">  
-            <img title="Visualizar Usuário" src="../../../public/assets/visualizar.png" alt="Visualizar" height="32px" width="32px">
-        </div>
-
-        <div class="editar">  
-            <img title="Editar Usuário" src="../../../public/assets/editar.png" alt="Editar" height="32px" width="32px">
-        </div>
-
-        <div class="deletar">  
-            <img title="Deletar Usuário" src="../../../public/assets/deletar.png" alt="Deletar" height="32px" width="32px">
-        </div>
-    </div>
 
     <!-- Link para o script -->
     <script src="../../../public/js/add_user_modal.js"></script>
 
 </body>
+
 </html>
