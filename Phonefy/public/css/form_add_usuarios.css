@@ -14,7 +14,7 @@ body{
     background-color: #2b4c63;
 }
 
-.modal-l {
+.modal-add-user {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -28,7 +28,7 @@ body{
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-.container-l{
+.modal-add-user .container-l{
     background-color: #2F2F3B;
     margin: 0 auto;
     border: solid #232330;
@@ -41,7 +41,7 @@ body{
     grid-template-rows: 15% 21.25% 21.25% 21.25% 21.25%;
 }
 
-.container-l .titulo-l{
+.modal-add-user .container-l .titulo-l{
         /* background-color: aqua; */
 
         display: flex;
@@ -50,7 +50,7 @@ body{
         align-items: center;
 }
 
-.container-l h1{
+.modal-add-user .container-l h1{
     text-align: center;
     margin-left: 10%;
     /* margin-top: 10%; */
@@ -63,7 +63,7 @@ body{
     background-color: #2F2F3B;
 }
 
-.container-l .caixa-selecao-l{
+.modal-add-user .container-l .caixa-selecao-l{
     /* background-color: red;
     border: 1px solid blue; */
     margin-left: 15%;
@@ -75,13 +75,13 @@ body{
     gap: 10px;
 }
 
-.caixa-selecao-l label{
+.modal-add-user .caixa-selecao-l label{
     font-size: 14px;
     display: block;
     color: #EEF0F2;
 }
 
-.caixa-selecao-l input{
+.modal-add-user .caixa-selecao-l input{
     display: block;
     width: 100%;
     height: 38px;
@@ -92,7 +92,7 @@ body{
     font-size: 14px;
 }
 
-.container-l .caixa-botao-l{
+.modal-add-user .container-l .caixa-botao-l{
     /* background-color: aqua; */
 
     display: flex;
@@ -106,7 +106,7 @@ body{
     gap: 7%;
 }
 
-.caixa-botao-l button{
+.modal-add-user .caixa-botao-l button{
     margin-top: 10%;
     font-size:100%;
     height: 38px;

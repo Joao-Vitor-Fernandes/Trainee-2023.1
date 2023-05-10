@@ -1,0 +1,118 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing   : border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    /* background-image: linear-gradient(#232330, #41b6e6); */
+    background-color: #2b4c63;
+}
+
+.delete-user-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+.delete-user-modal .container{
+    background-color: #2F2F3B;
+    margin: 0 auto;
+    border: solid #232330;
+    border-radius: 15px;
+
+    height: 240px;
+    width: 360px;
+
+    /* margin-top: 10%;
+    margin-bottom: 10%; */
+
+    display: grid;
+    grid-template-rows: auto 12% auto;
+}
+
+.delete-user-modal .container .campo-titulo{
+    /* background-color: aqua; */
+
+    margin-left: 5%;
+    margin-right: 5%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.delete-user-modal .campo-titulo h1{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 6px;
+    color: #EEF0F2;
+}
+
+.delete-user-modal .container .campo-texto{
+    /* background-color: red;
+    border: 1px solid blue; */
+    margin-left: 10%;
+    margin-right: 10%;
+
+    justify-content: center;
+    align-items: center;
+    color: #EEF0F2;
+
+    display: flex;
+}
+
+.delete-user-modal .campo-texto h2{
+    font-size: 14px;
+    text-align: left;
+    display: block;
+    color: #EEF0F2;
+    line-height: 1.5;
+}
+
+.delete-user-modal .container .campo-botoes{
+    /* background-color: blueviolet; */
+
+    margin-left: 10%;
+    margin-right: 10%;
+
+    display: flex;
+    justify-content: right;
+    
+    align-items: center;
+
+    gap: 7%;
+}
+
+.delete-user-modal .campo-botoes button{
+    font-size: 14px;    
+    height: 38px;
+    width: 85px;
+    border-radius: 15px;
+    background-color: #41B6E6;
+    color: #EEF0F2;
+}
+
+
+/* Responsividade */
+
+@media screen and (max-width: 400px) {
+    .container {
+        width: 100%;
+    }
+}

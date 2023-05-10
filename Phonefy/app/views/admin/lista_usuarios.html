@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="../../../public/css/lista_usuarios.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap">
 
-    <!-- CSS do modal -->
-    <link rel="stylesheet" href="../../../public/css/add_user_modal.css">
 
 </head>
 <body>
@@ -19,7 +17,9 @@
     </div> -->
 
     <!-- Botao adicionar usuario -->
-    <button id="myBtn" class="add">+</button>
+    <button id="myBtn" class="add" onclick="open_modal('myBtn', 'modal-add-user', 'close', 0)">+</button>
+    <div class="load_modal"></div>
+    <!-- <button id="myBtn" class="add">+</button> -->
 
 
     <div class="content">
@@ -54,37 +54,6 @@
         <div class="deletar">  
             <img title="Deletar Usuário" src="../../../public/assets/deletar.png" alt="Deletar" height="32px" width="32px">
         </div>
-    </div>
-
-
-
-    <!-- Modal -->
-
-    <div id="myModal" class="modal-l">
-
-        <form class="container-l">
-            <div class="titulo-l"><h1>Adicionar Usuário</h1></div>
-            <div class="caixa-selecao-l">
-                <label for="nome">Nome:</label>
-                <input type="text" name="nome" id="nome" required>
-            </div>
-
-            <div class="caixa-selecao-l">
-                <label for="email">Email:</label>
-                <input type="text" name="email" id="email" required>
-            </div>
-
-            <div class="caixa-selecao-l">
-                <label for="senha">Senha:</label>
-                <input type="password" name="senha" id="senha" required>
-            </div>
-
-            <div class="caixa-botao-l">
-                <button class="close-l" type="submit" onsubmit="">Cancelar</button> 
-                <button class="botao-l" type="submit" onsubmit="">Concluído</button> 
-            </div>
-        </form>
-
     </div>
 
     <!-- Link para o script -->
