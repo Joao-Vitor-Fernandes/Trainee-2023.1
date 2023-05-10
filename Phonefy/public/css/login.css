@@ -4,11 +4,15 @@ body{
     background-repeat: no-repeat;
     height: 100vh;
     
+    
 }
 div{
     
     background-color: #232330;
-    position: absolute;
+    position:fixed;
+    
+    /* justify-content: center;
+    align-items: center; */
     top: 30%;
     left: 39.5%;
     transform: translate(-50%,-50%);
@@ -67,7 +71,10 @@ input{
 .logo{
     background-color: rgba(0, 0, 0, 0);
     top: 2%;
-    left: 41.1%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 
