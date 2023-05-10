@@ -16,10 +16,10 @@
 
     <button class="btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><ion-icon name="chevron-forward-outline"></ion-icon></button> 
 
-    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel" >
    <div class="offcanvas-header">
      <h2 class="offcanvas-title" id="offcanvasScrollingLabel">Administração</h2>
-     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+     <button class="close" type="button"  data-bs-dismiss="offcanvas"><ion-icon class ="x"name="close-outline"></ion-icon></button>
    </div>
    <div class="offcanvas-body">
    
@@ -27,16 +27,16 @@
     <br>
     <div>
    <ul>
-    <ion-icon class="icon" name="construct-outline"></ion-icon>
-    <button class="lista"><p>Dashboard</p></button>
+   
+    <button class="dash"><p> <ion-icon class="icon" name="construct-outline"></ion-icon>   Dashboard</p></button>
     <br>
     <hr className='text-white d-none d-sm-block'></hr>
-    <ion-icon class="icon" name="construct-outline"></ion-icon>
-    <button class="lista"><p>Administrar posts</p></button>
+   
+    <button class="post"><p><ion-icon class="icon" name="construct-outline"></ion-icon>   Administrar posts</p></button>
     <br>
     <hr className='text-white d-none d-sm-block'></hr>
-    <ion-icon class="icon" name="construct-outline"></ion-icon>
-    <button class="lista"><p>Administrar usuários</p></button>
+    
+    <button class="usu"><p> <ion-icon class="icon" name="construct-outline"></ion-icon>   Administrar usuários</p></button>
     <br>
     <hr className='text-white d-none d-sm-block'></hr>
     </ul>
