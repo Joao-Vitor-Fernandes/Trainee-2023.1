@@ -95,7 +95,7 @@ body{
    
 }
 .btn-primary:hover{
-    background: #161a388a;
+    background: #f3f7f952;
     
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
@@ -103,7 +103,7 @@ body{
     border-bottom-right-radius: 50%;
 }
 .close:hover{
-    background: #161a388a;
+    background: #f3f7f952;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
     border-bottom-left-radius: 50%;
