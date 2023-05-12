@@ -36,33 +36,46 @@
                 <td>1</td>
                 <td>Jõao Vitor</td>
                 <td class="icon">
-                    <a href="#"> <i class="fa fa-eye" alt="Visualiar"></i> </a>
-                    <a href="#"><i class="fa fa-outdent" aria-hidden="true"></i> </a>
-                    <a href="#" onclick="return confirm('Tem certeza de que deseja excluir este elemento?')">
+                    <button id="Visualiar" class="a" onclick="open_modal('Visualiar', 'modal-view-user', 'close', 1)"> <i class="fa fa-eye" alt="Visualiar"></i> </button>
+                    <button id="Editar" class="a" onclick="open_modal('Editar', 'modal-edit-user', 'close', 2)"><i class="fa fa-outdent" aria-hidden="true"></i></button>
+                    <button id="Deleter" class="a" onclick="open_modal('Excluir', 'delete-user-modal', 'close', 3)"><i class="fa fa-times" alt="Deletar"></i></button>
+
+                    <!-- <a href="#"> <i class="fa fa-eye" alt="Visualiar"></i> </a> -->
+                    <!-- <a href="#"><i class="fa fa-outdent" aria-hidden="true"></i> </a> -->
+                    <!-- <a href="#" onclick="return confirm('Tem certeza de que deseja excluir este elemento?')">
                         <i class="fa fa-times" alt="Deletar"></i>
-                    </a>
+                    </a> -->
                 </td>
             </tr>
             <tr class="corpo"> <!--Terceira linha-->
                 <td>2</td>
                 <td>Anna Júlia</td>
                 <td class="icon">
-                    <a href="#"> <i class="fa fa-eye" alt="Visualiar"></i> </a>
+                    <button id="Visualiar" class="a" onclick="open_modal('Visualiar', 'modal-view-user', 'close', 1)"> <i class="fa fa-eye" alt="Visualiar"></i> </button>
+                    <button id="Editar" class="a" onclick="open_modal('Editar', 'modal-edit-user', 'close', 2)"><i class="fa fa-outdent" aria-hidden="true"></i></button>
+                    <button id="Deleter" class="a" onclick="open_modal('Excluir', 'delete-user-modal', 'close', 3)"><i class="fa fa-times" alt="Deletar"></i></button>
+
+                    <!-- <a href="#"> <i class="fa fa-eye" alt="Visualiar"></i> </a>
                     <a href="#"><i class="fa fa-outdent" aria-hidden="true"></i> </a>
                     <a href="#" onclick="return confirm('Tem certeza de que deseja excluir este elemento?')">
                         <i class="fa fa-times" alt="Deletar"></i>
-                    </a>
+                    </a> -->
                 </td>
             </tr>
             <tr class="corpo"> <!--Quarta linha-->
                 <td>3</td>
                 <td>Helena</td>
                 <td class="icon">
-                    <a href="#"> <i class="fa fa-eye" alt="Visualiar"></i> </a>
+
+                    <button id="Visualiar" class="a" onclick="open_modal('Visualiar', 'modal-view-user', 'close', 1)"> <i class="fa fa-eye" alt="Visualiar"></i> </button>
+                    <button id="Editar" class="a" onclick="open_modal('Editar', 'modal-edit-user', 'close', 2)"><i class="fa fa-outdent" aria-hidden="true"></i></button>
+                    <button id="Deleter" class="a" onclick="open_modal('Excluir', 'delete-user-modal', 'close', 3)"><i class="fa fa-times" alt="Deletar"></i></button>
+
+                    <!-- <a href="#"> <i class="fa fa-eye" alt="Visualiar"></i> </a>
                     <a href="#"><i class="fa fa-outdent" aria-hidden="true"></i> </a>
                     <a href="#" onclick="return confirm('Tem certeza de que deseja excluir este elemento?')">
                         <i class="fa fa-times" alt="Deletar"></i>
-                    </a>
+                    </a> -->
                 </td>
             </tr>
         </table>
@@ -70,7 +83,8 @@
 
 
     <!-- Link para o script -->
-    <script src="../../../public/js/add_user_modal.js"></script>
+    <!-- <script src="../../../public/js/add_user_modal.js"></script> -->
+    <script src="../../../public/js/modais_usuario.js"></script>
 
 </body>
 
