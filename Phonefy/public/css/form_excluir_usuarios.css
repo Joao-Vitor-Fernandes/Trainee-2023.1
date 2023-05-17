@@ -96,17 +96,17 @@ body{
     margin-right: 10%;
 
     display: flex;
-    justify-content: right;
+    justify-content: center;
     
     align-items: center;
 
-    gap: 7%;
+    gap: 10%;
 }
 
 .delete-user-modal .campo-botoes button{
     font-size: 14px;    
     height: 38px;
-    width: 85px;
+    width: 140px;
     border-radius: 15px;
     background-color: #41B6E6;
     color: #EEF0F2;
