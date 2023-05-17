@@ -6,16 +6,19 @@ body{
     
     
 }
-div{
+.teste2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.teste{
     
     background-color: #232330;
     position:fixed;
   
     
-    /* justify-content: center;
-    align-items: center; */
     top: 30%;
-    left: 39.5%;
+    /* left: 39.5%; */
     transform: translate(-50%,-50%);
     padding: 50px;
     padding-top: 35px;
@@ -49,7 +52,6 @@ input{
     padding-bottom: 4px;
     border-radius: 9px;
     border-color:rgba(0, 0, 0, 0);
-    
 }
 .entrar:hover{
     background-color:#173ca4 ;
@@ -72,11 +74,6 @@ input{
 .logo{
     background-color: rgba(0, 0, 0, 0);
     top: 2%;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
 }
 
 
