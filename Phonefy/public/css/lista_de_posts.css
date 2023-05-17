@@ -23,7 +23,7 @@ body{
 }
 
 .teste {
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -201,13 +201,33 @@ body{
 @media (max-width:950px)
 {
     .teste2 {
-        width: 46%;
+        width: 60%;
+    }
+    #posts {
+        width: 100%;
     }
     .blog-container {
         justify-content: center;
     }
     .blog-box {
-        width: 51%;
+        width: 60%;
     }
-    
+}
+
+@media (max-width:500px) {
+    .teste2 {
+        width: 80%;
+    }
+    .blog-box {
+        width: 80%;
+    }
+}
+
+@media (max-width:380px) {
+    .teste2 {
+        width: 90%;
+    }
+    .blog-box {
+        width: 90%;
+    }
 }
