@@ -22,18 +22,46 @@ body{
     /* background-image: linear-gradient(purple, #41b6e6); */
 }
 
-.search-box{
+.teste {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#posts {
+    /* background-color: purple; */
+    width: 90%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.teste2 {
+    width: 90%;
     position: absolute;
     top: 100px;
-    right: 125px;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search-box{
+    /* width: 90%;
+    position: absolute;
+    top: 100px; */
+    /* right: 125px; */
     
-    height: 40px;
+    /* height: 40px; */
     padding: 1px;
     border-radius: 40px;
     display: flex;
     justify-content: space-between;
     /* align-items:center; */
-    background-color: #41b6e6;}
+    background-color: #41b6e6;
+}
 
 .search-txt{
     border: none;
@@ -60,20 +88,27 @@ body{
 }
 
 .blog-container{
+    /* background-color: lime; */
+    /* width: 90%; */
     display: -webkit-inline-flex;
-    justify-content: center;
+    /* justify-content: center; */
+    justify-content: space-between;
     align-items: center;
-    margin: 160px 80px;
+    /* margin: 160px 80px; */
+    margin-top: 160px;
     flex-wrap: wrap;
 }
 
 .blog-box{
     display:flexbox;
-    width: 399px;
+    /* width: 399px; */
+    width: 28%;
     object-position: center;
     background-color: #EEF0F2;
     border: 5px solid #41b6e6;
-    margin: 25px;
+    /* margin: 25px; */
+    margin-top: 25px;
+    margin-bottom: 25px;
     border-radius: 16px;
 }
 
@@ -84,9 +119,11 @@ body{
 }
 
 .blog-image img{
-    width:405px;
+    /* width:405px; */
+    width: 105%;
     height:398px;
-    transform: translate(-15px, -2px);
+    /* transform: translate(-15px, -2px); */
+    transform: translate(-4.5%, -2px);
     object-fit: cover;
     object-position: center;
     border-radius: 16px;
@@ -110,7 +147,7 @@ body{
 }
 
 .blog-text{
-    padding: 0 30px;
+    padding: 10px 30px;
     display: flex;
     flex-direction: column;
 }
@@ -152,4 +189,25 @@ body{
 .blog-text a:hover{
     color: #41b6e6;
     transition: all ease 0.3s;
+}
+
+@media (max-width:1200px)
+{
+    .blog-box {
+        width: 40%;
+    }
+}
+
+@media (max-width:950px)
+{
+    .teste2 {
+        width: 46%;
+    }
+    .blog-container {
+        justify-content: center;
+    }
+    .blog-box {
+        width: 51%;
+    }
+    
 }
