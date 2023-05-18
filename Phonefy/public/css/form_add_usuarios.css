@@ -101,9 +101,9 @@ body{
     /* background-color: aqua; */
 
     display: flex;
-    justify-content:right;
-    /* align-items: center; */
-    margin-bottom: 5%;
+    justify-content:center;
+    align-items: center;
+    margin-bottom: 20px;
 
     margin-left: 15%;
     margin-right: 15%;
@@ -112,11 +112,10 @@ body{
 }
 
 .modal-add-user .caixa-botao-l button{
-    margin-top: 10%;
-    font-size:100%;
+    font-size: 14px;    
     height: 38px;
-    width: 85px;
-    border-radius: 8px;
+    width: 140px;
+    border-radius: 15px;
     background-color: #41B6E6;
     color: #EEF0F2;
 }
@@ -124,48 +123,48 @@ body{
 
 /* Responsividade */
 @media screen and (max-width: 1190px){
-    .container{
+    .modal-add-user .container-l{
         width: 40%;
     }
 
-    .container h1{
+    .modal-add-user .container-l h2{
         margin-left: 0;
         margin-right: 0;
     }
 }
 
 @media screen and (max-width: 1090px) {
-    .container{
+    .modal-add-user .container-l{
         width: 50%;
     }
 }
 
 @media screen and (max-width: 990px) {
-    .container{
+    .modal-add-user .container-l{
         width: 60%;
     }
 }
 
 @media screen and (max-width: 890px) {
-    .container{
+    .modal-add-user .container-l{
         width: 70%;
     }
 }
 
 @media screen and (max-width: 790px) {
-    .container{
+    .modal-add-user .container-l{
         width: 80%;
     }
 }
 
 @media screen and (max-width: 690px) {
-    .container{
+    .modal-add-user .container-l{
         width: 90%;
     }
 }
 
 @media screen and (max-width: 590px) {
-    .container{
+    .modal-add-user .container-l{
         width: 100%;
     }
 }

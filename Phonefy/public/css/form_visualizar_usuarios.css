@@ -106,13 +106,12 @@ body{
     /* background-color: blueviolet; */
 
     display: flex;
+    justify-content:center;
     align-items: center;
-    justify-content:flex-end;
+    /* margin-bottom: 20px; */
 
-    
-
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
 
     gap: 7%;
 }
@@ -131,34 +130,34 @@ body{
 
 /* Responsividade */
 @media screen and (max-width: 1150px) {
-    .container {
+    .modal-view-user .container {
         width: 40%;
     }
-    .container .campo-titulo{
+    .modal-view-user .container .campo-titulo{
         margin-left: 10%;
     }
 }
 
 @media screen and (max-width: 1015px) {
-    .container {
+    .modal-view-user .container {
         width: 50%;
     }
 }
 
 @media screen and (max-width: 915px) {
-    .container {
+    .modal-view-user .container {
         width: 60%;
     }
 }
 
 @media screen and (max-width: 815px) {
-    .container {
+    .modal-view-user .container {
         width: 70%;
     }
 }
 
 @media screen and (max-width: 580px) {
-    .container {
+    .modal-view-user .container {
         width: 100%;
     }
 }
