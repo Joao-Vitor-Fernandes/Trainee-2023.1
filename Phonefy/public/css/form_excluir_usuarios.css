@@ -116,7 +116,11 @@ body{
 /* Responsividade */
 
 @media screen and (max-width: 400px) {
-    .container {
+    .delete-user-modal .container {
         width: 100%;
+    }
+
+    .delete-user-modal .campo-texto h3{
+        text-align: center;
     }
 }
