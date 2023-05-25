@@ -52,6 +52,8 @@ body{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        margin-top: 15px;
 }
 
 .modal-add-user .container-l h2{
