@@ -22,7 +22,7 @@ body{
     /* background-image: linear-gradient(purple, #41b6e6); */
 }
 
-.teste {
+.capsula {
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -39,7 +39,7 @@ body{
     align-items: center;
 }
 
-.teste2 {
+.contorno {
     width: 90%;
     position: absolute;
     top: 100px;
@@ -226,7 +226,7 @@ body{
 
 @media (max-width:950px)
 {
-    .teste2 {
+    .contorno {
         width: 60%;
     }
     #posts {
@@ -241,7 +241,7 @@ body{
 }
 
 @media (max-width:500px) {
-    .teste2 {
+    .contorno {
         width: 80%;
     }
     .blog-box {
@@ -250,7 +250,7 @@ body{
 }
 
 @media (max-width:380px) {
-    .teste2 {
+    .contorno {
         width: 90%;
     }
     .blog-box {
