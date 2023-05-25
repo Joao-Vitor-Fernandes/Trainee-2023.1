@@ -1,0 +1,139 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing   : border-box;
+}
+
+button{
+    /* margin-top: 3%; */
+    font-size: 14px;
+    height: 38px;
+    width: 140px;
+    border-radius: 15px;
+    background-color: #41B6E6;
+    color: #EEF0F2;
+}
+
+.caixa-titulo{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 1%;
+}
+
+.caixa-autor_data{
+    /* background-color: rebeccapurple; */
+    margin-left: 10%;
+    margin-right: 10%;
+
+    display: grid;
+    grid-template-columns: 70% 28%;
+    gap: 2%;
+}
+
+.caixa-selecao{
+    /* background-color: brown;
+    border: 1px solid yellow; */
+
+    margin-top: 1%;
+    justify-content: center;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.caixa-selecao input{
+    display: block;
+    width: 100%;
+    height: 28px;
+    margin-top: 1%;
+    border-radius: 8px;
+
+    padding: 0px 50px 10 20px;
+    font-size: 14px;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    /* margin-bottom: 15px; */
+    /* background-color: plum; */
+}
+
+.fieldset-conteudo{
+    margin-top: 2%;
+    /* margin-bottom: 7%; */
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content:center;
+    align-content: center;
+    align-items: left;
+    /* background-color: aquamarine; */
+}
+
+.caixa-conteudo{
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 15px;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    align-content: center;
+}
+
+.caixa-conteudo textarea{
+    resize: none; /* Desativa a opção de redimensionar o elemento */
+    overflow: auto; /* Adiciona uma barra de rolagem caso o conteúdo seja maior do que o tamanho definido */
+    width: 100%; 
+    height: 200px; 
+    max-width: 100%; /* Define a largura máxima da textarea em 50% da largura do contêiner pai */
+    max-height: 300px; /* Define a altura máxima da textarea em 300 pixels */
+    padding-left: 15px;
+    padding-top: 10px;
+    margin-top: 1%;
+    border-radius: 0.5em;
+
+    /* color: #EEF0F2; */
+}
+
+label{
+    font-size: 14px;
+    display: block;
+    color: #EEF0F2;
+}
+
+input[type="text"]{
+    padding-left: 10px;
+}
+
+input[type="date"]{
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+.custom-file-input{
+    background-color: #41B6E6;
+    color: #EEF0F2;
+}
+
+.custom-file-input{
+    width: 70%;
+    /* background-color: red; */
+
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+
+    /* margin-left: 10%; */
+    margin-right: 10%;
+    margin-top: 1%;
+    border-radius: 0.5em;
+
+    background-color: #41B6E6;
+    color: #EEF0F2;
+}

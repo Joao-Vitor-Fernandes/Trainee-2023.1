@@ -1,0 +1,228 @@
+body {
+    /* background-color: #6c78b6; */
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-image: linear-gradient(#232330, #21b6e6);
+}
+
+ion-icon {
+    color: white;
+    font-size: 30px;
+    display: block;
+    margin-left: 1%;
+    opacity: 90;
+}
+
+
+.individual-post {
+    /* background-color: red; */
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: white;
+    margin-top: 200px;
+    margin-bottom: 200px;
+
+    animation-name: individual-post-animation;
+    animation-duration: 2s;
+}
+
+
+.data-post {
+    /* background-color: green; */
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.data-post h4 {
+    display: inline-block;
+    text-align: justify;
+}
+
+.data-post h1 {
+    text-transform: uppercase;
+}
+
+.data-post img {
+    width: 80%;
+    border-radius: 1%;
+}
+
+.date-author {
+    /* background-color: darkmagenta; */
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.post-content {
+    /* background-color: blue; */
+    width: 95%;
+    margin-top: 60px;
+    text-align: center;
+
+    border-color: rgba(255, 255, 255, 0.5);
+    border-style: hidden hidden double hidden;
+}
+
+.post-content div {
+    display: inline-block;
+}
+
+
+.left-content {
+    /* background-color: coral; */
+    width: 20%;
+    padding-right: 20px;
+}
+
+.cute-icon {
+    width: 80%;
+    /* background-color: yellowgreen; */
+    display: block;
+    margin-top: 10px;
+    opacity: 50%;
+}
+
+.cute-icon ion-icon {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.veja-tambem {
+    background-color: #2a7494;
+    border-radius: 1%;
+}
+
+.veja-tambem ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.veja-tambem li {
+    padding: 15px 0px;
+}
+
+.veja-tambem a {
+    color: white;
+    text-decoration: none;
+}
+
+.veja-tambem img {
+    width: 80%;
+    border-radius: 1%;
+    padding: 5px;
+}
+
+
+
+.right-content {
+    /* background-color: blueviolet; */
+    width: 70%;
+    vertical-align: top;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.right-content h2 {
+    text-transform: uppercase;
+}
+
+.right-content img {
+    width: 100%;
+    border-radius: 1%;
+}
+
+
+.coments-post {
+    /* background-color: royalblue; */
+    width: 80%;
+    margin-top: 20px;
+    vertical-align: top;
+    text-align: left;
+}
+
+.coments-post h2 {
+    margin-top: 5px;
+}
+
+.individual-coment {
+    /* width: 80%; */
+    border-style: dotted;
+    border-color: white;
+    padding-left: 15px;
+    line-height: 5px;
+    margin-bottom: 20px;
+}
+
+
+.social-media-icon {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+}
+
+.social-media-icon ion-icon {
+    padding: 10px;
+}
+
+
+@keyframes individual-post-animation {
+    0% {
+        opacity: 0;
+        transform: translate(-20px,0px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px,0px);
+    }
+}
+
+@keyframes subscribe-post-amination {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
+
+@media (max-width:1000px) {
+    .individual-post {
+        position: relative;
+        margin-top: 150px;
+        margin-bottom: 150px;
+    }
+    .data-post {
+        width: 100%;
+    }
+    .post-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .left-content div {
+        /* visibility: hidden; */
+        display: none;
+    }
+
+    .right-content {
+        width: 90%;
+    }
+
+    .social-media-icon {
+        position: absolute;
+        bottom: -140px;
+    }
+
+    ion-icon {
+        font-size: 25px;
+    }
+
+}
