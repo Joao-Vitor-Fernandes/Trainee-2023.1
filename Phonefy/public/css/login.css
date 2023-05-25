@@ -6,12 +6,12 @@ body{
     
     
 }
-.teste2 {
+.div1 {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.teste{
+.div2{
     
     background-color: #232330;
     position:fixed;
