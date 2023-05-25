@@ -14,7 +14,25 @@ body{
     background-color: #2b4c63;
 }
 
-.container{
+.modal-edit-user {
+
+    all: initial;
+    contain: content;
+
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-edit-user .container{
     background-color: #2F2F3B;
     margin: 0 auto;
     border: solid #232330;
@@ -23,14 +41,14 @@ body{
     height: 75vh;
     width: 32vw;
 
-    margin-top: 10%;
-    margin-bottom: 10%;
+    /* margin-top: 10%;
+    margin-bottom: 10%; */
 
     display: grid;
-    grid-template-rows: 19% auto auto auto 19%;
+    grid-template-rows: 15% 21.25% 21.25% 21.25% 15%;
 }
 
-.container .campo-titulo{
+.modal-edit-user .container .campo-titulo{
     /* background-color: aqua; */
 
     margin-left: 5%;
@@ -41,32 +59,34 @@ body{
     align-items: center;
 }
 
-.campo-titulo h1{
+.modal-edit-user .campo-titulo h2{
     text-align: center;
     font-size: 25px;
 	letter-spacing: 3px;
     color: #EEF0F2;
 }
 
-.container .caixa-selecao{
-    /* background-color: red;
-    border: 1px solid blue; */
+.modal-edit-user .container .caixa-selecao{
+        /* background-color: red;
+        border: 1px solid blue; */
     margin-left: 10%;
     margin-right: 10%;
     justify-content: center;
 
     display: flex;
     flex-direction: column;
+
+    gap: 10px;
 }
 
-.caixa-selecao label{
+.modal-edit-user .caixa-selecao label{
     font-size: 16px;
     display: block;
     color: #EEF0F2;
     padding: 0px 50px 10 20px;
 }
 
-.caixa-selecao input{
+.modal-edit-user .caixa-selecao input{
     color: #232330;   
 
     margin-top: 1%;
@@ -80,7 +100,7 @@ body{
     padding: 0px 50px 0 20px;
 }
 
-.caixa-senha .botao-senha{
+.modal-edit-user .caixa-senha .botao-senha{
     display: flex;
     align-items: center;
     margin-left: -45px;
@@ -89,59 +109,60 @@ body{
     transition: .2s;
 }
 
-.container .campo-botoes{
+.modal-edit-user .container .campo-botoes{
     /* background-color: blueviolet; */
 
     display: flex;
-    justify-content: center;
-    margin-bottom: 3%;
+    justify-content:center;
+    align-items: center;
+    margin-bottom: 20px;
 
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
 
-    gap: 10%;
+    gap: 7%;
 }
 
-.campo-botoes .botao{
-    font-size:100%;
+.modal-edit-user .campo-botoes button{
+    font-size: 14px;    
     height: 38px;
     width: 140px;
-    border-radius: 8px;
+    border-radius: 15px;
     background-color: #41B6E6;
-    color: #EEF0F2;;
+    color: #EEF0F2;
 }
 
 
 /* Responsividade */
 @media screen and (max-width: 1150px) {
-    .container {
+    .modal-edit-user .container {
         width: 40%;
     }
-    .container .campo-titulo{
+    .modal-edit-user .container .campo-titulo{
         margin-left: 10%;
     }
 }
 
 @media screen and (max-width: 1015px) {
-    .container {
+    .modal-edit-user .container {
         width: 50%;
     }
 }
 
 @media screen and (max-width: 915px) {
-    .container {
+    .modal-edit-user .container {
         width: 60%;
     }
 }
 
 @media screen and (max-width: 815px) {
-    .container {
+    .modal-edit-user .container {
         width: 70%;
     }
 }
 
 @media screen and (max-width: 580px) {
-    .container {
+    .modal-edit-user .container {
         width: 100%;
     }
 }
