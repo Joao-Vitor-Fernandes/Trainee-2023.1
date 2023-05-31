@@ -83,5 +83,21 @@ class QueryBuilder
             die("Ocorreu um erro ao tentar excluir do banco de dados: {$e->getMessage()}");
         }
     }
+    public function select($table, $id){
+        $sql = sprintf(
+            'select * FROM %s WHERE %s',
+            $table, "id = :id"
+        );
+
+
+        try {
+            $statement = $this->pdo->prepare($sql);
+
+            $statement->execute(compact('id'));
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e){
+            die("Ocorreu um erro ao tentar buscar do banco de dados: {$e->getMessage()}");
+        }
+    }
 }
 
