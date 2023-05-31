@@ -37,4 +37,4 @@ function open_modal(b, m, s, i, route)
 load('../../../app/views/admin/view_modal.html', document.getElementsByClassName('load_modal')[0]);
 load('../../../app/views/admin/add_modal.view.php', document.getElementsByClassName('load_modal')[0]);
 load('../../../app/views/admin/edit_modal.html', document.getElementsByClassName('load_modal')[0]);
-load('../../../app/views/admin/delete_modal.html', document.getElementsByClassName('load_modal')[0]);
+load('../../../app/views/admin/delete_modal.view.php', document.getElementsByClassName('load_modal')[0]);

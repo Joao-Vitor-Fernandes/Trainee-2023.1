@@ -1,5 +1,5 @@
 <div id="delete-modal" class="modal">
-    <form class="modal-content-delete">
+    <form class="modal-content-delete"  action="admin/excluir" method="POST">
         <div class="modal-header-delete">
             <h1>Excluir Post</h1>
         </div>

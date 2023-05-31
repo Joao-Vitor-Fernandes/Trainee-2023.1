@@ -28,6 +28,14 @@ class PostController
 
         header('Location: /admin');
     }
+
+    public function delete_tabela_post(){
+        $id = $_POST['id'];
+
+        App::get('database')->delete('usuarios', $id);
+
+        header('Location: /admin');
+    }
     public function index()
     {
         return view('site/teste');

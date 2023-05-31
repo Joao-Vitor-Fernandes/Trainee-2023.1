@@ -44,4 +44,23 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+
+    
+    public function delete($table, $parameters){
+        $sql = sprintf(
+            'DELETE FROM %s WHERE $S',
+            $table,
+            'id = id    '
+        );
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute(compact('id'));
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
 }
