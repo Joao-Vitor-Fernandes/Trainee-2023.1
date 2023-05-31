@@ -41,15 +41,6 @@ class PostController
         return view('site/teste');
     }
 
-    public function show()
-    {
-
-    }
-
-    public function create()
-    {
- 
-    }
 
     public function store()
     {
@@ -66,8 +57,5 @@ class PostController
         
     }
 
-    public function delete()
-    {
- 
-    }
+   
 }
