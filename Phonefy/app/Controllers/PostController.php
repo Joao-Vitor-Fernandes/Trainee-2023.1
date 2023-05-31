@@ -41,16 +41,17 @@ class PostController
         return view('site/teste');
     }
 
+    public function editar_tabela_post()
+    {
+        
+    }
+
 
     public function store()
     {
 
     }
 
-    public function edit()
-    {
-  
-    }
 
     public function update()
     {
