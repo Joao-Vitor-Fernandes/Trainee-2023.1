@@ -10,7 +10,7 @@
 <body>
         <div id="modal-add-user" class="modal-add-user">
 
-            <form class="container-l">
+            <form class="container-l" action="create" method="POST">
                 <div class="titulo-l"><h2>Adicionar Usuário</h2></div>
                 <div class="caixa-selecao-l">
                     <label for="nome">Nome:</label>

@@ -24,8 +24,24 @@ class QueryBuilder
             $stmt->execute();
 
             return $stmt->fetchAll(PDO::FETCH_CLASS);
-        } catch (Exception $e) {
+        } 
+        catch (Exception $e) {
             die($e->getMessage());
+        }
+    }
+
+    public function insert($tables, $parameters)
+    {
+        $sql = sprintf(
+            'INSERT INTO %s (%s) VALUES (%s)',
+            $tables,
+            implode(", ", array_keys($parameters)), ":" . implode(", :", array_keys($parameters))
+        );
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute($parameters);
+        } catch (Exception $e) {
+            die("Erro ao tentar inserir no banco de dados: {$e->getMessage()}");
         }
     }
 }

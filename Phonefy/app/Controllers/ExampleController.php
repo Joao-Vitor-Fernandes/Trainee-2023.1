@@ -14,7 +14,7 @@ class ExampleController
 
     public function show()
     {
-
+        
     }
 
     public function create()

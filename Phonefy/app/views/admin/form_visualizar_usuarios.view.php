@@ -13,7 +13,7 @@
     
     <div id="modal-view-user" class="modal-view-user">
 
-            <form class="container">
+            <form class="container" action="lista_usuarios" method="GET">
                 <div class="campo-titulo"><h2>Dados do Usuário</h2></div>
 
                 <div class="caixa-selecao">

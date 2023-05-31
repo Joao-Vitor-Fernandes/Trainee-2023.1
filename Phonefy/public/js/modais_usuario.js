@@ -29,8 +29,8 @@ function open_modal(b, m, s, i)
     }
 }
 
-load('../../../app/views/admin/form_visualizar_usuarios.html', document.getElementsByClassName('load_modal')[0]);
-load('../../../app/views/admin/form_add_usuarios.html', document.getElementsByClassName('load_modal')[0]);
-load('../../../app/views/admin/form_edt_usuarios.html', document.getElementsByClassName('load_modal')[0]);
-load('../../../app/views/admin/form_excluir_usuarios.html', document.getElementsByClassName('load_modal')[0]);
+load('../../../app/views/admin/form_visualizar_usuarios.view.php', document.getElementsByClassName('load_modal')[0]);
+load('../../../app/views/admin/form_add_usuarios.view.php', document.getElementsByClassName('load_modal')[0]);
+load('../../../app/views/admin/form_edt_usuarios.view.php', document.getElementsByClassName('load_modal')[0]);
+load('../../../app/views/admin/form_excluir_usuarios.view.php', document.getElementsByClassName('load_modal')[0]);
 
