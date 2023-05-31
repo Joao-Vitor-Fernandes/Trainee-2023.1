@@ -7,7 +7,7 @@ use Exception;
 
 class PostController
 {
-    public function view_tabela_post(){
+    public function preenche_tabela_post(){
         $posts = App::get('database')->selectAll('posts');
         $tables = [
             'posts' => $posts,
