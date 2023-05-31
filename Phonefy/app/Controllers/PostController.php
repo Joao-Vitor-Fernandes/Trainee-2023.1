@@ -12,12 +12,12 @@ class PostController
         $tables = [
             'posts' => $posts,
         ];
-        return view('admin/modal', $tables);   //perguntar da var tables
+        return view('admin/modal', $tables);   
     }
 
     public function view_tabela_post(){
         $post = App::get('database')->select('posts', $id);
-        return view('admin/modal', $post);  //perguntar do admin/modal
+        return view('admin/modal', $post); 
     }
 
     public function create_tabela_post(){
