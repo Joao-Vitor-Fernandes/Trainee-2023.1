@@ -7,7 +7,7 @@ use Exception;
 
 class PostController
 {
-    public function view_tabela_post(){
+    public function preenche_tabela_post(){
         $posts = App::get('database')->selectAll('posts');
         $tables = [
             'posts' => $posts,
@@ -25,6 +25,14 @@ class PostController
         ];
 
         App::get('database')->insert('posts', $parameters);
+
+        header('Location: /admin');
+    }
+
+    public function delete_tabela_post(){
+        $id = $_POST['id'];
+
+        App::get('database')->delete('usuarios', $id);
 
         header('Location: /admin');
     }
