@@ -33,18 +33,19 @@
                 <th>Opções</th>
             </tr>
 
-            <?php require 'form_add_usuarios.view.php' ?>
-            <?php require 'form_visualizar_usuarios.view.php' ?>
-            <?php require 'form_excluir_usuarios.view.php' ?>
-            <?php require 'form_edt_usuarios.view.php' ?>
-            <?php foreach ($users as $user) : ?>
+            <?php 
+                require 'form_add_usuarios.view.php';
+                require 'form_visualizar_usuarios.view.php';
+                require 'form_excluir_usuarios.view.php';
+                require 'form_edt_usuarios.view.php';
+                foreach ($users as $user) : ?>
             <tr class="corpo">
                 <th><?=$user->id?></th>
                 <td><?=$user->name?></td>
                 <td class="icon">
-                    <button id="Visualiar" class="a" onclick="open_modal('Visualiar', 'modal-view-user', 'close', 1)"> <i class="fa fa-eye" alt="Visualiar"></i> </button>
-                    <button id="Editar" class="a" onclick="open_modal('Editar', 'modal-edit-user', 'close', 2)"><i class="fa fa-outdent" aria-hidden="true"></i></button>
-                    <button id="Deleter" class="a" onclick="open_modal('Excluir', 'delete-user-modal', 'close', 3)"><i class="fa fa-times" alt="Deletar"></i></button>
+                    <button id="Visualiar" class="a" onclick="open_modal('Visualiar', 'modal-view-user', 'close', 1, <?=$user->id?>)"> <i class="fa fa-eye" alt="Visualiar"></i> </button>
+                    <button id="Editar" class="a" onclick="open_modal('Editar', 'modal-edit-user', 'close', 2, <?=$user->id?>)"><i class="fa fa-outdent" aria-hidden="true"></i></button>
+                    <button id="Deleter" class="a" onclick="open_modal('Excluir', 'delete-user-modal', 'close', 3, <?=$user->id?>)"><i class="fa fa-times" alt="Deletar"></i></button>
                 </td>
             </tr>
             <?php endforeach; ?>

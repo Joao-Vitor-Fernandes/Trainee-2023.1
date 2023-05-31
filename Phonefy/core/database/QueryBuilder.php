@@ -44,4 +44,19 @@ class QueryBuilder
             die("Erro ao tentar inserir no banco de dados: {$e->getMessage()}");
         }
     }
+
+    public function delete($tables, $id)
+    {
+        $sql = sprintf(
+            'DELETE FROM %s WHERE %s',
+            $tables,
+            "id = :id"
+        );
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(compact('id'));
+        } catch (Exception $e) {
+            die("Erro ao tentar deletar no banco de dados: {$e->getMessage()}");
+        }
+    }
 }
