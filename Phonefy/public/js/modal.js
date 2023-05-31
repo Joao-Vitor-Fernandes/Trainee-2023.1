@@ -17,19 +17,19 @@ function open_modal(b, m, s, i, route)
     console.log('clicou');
 
     var previousURL = window.location.href; // Armazena a URL atual
-    history.pushState({}, '', route); //Modifica a url
+    //history.pushState({}, '', route); //Modifica a url
 
     span.onclick = function() {
         modal.style.display = "none";
         console.log('saiu');
         console.log(span);
-        history.replaceState({}, '', previousURL); // Restaura a URL anterior
+        //history.replaceState({}, '', previousURL); // Restaura a URL anterior
     }
 
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
-            history.replaceState({}, '', previousURL); // Restaura a URL anterior
+            //history.replaceState({}, '', previousURL); // Restaura a URL anterior
         }
     }
 }

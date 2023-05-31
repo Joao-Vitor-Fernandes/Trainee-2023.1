@@ -30,10 +30,10 @@
     </style>
 </head>
 <body>
-    <button id="a" onclick="open_modal('a', 'view-modal', 'close', 0)">Vizualizar Post</button>
-    <button id="b" onclick="open_modal('b', 'add-modal', 'close', 1)">Criar Post</button>
-    <button id="c" onclick="open_modal('c', 'edit-modal', 'close', 2)">Editar Post</button>
-    <button id="d" onclick="open_modal('d', 'delete-modal', 'close', 3)">Excluir Post</button>
+    <button id="a" onclick="open_modal('a', 'view-modal', 'close', 0, 'admin/visualizar')">Vizualizar Post</button>
+    <button id="b" onclick="open_modal('b', 'add-modal', 'close', 1, 'admin/adicionar')">Criar Post</button>
+    <button id="c" onclick="open_modal('c', 'edit-modal', 'close', 2, 'admin/editar')">Editar Post</button>
+    <button id="d" onclick="open_modal('d', 'delete-modal', 'close', 3, 'admin/excluir')">Excluir Post</button>
     
     <div class="load_modal"></div>
 

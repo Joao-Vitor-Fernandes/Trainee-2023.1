@@ -1,5 +1,5 @@
 <div id="add-modal" class="modal">
-    <form class="modal-content">
+    <form class="modal-content" action="admin/adicionar" method="POST">
         <div class="modal-header">
             <h1>Adicionar Post</h1>
         </div>
