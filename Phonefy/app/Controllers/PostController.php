@@ -32,7 +32,7 @@ class PostController
     public function delete_tabela_post(){
         $id = $_POST['id'];
 
-        App::get('database')->delete('usuarios', $id);
+        App::get('database')->delete('posts', $id);
 
         header('Location: /admin');
     }
@@ -43,7 +43,9 @@ class PostController
 
     public function editar_tabela_post()
     {
-        
+        App::post('database')->editar('posts', $id);
+
+        header('Location: /admin');
     }
 
 
