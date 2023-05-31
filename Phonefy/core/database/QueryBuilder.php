@@ -60,5 +60,28 @@ class QueryBuilder
             die("Ocorreu um erro ao tentar excluir do banco de dados: {$e->getMessage()}");
         }
     }
+
+    public function edit($id, $table, $parameter){
+        $sql = sprintf(
+            'UPDATE %s
+            SET %s
+            WHERE %s',
+            $table,
+            implode(',', array_map(function ($parameter){
+                return "{$parameter} = :{$parameter}";
+            }, array_keys($parameter))),
+            'id = :id'
+        );
+
+        $parameter['id'] = $id;
+
+        try {
+            $statement = $this->pdo->prepare($sql);
+
+            $statement->execute($parameter);
+        } catch (Exception $e){
+            die("Ocorreu um erro ao tentar excluir do banco de dados: {$e->getMessage()}");
+        }
+    }
 }
 

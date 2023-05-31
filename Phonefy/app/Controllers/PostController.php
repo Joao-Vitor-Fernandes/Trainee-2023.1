@@ -43,9 +43,21 @@ class PostController
 
     public function editar_tabela_post()
     {
-        App::post('database')->editar('posts', $id);
+        $parameters = [
+            'title' => $_POST['titulo'],
+            'author' => $_POST['autor'],
+            'created_at' => $_POST['data'],
+            'image' => $_POST['imagem'],
+            'content' => $_POST['conteudo'],
+        ];
 
         header('Location: /admin');
+
+        App::post('database')->edit($_POST['id'], 'posts', $parameters);
+
+        header('Location: /admin');
+
+
     }
 
 
