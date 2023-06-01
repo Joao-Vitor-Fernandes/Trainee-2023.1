@@ -7,11 +7,13 @@ function load(url, element)
     element.innerHTML += req.responseText;
 }
 
-function open_modal(b, m, s, i, route)
+function open_modal(b, m, s, i, id, testeinput)
 {
     btn = document.getElementById(b);
     modal = document.getElementById(m);
     span = document.getElementsByClassName(s)[i];
+
+    // document.querySelector("[name='id']").value = id;
 
     modal.style.display = "block";
     console.log('clicou');

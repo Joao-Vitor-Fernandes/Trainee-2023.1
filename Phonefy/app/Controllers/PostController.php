@@ -16,7 +16,7 @@ class PostController
     }
 
     public function create_tabela_post(){
-        $parameters = [
+            $parameters = [
             'title' => $_POST['titulo'],
             'author' => $_POST['autor'],
             'created_at' => $_POST['data'],
@@ -26,7 +26,7 @@ class PostController
 
         App::get('database')->insert('posts', $parameters);
 
-        header('Location: /admin');
+        header('Location: /admin/posts');
     }
 
     public function delete_tabela_post(){
@@ -34,7 +34,7 @@ class PostController
 
         App::get('database')->delete('usuarios', $id);
 
-        header('Location: /admin');
+        header('Location: /admin/posts');
     }
     public function index()
     {

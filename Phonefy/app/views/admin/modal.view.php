@@ -72,9 +72,9 @@
             <th><?=$post->id?></th>
             <td><?=$post->title?></td>
             <td class="icon">
-                <button id="a" onclick="open_modal('a', 'view-modal', 'close', 0, 'admin/visualizar')">Visualizar Post</button>
-                <button id="c" onclick="open_modal('c', 'edit-modal', 'close', 2, 'admin/editar')">Editar Post</button>
-                <button id="d" onclick="open_modal('d', 'delete-modal', 'close', 3, 'admin/excluir')">Excluir Post</button>
+                <button id="a" onclick="open_modal('a', 'view-modal', 'close', 0, 'admin/visualizar', <?=$post->id?>)">Visualizar Post</button>
+                <button id="c" onclick="open_modal('c', 'edit-modal', 'close', 2, 'admin/editar'), <?=$post->id?>">Editar Post</button>
+                <button id="d" onclick="open_modal('d', 'delete-modal', 'close', 3, 'admin/excluir', <?=$post->id?>)">Excluir Post</button>
                 <br> <!-- Quebra de linha adicionada -->
             </td>
         </tr>
