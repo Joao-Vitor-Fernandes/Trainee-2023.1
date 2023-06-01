@@ -45,22 +45,60 @@ class QueryBuilder
         }
     }
 
-    
-    public function delete($table, $parameters){
+    public function delete($table, $id){
         $sql = sprintf(
-            'DELETE FROM %s WHERE $S',
+            'DELETE FROM %s WHERE %s',
             $table,
-            'id = id    '
+            "id = :id"
         );
 
         try {
-            $stmt = $this->pdo->prepare($sql);
+            $statement = $this->pdo->prepare($sql);
 
-            $stmt->execute(compact('id'));
+            $statement->execute(compact('id'));
+        } catch (Exception $e){
+            die("Ocorreu um erro ao tentar excluir do banco de dados: {$e->getMessage()}");
+        }
+    }
 
-            return $stmt->fetchAll(PDO::FETCH_CLASS);
-        } catch (Exception $e) {
-            die($e->getMessage());
+    public function edit($id, $table, $parameter){
+        $sql = sprintf(
+            'UPDATE %s
+            SET %s
+            WHERE %s',
+            $table,
+            implode(',', array_map(function ($parameter){
+                return "{$parameter} = :{$parameter}";
+            }, array_keys($parameter))),
+            'id = :id'
+        );
+
+        $parameter['id'] = $id;
+
+        try {
+            $statement = $this->pdo->prepare($sql);
+
+            $statement->execute($parameter);
+        } catch (Exception $e){
+            die("Ocorreu um erro ao tentar excluir do banco de dados: {$e->getMessage()}");
+        }
+    }
+    public function select($table, $id){
+        $sql = sprintf(
+            'select * FROM %s WHERE %s',
+            $table, "id = :id"
+        );
+
+
+        try {
+            $statement = $this->pdo->prepare($sql);
+
+            $statement->execute(compact('id'));
+            //erro de sintaxe
+            //return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e){
+            die("Ocorreu um erro ao tentar buscar do banco de dados: {$e->getMessage()}");
         }
     }
 }
+

@@ -12,7 +12,13 @@ class PostController
         $tables = [
             'posts' => $posts,
         ];
-        return view('admin/modal', $tables);
+        return view('admin/modal', $tables);   
+    }
+
+    public function view_tabela_post(){
+        // erro de sintaxe
+        // $post = App::get('database')->select('posts', $id);
+        //return view('admin/modal', $post); 
     }
 
     public function create_tabela_post(){
@@ -32,7 +38,7 @@ class PostController
     public function delete_tabela_post(){
         $id = $_POST['id'];
 
-        App::get('database')->delete('usuarios', $id);
+        App::get('database')->delete('posts', $id);
 
         header('Location: /admin/posts');
     }
@@ -41,33 +47,23 @@ class PostController
         return view('site/teste');
     }
 
-    public function show()
+    public function editar_tabela_post()
     {
+        $parameters = [
+            'title' => $_POST['titulo'],
+            'author' => $_POST['autor'],
+            'created_at' => $_POST['data'],
+            'image' => $_POST['imagem'],
+            'content' => $_POST['conteudo'],
+        ];
 
-    }
+        header('Location: /admin');
 
-    public function create()
-    {
- 
-    }
+        //erro de sintaxe
+        //App::post('database')->edit($_POST['id'], 'posts', $parameters);
 
-    public function store()
-    {
+        header('Location: /admin');
 
-    }
 
-    public function edit()
-    {
-  
-    }
-
-    public function update()
-    {
-        
-    }
-
-    public function delete()
-    {
- 
-    }
+    } 
 }
