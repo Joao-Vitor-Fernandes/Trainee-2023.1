@@ -12,6 +12,7 @@ $router->get('show', 'UserController@show');
 
 $router->post('create', 'UserController@create');
 $router->post('delete', 'UserController@delete');
+$router->post('update', 'UserController@update');
 
 
 ?> 

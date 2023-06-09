@@ -1,45 +1,30 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visualizar Usuário</title>
+<div id="modal-view-user" class="modal-view-user">
 
-    <link rel="stylesheet" href="../../../public/css/form_visualizar_usuarios.css">
+    <form class="container">
+        <input type="hidden" name="id" value="" >
+        <div class="campo-titulo"><h2>Dados do Usuário</h2></div>
 
-</head>
-<body>
-    
-    <div id="modal-view-user" class="modal-view-user">
+        <div class="caixa-selecao">
+            <label for="nome"><strong>Nome:</strong></label>
+            <input type="text" placeholder="" value="" name="nome" readonly disabled>
+        </div>
 
-            <form class="container" action="lista_usuarios" method="GET">
-                <div class="campo-titulo"><h2>Dados do Usuário</h2></div>
+        <div class="caixa-selecao">
+            <label for="email"><strong>Email:</strong></label>
+            <input type="text" placeholder="" value="" name="email" readonly disabled>
+        </div>
 
-                <div class="caixa-selecao">
-                    <label for="nome"><strong>Nome:</strong></label>
-                    <input type="text" value="Maria Almeida" name="nome" id="nome" readonly disabled>
-                </div>
+        <div class="caixa-selecao">
+            <label for="senha"><strong>Senha:</strong></label>
+            <input type="value" placeholder="" value="" name="senha" readonly disabled>
+        </div>
 
-                <div class="caixa-selecao">
-                    <label for="email"><strong>Email:</strong></label>
-                    <input type="text" value="maria_almeida@gmail.com" name="email" id="email" readonly disabled>
-                </div>
+        <div class="campo-botoes">
+            <button class="close" type="button" onsubmit="">Fechar</button> 
+            <!-- <button class="close" type="button" onsubmit="">Cancelar</button>  -->
+            <!-- <button class="botao" type="button" onsubmit="">Editar</button> -->
+            <!-- <button class="botao" type="button" onsubmit="">Concluído</button>  -->
+        </div>
+    </form>
 
-                <div class="caixa-selecao">
-                    <label for="senha"><strong>Senha:</strong></label>
-                    <input type="value" value="senha123" name="senha" id="senha" readonly disabled>
-                </div>
-
-                <div class="campo-botoes">
-                    <button class="close" type="button" onsubmit="">Cancelar</button> 
-                    <button class="botao" type="button" onsubmit="">Editar</button>
-                    <button class="botao" type="button" onsubmit="">Concluído</button> 
-                </div>
-        </form>
-
-    </div>
-    
-
-</body>
-</html>
+</div>

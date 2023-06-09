@@ -18,7 +18,7 @@ class UserController
 
     public function show()
     {
-        return view('admin/form_visualizar_usuarios');
+        
     }
 
     public function create()
@@ -46,7 +46,15 @@ class UserController
 
     public function update()
     {
-        
+        $parameters = [
+            'name' => $_POST['nome'],
+            'email' => $_POST['email'],
+            'password' => $_POST['senha']
+        ];
+
+        app::get('database')->edit($_POST['id'], 'users', $parameters);
+
+        header('Location: /lista_de_usuarios');
     }
 
     public function delete()

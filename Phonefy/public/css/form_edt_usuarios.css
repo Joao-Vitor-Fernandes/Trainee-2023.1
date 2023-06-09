@@ -113,12 +113,12 @@ body{
     /* background-color: blueviolet; */
 
     display: flex;
-    justify-content:center;
+    justify-content:space-between;
     align-items: center;
     margin-bottom: 20px;
 
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 10%;
+    margin-right: 10%;
 
     gap: 7%;
 }

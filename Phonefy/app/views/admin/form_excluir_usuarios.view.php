@@ -1,31 +1,16 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Excluir Usuário</title>
+<div id="delete-user-modal" class="delete-user-modal">
 
-    <link rel="stylesheet" href="../../../public/css/form_excluir_usuarios.css">
+    <form class="container" action="delete" method="POST">
+        <input type="hidden" name="id" value="" >
 
-</head>
-<body>
+        <div class="campo-titulo"><h2>Excluir Usuário</h2></div>
 
-    <div id="delete-user-modal" class="delete-user-modal">
+        <div class="campo-texto"><h3>Deseja realmente excluir o usuário? Essa ação é definitiva</h3></div>
 
-        <form class="container" action="delete" method="POST">
-            <input type="hidden" name="id" value="" >
+        <div class="campo-botoes">
+            <button class="close" type="button" onsubmit="">Cancelar</button> 
+            <button class="botao" type="submit" onsubmit="">Confirmar</button> 
+        </div>
+    </form>
 
-            <div class="campo-titulo"><h2>Excluir Usuário</h2></div>
-
-            <div class="campo-texto"><h3>Deseja realmente excluir o usuário? Essa ação é definitiva</h3></div>
-
-            <div class="campo-botoes">
-                <button class="close" type="button" onsubmit="">Cancelar</button> 
-                <button class="botao" type="submit" onsubmit="">Confirmar</button> 
-            </div>
-        </form>
-
-    </div>
-</body>
-</html>
+</div>

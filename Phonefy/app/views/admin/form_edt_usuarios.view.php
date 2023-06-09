@@ -1,43 +1,28 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Usuário</title>
+<div id="modal-edit-user" class="modal-edit-user">
 
-    <link rel="stylesheet" href="../../../public/css/form_edt_usuarios.css">
+    <form id='coisa' class="container" action="update" method="POST">
+        <input type="hidden" name="id" value="" >
+        <div class="campo-titulo"><h2>Alterar Dados do Usuário</h2></div>
 
-</head>
-<body>
-    <div id="modal-edit-user" class="modal-edit-user">
+        <div class="caixa-selecao">
+            <label for="nome"><strong>Nome:</strong></label>
+            <input type="text" placeholder="Novo Nome" value="" name="nome" required>
+        </div>
 
-        <form class="container">
-            <div class="campo-titulo"><h2>Alterar Dados do Usuário</h2></div>
+        <div class="caixa-selecao">
+            <label for="email"><strong>Email:</strong></label>
+            <input type="text"  value="" name="email" required>
+        </div>
 
-            <div class="caixa-selecao">
-                <label for="nome"><strong>Nome:</strong> Maria Almeida</label>
-                <input type="text" placeholder="Novo Nome" name="nome" id="nome" required>
-            </div>
+        <div class="caixa-selecao">
+            <label for="senha"><strong>Senha:</strong></label>
+            <input type="password" placeholder="Nova Senha" value="" name="senha" required>
+        </div>
 
-            <div class="caixa-selecao">
-                <label for="email"><strong>Email:</strong> maria_almeidajf@gmail.com</label>
-                <input type="text" placeholder="Novo Email" name="email" id="email" required>
-            </div>
-
-            <div class="caixa-selecao">
-                <label for="senha"><strong>Senha:</strong></label>
-                <input type="password" placeholder="Nova Senha" name="senha" id="senha" required>
-            </div>
-
-            <div class="campo-botoes">
-                <button class="close" type="button" onsubmit="">Cancelar</button> 
-                <button class="botao" type="submit" onsubmit="">Concluído</button> 
-            </div>
+        <div class="campo-botoes">
+            <button class="close" type="button" onsubmit="">Cancelar</button> 
+            <button class="botao" type="submit" onsubmit="">Concluído</button> 
+        </div>
     </form>
 
-    </div>
-    
-
-</body>
-</html>
+</div>
