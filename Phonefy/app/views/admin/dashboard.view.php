@@ -10,6 +10,8 @@
 
     <body>
         <div class="dashboard">
+            <button class="sidebar-icon"><ion-icon name="chevron-forward-outline"></ion-icon></button>
+
             <div class="dashboard-nav">
                 <div class="icon-name">
                     <ion-icon name="grid"></ion-icon>
