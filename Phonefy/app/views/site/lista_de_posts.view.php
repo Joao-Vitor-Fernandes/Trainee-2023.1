@@ -32,18 +32,18 @@
                     
                     <div class="blog-image">
                         
-                        <a href="https://whiplash.net/materias/news_709/350367-queen.html" target="_blank"><img
+                        <a href="./posts/post_individual" target="_blank"><img
                                 src="../../../public/assets/queen.jpg" alt="Icone com imagem do Queen  "></a>
                         
                         <div class="blog-text">
                             <span> 17/04/2023 by Luiz Oliveira</span>
-                            <a href="https://whiplash.net/materias/news_709/350367-queen.html" target="_blank"
+                            <a href="./posts/post_individual" target="_blank"
                                 class="blog-title">O clássico
                                 do Queen cujo riff Brian May compôs "no topo de um vulcão"</a>
                             <p>Todo fã do lado roqueiro do Queen certamente conhece essa faixa, que abre seu quinto álbum,
                                 "A Day at the Races" (1976), e foi seu segundo single. Em entrevista para a Guitar World,
                                 May relembrou que compôs aquele riff em circunstâncias no mínimo extraordinárias.</p>
-                            <a href="https://whiplash.net/materias/news_709/350367-queen.html" target="_blank"  class="leia-mais">Leia Mais</a>
+                            <a href="./posts/post_individual" target="_blank"  class="leia-mais">Leia Mais</a>
                         
                         </div>
                     

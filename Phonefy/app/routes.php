@@ -16,4 +16,7 @@ $router->post('delete', 'UserController@delete');
 $router->post('update', 'UserController@update');
 
 $router->get('dashboard', 'FrontController@dashboard');
+
+$router->get('posts', 'FrontController@posts');
+$router->get('posts/post_individual', 'FrontController@post_individual');
 ?> 
