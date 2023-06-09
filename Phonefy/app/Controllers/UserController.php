@@ -31,7 +31,7 @@ class UserController
 
         app::get('database')->insert('users', $parameters);
 
-        header('Location: /lista_de_usuarios');
+        header('Location: /lista_usuarios');
     }
 
     public function store()
@@ -54,7 +54,7 @@ class UserController
 
         app::get('database')->edit($_POST['id'], 'users', $parameters);
 
-        header('Location: /lista_de_usuarios');
+        header('Location: /lista_usuarios');
     }
 
     public function delete()
@@ -62,6 +62,6 @@ class UserController
         $id = $_POST['id'];
         app::get('database')->delete('users', $id);
 
-        header('Location: /lista_de_usuarios');
+        header('Location: /lista_usuarios');
     }
 }

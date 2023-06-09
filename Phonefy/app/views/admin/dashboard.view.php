@@ -22,16 +22,16 @@
             </div>
 
             <div class="dashboard-main">
-                    <div class="card-page">
-                        <button class="card-post">
+                    <div class="card-page" >
+                        <a class="card" href="#">
                             <ion-icon name="reader-outline"></ion-icon>
                             <h2>Lista de Posts</h2>
-                        </button>
+                        </a>
         
-                        <button class="card-user">
-                            <ion-icon name="person-outline"></ion-icon>
-                            <h2>Lista de Usuários</h2>
-                        </button>
+                        <a class="card" href="./lista_usuarios">
+                                <ion-icon name="person-outline"></ion-icon>
+                                <h2>Lista de Usuários</h2>
+                        </a>
                     </div>
         
                     <div class="lasted-posts">
