@@ -30,7 +30,7 @@
     </style>
 </head>
 <body>
-    <button id="b" onclick="open_modal('b', 'add-modal', 'close', 1, 'admin/adicionar')">Criar Post</button>
+<button id="myBtn" class="add" onclick="modalAdd('add-modal')">Criar Post</button>
     
     <div class="load_modal"></div>
 
