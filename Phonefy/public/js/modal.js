@@ -27,7 +27,8 @@ function modalEdit(m, id, userName, email, password) {
 }
 
 function modalDelete(m, id) {
-    document.getElementsByName("id")[2].value = id;
+    console.log(id);
+    document.getElementById("delete-modal").querySelector("[name='id']").value = id;
 
     open_modal(m,2);
 }
