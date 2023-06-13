@@ -22,11 +22,23 @@ class PostController
     }
 
     public function create_tabela_post(){
-            $parameters = [
+
+        // Obtenha o nome original da imagem
+        $fileName = $_FILES['imagem']['name'];
+        // Obtenha a extensão do arquivo
+        $fileExtension = pathinfo($fileName, PATHINFO_EXTENSION);
+        // Gere um novo nome para o arquivo usando o título
+        $newFileName = $_POST['titulo'] . '_' . $fileName . '.' . $fileExtension;
+        // Defina o caminho completo do novo arquivo
+        $imagePath = 'imagens-posts/' . $newFileName;
+        // Mova o arquivo temporário para o diretório correto com o novo nome
+        move_uploaded_file($_FILES['imagem']['tmp_name'], $imagePath);
+
+        $parameters = [
             'title' => $_POST['titulo'],
             'author' => $_POST['autor'],
             'created_at' => $_POST['data'],
-            'image' => $_POST['imagem'],
+            'image' => $imagePath,
             'content' => $_POST['conteudo'],
         ];
 
