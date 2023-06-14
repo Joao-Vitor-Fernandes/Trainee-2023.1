@@ -1,4 +1,7 @@
 .modal {
+    all: initial;
+    contain: content;
+
     display: none; 
     position: fixed; 
     z-index: 1; 
@@ -133,6 +136,16 @@
   align-items: center;
 
   gap: 10%;
+}
+
+.modal-footer-delete button{
+  /* margin-top: 3%; */
+  font-size: 14px;
+  height: 38px;
+  width: 140px;
+  border-radius: 15px;
+  background-color: #41B6E6;
+  color: #EEF0F2;
 }
 
 

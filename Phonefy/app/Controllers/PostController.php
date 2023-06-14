@@ -14,7 +14,26 @@ class PostController
             'posts' => $posts,
             'users' => $users,
         ];
-        return view('admin/modal', $tables);   
+
+        // Associar o nome do autor aos posts(autor é o id do user)
+        foreach ($posts as $post) {
+        $author = $this->getUserById($users, $post->author);
+        $post->author_name = $author->name;
+    }
+
+        return view('admin/lista_de_posts', $tables);   
+    }
+
+    // Função auxiliar para buscar o usuário pelo ID
+    private function getUserById($users, $userId)
+    {
+        foreach ($users as $user) {
+            if ($user->id === $userId) {
+                return $user;
+            }
+        }
+
+        return null; // Caso o usuário não seja encontrado
     }
 
     public function view_tabela_post(){
