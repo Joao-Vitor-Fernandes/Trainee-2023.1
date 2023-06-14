@@ -92,19 +92,43 @@ class PostController
             'title' => $_POST['titulo'],
             'author' => $_POST['autor'],
             'created_at' => $_POST['data'],
-            'image' => $_POST['imagem'],
             'content' => $_POST['conteudo'],
         ];
 
-        var_dump($_POST['id']);
+        // Verificar se um novo arquivo de imagem foi enviado
+        if ($_FILES['imagem']['size'] > 0) {
+            // Obter informações sobre o arquivo de imagem enviado
+            $fileName = $_FILES['imagem']['name'];
+            $fileExtension = pathinfo($fileName, PATHINFO_EXTENSION);
+            $newFileName = $_POST['titulo'] . '_' . $fileName;
+            $imageDirectory = 'imagens-posts/';
 
-        //erro de sintaxe
+            // Criar o diretório se não existir
+            if (!file_exists($imageDirectory)) {
+                mkdir($imageDirectory, 0755, true);
+            }
+
+            // Mover o arquivo temporário para o diretório com o novo nome
+            $imagePath = $imageDirectory . $newFileName;
+            
+            // Excluir a imagem antiga, se existir
+            $oldImagePath = $_POST['image'];
+            if (file_exists($oldImagePath)) {
+                unlink($oldImagePath);
+            }
+
+            move_uploaded_file($_FILES['imagem']['tmp_name'], $imagePath);
+
+            // Atualizar o parâmetro 'image' com o novo caminho
+            $parameters['image'] = $imagePath;
+        }
+
         App::get('database')->edit($_POST['id'], 'posts', $parameters);
 
         header('Location: /admin/posts');
+    }
 
 
-    } 
 
     public function exibirImagem($filename)
 {

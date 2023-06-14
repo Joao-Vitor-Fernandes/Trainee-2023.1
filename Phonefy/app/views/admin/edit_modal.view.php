@@ -1,5 +1,5 @@
 <div id="edit-modal" class="modal">
-    <form class="modal-content" action="posts/editar" method="POST">
+    <form class="modal-content" action="posts/editar" enctype="multipart/form-data" method="POST">
     <input type="hidden" name="id" value="" >
         <div class="modal-header">
             <h1>Editar Post</h1>
@@ -33,11 +33,6 @@
             <div class="caixa-conteudo">
                 <label for="imagem">Imagem:</label>
                 <input type="file" class="custom-file-input" id="imagem" name="imagem" accept=".jpg, .jpeg, .png, .gif">
-                <!-- <div class="imagem-container">
-                        <a href="" target="_blank">
-                            <img id="imagem-preview" src="" alt="Imagem" readonly disabled>
-                        </a>
-                </div> -->
             </div>
         
                 <div class="caixa-conteudo">
