@@ -32,7 +32,8 @@
     
                 <div class="caixa-conteudo">
                     <label for="imagem">Imagem:</label>
-                    <input type="file" class="custom-file-input" id="imagem" name="imagem" accept=".jpg, .jpeg, .png, .gif">
+                    <!-- <input type="file" class="custom-file-input" id="imagem" name="imagem" accept=".jpg, .jpeg, .png, .gif"> -->
+                    <img id="imagem-preview" src="" alt="Imagem" readonly disabled>
                 </div>
         
                 <div class="caixa-conteudo">

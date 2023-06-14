@@ -49,7 +49,13 @@ class PostController
         // Obtenha a extensão do arquivo
         $fileExtension = pathinfo($fileName, PATHINFO_EXTENSION);
         // Gere um novo nome para o arquivo usando o título
-        $newFileName = $_POST['titulo'] . '_' . $fileName . '.' . $fileExtension;
+        $newFileName = $_POST['titulo'] . '_' . $fileName;
+
+        
+        $imageDirectory = 'imagens-posts/';
+        if (!file_exists($imageDirectory)) {
+            mkdir($imageDirectory, 0755, true); // Cria o diretório com permissões adequadas
+        }
         // Defina o caminho completo do novo arquivo
         $imagePath = 'imagens-posts/' . $newFileName;
         // Mova o arquivo temporário para o diretório correto com o novo nome
