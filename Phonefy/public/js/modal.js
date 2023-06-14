@@ -1,4 +1,4 @@
-load('../../../app/views/admin/view_modal.html', document.getElementsByClassName('load_modal')[0]);
+load('../../../app/views/admin/view_modal.view.php', document.getElementsByClassName('load_modal')[0]);
 load('../../../app/views/admin/edit_modal.view.php', document.getElementsByClassName('load_modal')[0]);
 load('../../../app/views/admin/delete_modal.view.php', document.getElementsByClassName('load_modal')[0]);
 load('../../../app/views/admin/add_modal.view.php', document.getElementsByClassName('load_modal')[0]);
@@ -20,12 +20,12 @@ function modalEdit(m, id, titulo, autor, data, imagem, conteudo) {
 
     console.log(i);
 
-    document.getElementById("edit-modal").querySelector("[name='id']").value = id;
-    document.getElementById("edit-modal").querySelector("[name='titulo']").value = titulo;
-    document.getElementById("edit-modal").querySelector("[name='autor']").value = autor;
-    document.getElementById("edit-modal").querySelector("[name='data']").value = data;
-    //document.getElementById("edit-modal").querySelector("[name='imagem']").value = imagem;
-    document.getElementById("edit-modal").querySelector("[name='conteudo']").value = conteudo;
+    document.getElementById(m).querySelector("[name='id']").value = id;
+    document.getElementById(m).querySelector("[name='titulo']").value = titulo;
+    document.getElementById(m).querySelector("[name='autor']").value = autor;
+    document.getElementById(m).querySelector("[name='data']").value = data;
+    //  document.getElementById("edit-modal").querySelector("[name='imagem']").value = imagem;
+    document.getElementById(m).querySelector("[name='conteudo']").value = conteudo;
 
 
     open_modal(m,i);

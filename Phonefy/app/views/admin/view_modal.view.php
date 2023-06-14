@@ -1,5 +1,6 @@
 <div id="view-modal" class="modal">
     <form class="modal-content">
+        <input type="hidden" name="id" value="" >
         <div class="modal-header">
             <h1>Meu Post</h1>
         </div>
