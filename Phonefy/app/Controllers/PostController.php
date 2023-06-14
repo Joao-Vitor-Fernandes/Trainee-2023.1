@@ -9,8 +9,10 @@ class PostController
 {
     public function preenche_tabela_post(){
         $posts = App::get('database')->selectAll('posts');
+        $users = App::get('database')->selectAll('users');
         $tables = [
             'posts' => $posts,
+            'users' => $users,
         ];
         return view('admin/modal', $tables);   
     }

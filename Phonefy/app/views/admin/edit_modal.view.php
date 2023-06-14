@@ -15,7 +15,12 @@
             <div class="caixa-autor_data">
                 <div class="caixa-selecao">
                     <label for="autor">Autor:</label>
-                    <input type="text" name="autor" id="autor" value="vagalume.com" required>
+                    <!-- <input type="text" name="autor" id="autor" value="vagalume.com" required> -->
+                    <select name="autor" id="autor" required>
+                        <option value="valor1" selected>Autor 1</option>
+                        <option value="valor2">Autor 2</option>
+                        <option value="valor3">Autor 3</option>
+                    </select>
                 </div>
                 
                 <div class="caixa-selecao">
@@ -28,7 +33,7 @@
                 <div class="caixa-conteudo">
                     <label for="imagem">Imagem:</label>
                     <input type="file" class="custom-file-input" id="imagem" name="imagem" accept=".jpg, .jpeg, .png, .gif">
-                    <img id="imagem-preview" src="" alt="Prévia da imagem">
+                    <!-- <img id="imagem-preview" src="" alt="Prévia da imagem"> -->
                 </div>
         
                 <div class="caixa-conteudo">

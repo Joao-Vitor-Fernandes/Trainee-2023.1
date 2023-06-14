@@ -30,7 +30,7 @@
     </style>
 </head>
 <body>
-<button id="myBtn" class="add" onclick="modalAdd('add-modal')">Criar Post</button>
+<button id="myBtn" class="add" onclick="modalAdd('add-modal', <?= htmlspecialchars(json_encode($users)) ?>)">Criar Post</button>
     
     <div class="load_modal"></div>
 
@@ -72,8 +72,8 @@
             <th><?=$post->id?></th>
             <td><?=$post->title?></td>
             <td class="icon">
-            <button id="view" class="a" onclick="modalEdit('view-modal', <?=$post->id?>, '<?=$post->title?>', <?=$post->author?>, '<?=$post->created_at?>', '<?=$post->image?>', '<?=$post->content?>')">Visualizar Post</button>
-                <button id="edit" class="a" onclick="modalEdit('edit-modal', <?=$post->id?>, '<?=$post->title?>', <?=$post->author?>, '<?=$post->created_at?>', '<?=$post->image?>', '<?=$post->content?>')">Editar Post</button>
+            <button id="view" class="a" onclick="modalEdit('view-modal', <?=$post->id?>, '<?=$post->title?>', <?=$post->author?>, '<?=$post->created_at?>', '<?=$post->image?>', '<?=$post->content?>', <?= htmlspecialchars(json_encode($users)) ?>)">Visualizar Post</button>
+                <button id="edit" class="a" onclick="modalEdit('edit-modal', <?=$post->id?>, '<?=$post->title?>', <?=$post->author?>, '<?=$post->created_at?>', '<?=$post->image?>', '<?=$post->content?>', <?= htmlspecialchars(json_encode($users)) ?>)">Editar Post</button>
                 <button id="Deleter" class="a" onclick="modalDelete('delete-modal', <?=$post->id?>)">Excluir Post</button>
                 <br> <!-- Quebra de linha adicionada -->
             </td>

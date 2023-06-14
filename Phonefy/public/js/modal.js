@@ -13,32 +13,79 @@ function load(url, element)
 }
 
 // Indices baseados na sequencia que é chamado as funcoes 'load'
-function modalEdit(m, id, titulo, autor, data, imagem, conteudo) {
+function modalEdit(m, id, titulo, autor, data, imagem, conteudo, users) {
     if(m == 'view-modal'){ i = 0;}
     else if (m == 'edit-modal'){ i = 1;}
     else {console.log("Erro no indice");}
 
-    console.log(i);
-
+    //----Preenchendo os valores no modal
     document.getElementById(m).querySelector("[name='id']").value = id;
     document.getElementById(m).querySelector("[name='titulo']").value = titulo;
-    document.getElementById(m).querySelector("[name='autor']").value = autor;
     document.getElementById(m).querySelector("[name='data']").value = data;
     //  document.getElementById("edit-modal").querySelector("[name='imagem']").value = imagem;
     document.getElementById(m).querySelector("[name='conteudo']").value = conteudo;
+
+    //----Preenchendo os autores no modal
+    //Se for o modal visualizar
+    if (i == 0) {
+        // Encontrar o nome do autor com base no ID
+        var autorName = '';
+        for (var j = 0; j < users.length; j++) {
+            var user = users[j];
+            if (user.id == autor) {
+                autorName = user.name;
+                break;
+            }
+        }
+        // Atribuir o nome do autor ao campo no modal
+        document.getElementById(m).querySelector("[name='autor']").value = autorName;
+    }
+    
+    //Se for o modal editar
+    else if(i ==1){
+        var autorSelect = document.getElementById(m).querySelector("[name='autor']");
+        autorSelect.innerHTML = ''; // Limpa as opções existentes
+
+        for (var j = 0; j < users.length; j++) {
+            var user = users[j];
+            var option = document.createElement('option');
+            option.value = user.id;
+            option.textContent = user.name;
+            if (user.id == autor) {
+                option.selected = true; // Define a opção selecionada
+            }
+            autorSelect.appendChild(option);
+        }
+    }
+    
 
 
     open_modal(m,i);
 }
 
 function modalDelete(m, id) {
-    console.log(id);
     document.getElementById("delete-modal").querySelector("[name='id']").value = id;
 
     open_modal(m,2);
 }
 
-function modalAdd(m) {
+function modalAdd(m, users) {
+
+    //Preenchendo os autores no modal
+    var autorSelect = document.getElementById(m).querySelector("[name='autor']");
+    autorSelect.innerHTML = ''; // Limpa as opções existentes
+
+    for (var j = 0; j < users.length; j++) {
+        var user = users[j];
+        var option = document.createElement('option');
+        option.value = user.id;
+        option.textContent = user.name;
+        if (user.id == autor) {
+            option.selected = true; // Define a opção selecionada
+        }
+        autorSelect.appendChild(option);
+    }
+
     open_modal(m,3);
 }
 
