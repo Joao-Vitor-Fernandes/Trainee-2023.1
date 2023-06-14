@@ -22,7 +22,6 @@ function modalEdit(m, id, titulo, autor, data, imagem, conteudo, users) {
     document.getElementById(m).querySelector("[name='id']").value = id;
     document.getElementById(m).querySelector("[name='titulo']").value = titulo;
     document.getElementById(m).querySelector("[name='data']").value = data;
-    //  document.getElementById("edit-modal").querySelector("[name='imagem']").value = imagem;
     document.getElementById(m).querySelector("[name='conteudo']").value = conteudo;
 
     //----Preenchendo os autores no modal
@@ -56,6 +55,16 @@ function modalEdit(m, id, titulo, autor, data, imagem, conteudo, users) {
             }
             autorSelect.appendChild(option);
         }
+    }
+    
+    if(i ==0){
+        // ----Atualizar a imagem no modal visualizar
+        var imagemContainer = document.getElementById(m).querySelector(".imagem-container");
+        var link = imagemContainer.querySelector("a");
+        var imagemPreview = imagemContainer.querySelector("img");
+
+        link.href = "../../" + imagem;
+        imagemPreview.src = "../../" + imagem;   
     }
     
 

@@ -105,4 +105,16 @@ class PostController
 
 
     } 
+
+    public function exibirImagem($filename)
+{
+    $path = __DIR__ . '/../imagens-posts/' . $filename;
+    if (file_exists($path)) {
+        header('Content-Type: image/jpeg'); // Defina o tipo de conteúdo correto para o tipo de imagem
+        readfile($path);
+    } else {
+        http_response_code(404); // Retorne um código de resposta 404 se a imagem não for encontrada
+        echo 'Imagem não encontrada';
+    }
+}
 }

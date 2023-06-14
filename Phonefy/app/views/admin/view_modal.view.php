@@ -31,9 +31,13 @@
             <fieldset class="fieldset-conteudo">
     
                 <div class="caixa-conteudo">
-                    <label for="imagem">Imagem:</label>
+                    <!-- <label for="imagem">Imagem:</label> -->
                     <!-- <input type="file" class="custom-file-input" id="imagem" name="imagem" accept=".jpg, .jpeg, .png, .gif"> -->
-                    <img id="imagem-preview" src="" alt="Imagem" readonly disabled>
+                    <div class="imagem-container">
+                        <a href="" target="_blank">
+                            <img id="imagem-preview" src="" alt="Imagem" readonly disabled>
+                        </a>
+                    </div>
                 </div>
         
                 <div class="caixa-conteudo">
