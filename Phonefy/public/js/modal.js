@@ -13,15 +13,20 @@ function load(url, element)
 }
 
 // Indices baseados na sequencia que é chamado as funcoes 'load'
-function modalEdit(m, id, userName, email, password) {
-    if(m == 'modal-view-user'){ i = 0;}
-    else if (m == 'modal-edit-user'){ i = 1;}
+function modalEdit(m, id, titulo, autor, data, imagem, conteudo) {
+    if(m == 'view-modal'){ i = 0;}
+    else if (m == 'edit-modal'){ i = 1;}
     else {console.log("Erro no indice");}
 
-    document.getElementsByName("id")[i].value = id;
-    document.getElementsByName("nome")[i].value = userName;
-    document.getElementsByName("email")[i].value = email;
-    document.getElementsByName("senha")[i].value = password;
+    console.log(i);
+
+    document.getElementById("edit-modal").querySelector("[name='id']").value = id;
+    document.getElementById("edit-modal").querySelector("[name='titulo']").value = titulo;
+    document.getElementById("edit-modal").querySelector("[name='autor']").value = autor;
+    document.getElementById("edit-modal").querySelector("[name='data']").value = data;
+    //document.getElementById("edit-modal").querySelector("[name='imagem']").value = imagem;
+    document.getElementById("edit-modal").querySelector("[name='conteudo']").value = conteudo;
+
 
     open_modal(m,i);
 }

@@ -69,12 +69,12 @@ class PostController
             'content' => $_POST['conteudo'],
         ];
 
-        header('Location: /admin');
+        var_dump($_POST['id']);
 
         //erro de sintaxe
-        //App::post('database')->edit($_POST['id'], 'posts', $parameters);
+        App::get('database')->edit($_POST['id'], 'posts', $parameters);
 
-        header('Location: /admin');
+        header('Location: /admin/posts');
 
 
     } 
