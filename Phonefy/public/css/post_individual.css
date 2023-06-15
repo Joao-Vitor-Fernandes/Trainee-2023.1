@@ -22,8 +22,8 @@ ion-icon {
     align-items: center;
 
     color: white;
-    margin-top: 200px;
-    margin-bottom: 200px;
+    margin-top: 9rem;
+    margin-bottom: 10rem;
 
     animation-name: individual-post-animation;
     animation-duration: 2s;
@@ -67,8 +67,8 @@ ion-icon {
     margin-top: 60px;
     text-align: center;
 
-    border-color: rgba(255, 255, 255, 0.5);
-    border-style: hidden hidden double hidden;
+    /* border-color: rgba(255, 255, 255, 0.5);
+    border-style: hidden hidden double hidden; */
 }
 
 .post-content div {
