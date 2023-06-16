@@ -155,7 +155,19 @@ option {
   background-color: white;
 }
 
+.imagem-container {
+    display: flex;
+    justify-content:first baseline;
+    align-items: right;
+  }
+
 .imagem-container a img {
     width: 100px;
     height: 50px;
+}
+
+.modal-content input[readonly][disabled],
+.modal-content textarea[readonly][disabled] {
+    color: #2b4c63;
+    font-weight: bold;
 }
