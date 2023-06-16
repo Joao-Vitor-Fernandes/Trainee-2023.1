@@ -29,6 +29,8 @@ h1{
     color: white;
     position: sticky; /*fixar cabeçalho - deixar colado*/
     top: -1px;
+
+    height: 40px;
 }
 
 .corpo{
@@ -66,8 +68,9 @@ caption{
 
 table {
     background-color: antiquewhite;
-    width: 900px;
-    height: 300px;
+    width: 90%;
+    /* width: 900px; */
+    /* height: 300px; */
     margin: 0 auto;
     border-collapse: collapse;
     border: none;
