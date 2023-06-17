@@ -6,7 +6,7 @@ use App\Core\App;
 
 use Exception;
 
-class login_controller extends controller
+class LoginController extends controller
 {
     public function __construct()
     {
@@ -15,15 +15,16 @@ class login_controller extends controller
 
     public function index()
     {
-        return view(site/login);
+        return view(phonefy/login);
     }
 
     public function autenticacao()
     {
-    $usuario = filter_input(INPUT_POST, 'usuario', FILTER_SANITIZE_SPECIAL_CHARS);
+    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
     $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_SPECIAL_CHARS);
-    $user = User::where('email', $usuario)->where('senha', $senha)->first();
-    if(user->id)
+    // $user = User::where('email', $email)->where('senha', $senha)->first();
+    $id = App::get('database')->autenticar('users', $email, $senha);
+    if(if $id > 0)
     {
         $_SESSION['logado'] = $user;
         return redirect('dashboard');

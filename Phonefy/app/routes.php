@@ -1,8 +1,11 @@
 <?php
 
-use App\Controllers\ExampleController;
+use App\Controllers\LoginController;
 use App\Core\Router;
 
-$router->get('index', 'ExampleController@index');
+//Login
+$router->get('login', 'LoginController@index');
+$router->get('logar', 'LoginController@autenticacao');
+$router->get('logout', 'LoginController@logout');
 
 ?> 

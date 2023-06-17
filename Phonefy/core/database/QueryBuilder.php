@@ -14,18 +14,17 @@ class QueryBuilder
         $this->pdo = $pdo;
     }
 
-    public function selectAll($table)
+    public function autenticar($table, $email, $senha)
     {
-        $sql = "select * from {$table}";
-
+        $sql = "select id from {$table} where email = {$email} and senha = {$senha}";
         try {
-            $stmt = $this->pdo->prepare($sql);
-
-            $stmt->execute();
-
-            return $stmt->fetchAll(PDO::FETCH_CLASS);
+            $statement = $this->pdo->prepare($sql);
+            $statement->execute();
+            return $stmt->fecthOne(PDO::FETCH_ASSOC);
         } catch (Exception $e) {
             die($e->getMessage());
         }
     }
+
+   
 }
