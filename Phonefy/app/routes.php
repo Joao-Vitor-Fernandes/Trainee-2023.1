@@ -3,6 +3,7 @@
 use App\Controllers\ExampleController;
 use App\Controllers\PostController;
 use App\Controllers\UserController;
+use App\Controllers\SiteController;
 use App\Core\Router;
 
 //Posts
@@ -18,6 +19,8 @@ $router->get('admin/usuarios', 'UserController@view_usuarios');
 $router->post('admin/usuarios/create', 'UserController@create_usuarios');
 $router->post('admin/usuarios/delete', 'UserController@delete_usuarios');
 $router->post('admin/usuarios/update', 'UserController@update_usuarios');
+
+$router->get('phonefy/posts', 'SiteController@posts');
 
 
 ?> 
