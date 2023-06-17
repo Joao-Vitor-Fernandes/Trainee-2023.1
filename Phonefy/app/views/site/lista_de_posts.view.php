@@ -39,7 +39,7 @@
                             <span> <?=$post->created_at?> by <?=$post->author_name?></span>
                             <a href="https://whiplash.net/materias/news_709/350367-queen.html" target="_blank"
                                 class="blog-title"><?=$post->title?></a>
-                            <p><?=$post->content?></p>
+                            <p><?=nl2br($post->content)?></p>
                             <a href="https://whiplash.net/materias/news_709/350367-queen.html" target="_blank"  class="leia-mais">Leia Mais</a>
                         
                         </div>

@@ -90,6 +90,7 @@ body{
 
 .blog-box{
     display:flexbox;
+    height: 600px;
     /* width: 399px; */
     width: 28%;
     object-position: center;
