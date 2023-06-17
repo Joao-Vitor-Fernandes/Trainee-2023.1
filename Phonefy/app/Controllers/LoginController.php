@@ -24,7 +24,7 @@ class LoginController extends controller
     $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_SPECIAL_CHARS);
     // $user = User::where('email', $email)->where('senha', $senha)->first();
     $id = App::get('database')->autenticar('users', $email, $senha);
-    if(if $id > 0)
+    if($id > 0)
     {
         $_SESSION['logado'] = $user;
         return redirect('dashboard');
