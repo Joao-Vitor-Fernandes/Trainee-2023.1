@@ -15,7 +15,7 @@ class LoginController extends controller
 
     public function index()
     {
-        return view(phonefy/login);
+        return view('phonefy/login');
     }
 
     public function autenticacao()
