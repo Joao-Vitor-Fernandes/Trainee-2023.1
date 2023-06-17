@@ -159,10 +159,11 @@ body{
 
 /* Hover */
 
-.search-box:hover > .search-txt{
-    padding-left: 15px;
-    width: 300px;
-    transition: 1s;
+.search-box:hover > .search-txt,
+.search-box > .search-txt:focus {
+  padding-left: 15px;
+  width: 300px;
+  transition: 1s;
 }
 
 .blog-text a:hover{

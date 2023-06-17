@@ -36,7 +36,7 @@
     
                 <div class="caixa-conteudo">
                     <label for="imagem">Imagem:</label>
-                    <input type="file" class="custom-file-input" id="imagem" name="imagem" accept=".jpg, .jpeg, .png, .gif">
+                    <input type="file" class="custom-file-input" id="imagem" name="imagem" accept=".jpg, .jpeg, .png, .gif" required>
                 </div>
         
                 <div class="caixa-conteudo">
