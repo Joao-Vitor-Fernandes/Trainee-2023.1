@@ -24,7 +24,7 @@
         <div class="logo" data-aos="fade-up">
             <img src="../../../public/assets/logo_circular.png" alt="some text" width="140" height="120">
         </div>
-    
+    <form action="logar" method="GET">
         <div class="div2" data-aos="fade-up">
         <!--    <ul>
                 <img src="logo_circular.png" alt="some text" width="100" height="80">
@@ -40,7 +40,7 @@
               <button class="entrar" type="submit">Entrar</button>
               
               <button class="cadastro"><a>Novo Cadastro</a></button>
-              
+    </form>
               
         </div> 
     </div>
