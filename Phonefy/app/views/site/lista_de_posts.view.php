@@ -16,10 +16,10 @@
     <div class="capsula">
         <div class="contorno">
             <div class="search-box">
-                <input type="text" class="search-txt" placeholder="Pesquisar">
-                <a href="" class="search-btn">
+                <input type="search" class="search-txt" placeholder="Pesquisar" id="pesquisar">
+                <button onclick="searchData()" class="search-btn" id="searchButton">
                     <img src="../../../public/assets/lupa.svg" alt="Lupa" height="20px" width="20px">
-                </a>
+                </button>
             </div>
         </div>
 
@@ -52,5 +52,27 @@
         </div>
     </div>
 </body>
+
+<!-- Script da Barra de Pesquisa -->
+<?php 
+    if (!empty($pesquisa) && empty($posts)):
+        header('Location: /home/lista-posts');
+    endif;
+?>
+
+<script>
+    var search = document.getElementById('pesquisar');
+
+    search.addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            searchData();
+        }
+    });
+
+    function searchData() {
+        var pesquisa = search.value;
+        window.location = '/home/lista-posts/search?busca=' + pesquisa;
+    }
+</script>
 
 </html>

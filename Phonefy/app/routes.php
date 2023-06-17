@@ -5,6 +5,7 @@ use App\Controllers\PostController;
 use App\Controllers\UserController;
 use App\Core\Router;
 
+//--------Admin--------//
 //Posts
 $router->get('admin/posts', 'PostController@preenche_tabela_post');
 $router->post('admin/posts/adicionar', 'PostController@create_tabela_post');
@@ -19,7 +20,9 @@ $router->post('admin/usuarios/create', 'UserController@create_usuarios');
 $router->post('admin/usuarios/delete', 'UserController@delete_usuarios');
 $router->post('admin/usuarios/update', 'UserController@update_usuarios');
 
-//site/posts
-$router->get('home/lista-posts', 'PostController@preenche_tabela_site');
+//--------Public--------//
+//Lista-posts
+$router->get('home/lista-posts', 'Lista_postsController@index');
+$router->get('home/lista-posts/search', 'Lista_postsController@search');
 
 ?> 
