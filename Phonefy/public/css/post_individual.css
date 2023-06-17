@@ -67,8 +67,8 @@ ion-icon {
     margin-top: 60px;
     text-align: center;
 
-    border-color: rgba(255, 255, 255, 0.5);
-    border-style: hidden hidden double hidden;
+    /* border-color: rgba(255, 255, 255, 0.5);
+    border-style: hidden hidden double hidden; */
 }
 
 .post-content div {
