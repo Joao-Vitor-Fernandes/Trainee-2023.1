@@ -37,7 +37,7 @@
               <br>
               <button class="recuperar"><a>Esqueci a minha senha</a></button>
               <br><br>
-              <button class="entrar">Entrar</button>
+              <button class="entrar" type="submit">Entrar</button>
               
               <button class="cadastro"><a>Novo Cadastro</a></button>
               

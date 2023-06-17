@@ -6,16 +6,17 @@ use App\Core\App;
 
 use Exception;
 
-class LoginController extends controller
+class LoginController 
 {
-    public function __construct()
-    {
-        parent::__construct();
-    }
+    // extends controller
+    // public function __construct()
+    // {
+    //     parent::__construct();
+    // }
 
     public function index()
     {
-        return view('phonefy/login');
+        return view('site/login');
     }
 
     public function autenticacao()
@@ -26,7 +27,7 @@ class LoginController extends controller
     $id = App::get('database')->autenticar('users', $email, $senha);
     if($id > 0)
     {
-        $_SESSION['logado'] = $user;
+        $_SESSION['logado'] = $id;
         return redirect('dashboard');
     }
     $_SESSION['error_message'] = "E-mail ou senha incorretos.";

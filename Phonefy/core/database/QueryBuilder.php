@@ -20,7 +20,7 @@ class QueryBuilder
         try {
             $statement = $this->pdo->prepare($sql);
             $statement->execute();
-            return $stmt->fecthOne(PDO::FETCH_ASSOC);
+            return $statement->fecthOne(PDO::FETCH_ASSOC);
         } catch (Exception $e) {
             die($e->getMessage());
         }
