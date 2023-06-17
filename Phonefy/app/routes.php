@@ -19,5 +19,7 @@ $router->post('admin/usuarios/create', 'UserController@create_usuarios');
 $router->post('admin/usuarios/delete', 'UserController@delete_usuarios');
 $router->post('admin/usuarios/update', 'UserController@update_usuarios');
 
+//site/posts
+$router->get('home/lista-posts', 'PostController@preenche_tabela_site');
 
 ?> 

@@ -36,12 +36,6 @@ class PostController
         return null; // Caso o usuário não seja encontrado
     }
 
-    public function view_tabela_post(){
-        // erro de sintaxe
-        // $post = App::get('database')->select('posts', $id);
-        //return view('admin/modal', $post); 
-    }
-
     public function create_tabela_post(){
 
         // Obtenha o nome original da imagem
@@ -141,4 +135,22 @@ class PostController
         echo 'Imagem não encontrada';
     }
 }
+
+public function preenche_tabela_site(){
+    $posts = App::get('database')->selectAll('posts');
+        $users = App::get('database')->selectAll('users');
+        $tables = [
+            'posts' => $posts,
+            'users' => $users,
+        ];
+
+        // Associar o nome do autor aos posts(autor é o id do user)
+        foreach ($posts as $post) {
+        $author = $this->getUserById($users, $post->author);
+        $post->author_name = $author->name;
+    }
+
+        return view('site/lista_de_posts', $tables);   
+}
+
 }
