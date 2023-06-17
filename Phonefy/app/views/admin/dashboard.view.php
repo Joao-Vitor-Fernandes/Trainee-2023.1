@@ -25,12 +25,12 @@
 
             <div class="dashboard-main">
                     <div class="card-page" >
-                        <a class="card" href="#">
+                        <a class="card" href="./posts">
                             <ion-icon name="reader-outline"></ion-icon>
                             <h2>Lista de Posts</h2>
                         </a>
         
-                        <a class="card" href="./lista_usuarios">
+                        <a class="card" href="./usuarios">
                                 <ion-icon name="person-outline"></ion-icon>
                                 <h2>Lista de Usuários</h2>
                         </a>

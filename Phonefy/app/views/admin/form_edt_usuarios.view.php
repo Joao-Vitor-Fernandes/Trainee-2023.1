@@ -1,6 +1,6 @@
 <div id="modal-edit-user" class="modal-edit-user">
 
-    <form id='coisa' class="container" action="update" method="POST">
+    <form id='coisa' class="container" action="usuarios/update" method="POST">
         <input type="hidden" name="id" value="" >
         <div class="campo-titulo"><h2>Alterar Dados do Usuário</h2></div>
 

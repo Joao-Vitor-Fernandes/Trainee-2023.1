@@ -24,90 +24,98 @@ class QueryBuilder
             $stmt->execute();
 
             return $stmt->fetchAll(PDO::FETCH_CLASS);
-        } 
-        catch (Exception $e) {
+        } catch (Exception $e) {
             die($e->getMessage());
         }
     }
 
-    public function selectById($id, $tables, $parameters)
-    {
-        $parameters['id'] = $id;
-
+    public function insert($table, $parameters){
         $sql = sprintf(
-            "SELECT %s %s %s FROM %s WHERE %s;",
-            implode(", ", array_map(function($parameters){
-                return "{$parameters} = : {$parameters}";
-                },
-                array_keys($parameters))),
-            $tables,
-            "id = :id"
+            'INSERT INTO %s (%s) VALUES (%s)', $table, implode(',', array_keys($parameters)), ':' . implode(', :', array_keys($parameters))
         );
 
         try {
             $stmt = $this->pdo->prepare($sql);
 
+            $stmt->execute($parameters);
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function delete($table, $id){
+        $sql = sprintf(
+            'DELETE FROM %s WHERE %s',
+            $table,
+            "id = :id"
+        );
+
+        try {
+            $statement = $this->pdo->prepare($sql);
+
+            $statement->execute(compact('id'));
+        } catch (Exception $e){
+            die("Ocorreu um erro ao tentar excluir do banco de dados: {$e->getMessage()}");
+        }
+    }
+
+    public function edit($id, $table, $parameter){
+        $sql = sprintf(
+            'UPDATE %s
+            SET %s
+            WHERE %s',
+            $table,
+            implode(',', array_map(function ($parameter){
+                return "{$parameter} = :{$parameter}";
+            }, array_keys($parameter))),
+            'id = :id'
+        );
+
+        $parameter['id'] = $id;
+
+        try {
+            $statement = $this->pdo->prepare($sql);
+
+            $statement->execute($parameter);
+        } catch (Exception $e){
+            die("Ocorreu um erro ao tentar excluir do banco de dados: {$e->getMessage()}");
+        }
+    }
+    public function select($table, $id){
+        $sql = sprintf(
+            'select * FROM %s WHERE %s',
+            $table, "id = :id"
+        );
+
+
+        try {
+            $statement = $this->pdo->prepare($sql);
+
+            $statement->execute(compact('id'));
+        } catch (Exception $e){
+            die("Ocorreu um erro ao tentar buscar do banco de dados: {$e->getMessage()}");
+        }
+    }
+
+    public function buscar($titulo, $table, $pesquisa)
+    {
+        $sql = sprintf(
+            "SELECT * FROM %s WHERE %s LIKE '%%%s%%'",
+            $table,
+            $titulo,
+            $pesquisa
+        );
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
 
-            return $stmt->fecthOne(PDO::FETCH_ASSOC);
-        } 
-        catch (Exception $e) {
-            die("Erro ao tentar acessar por ID no banco de dados: {$e->getMessage()}");
-        }
-    }
-
-    public function insert($tables, $parameters)
-    {
-        $sql = sprintf(
-            'INSERT INTO %s (%s) VALUES (%s);',
-            $tables,
-            implode(", ", array_keys($parameters)), ":" . implode(", :", array_keys($parameters))
-        );
-        try {
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->execute($parameters);
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
         } catch (Exception $e) {
-            die("Erro ao tentar inserir no banco de dados: {$e->getMessage()}");
-        }
-    }
-
-    public function delete($tables, $id)
-    {
-        $sql = sprintf(
-            'DELETE FROM %s WHERE %s;',
-            $tables,
-            "id = :id"
-        );
-        try {
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->execute(compact('id'));
-        } catch (Exception $e) {
-            die("Erro ao tentar deletar no banco de dados: {$e->getMessage()}");
-        }
-    }
-
-    public function edit($id, $tables, $parameters)
-    {
-        $parameters['id'] = $id;
-   
-        $sql = sprintf(
-            'UPDATE %s SET %s WHERE %s;',
-            $tables,
-            implode(", ", array_map(function($parameters){
-                return "{$parameters} = :{$parameters}";
-            },
-            array_keys($parameters))),
-            "id = :id"
-        );
-        
-       
-
-        try {
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->execute($parameters);
-        
-        } catch (Exception $e) {
-            die("Erro ao tentar atualizar/editar no banco de dados: {$e->getMessage()}");
+            die("Erro ao fazer busca: {$e->getMessage()}");
         }
     }
 }
+

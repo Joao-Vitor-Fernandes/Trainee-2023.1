@@ -12,11 +12,6 @@ class FrontController
         return view('admin/dashboard');
     }
 
-    public function posts()
-    {
-        return view('site/lista_de_posts');
-    }
-
     public function post_individual()
     {
         return view('site/post_individual');

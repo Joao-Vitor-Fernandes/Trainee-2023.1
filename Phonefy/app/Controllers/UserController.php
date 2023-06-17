@@ -7,7 +7,7 @@ use Exception;
 
 class UserController
 {
-    public function lista_de_usuarios()
+    public function view_usuarios()
     {
         $usuarios = App::get('database')->selectAll('users');
         $tables = [
@@ -21,7 +21,7 @@ class UserController
         
     }
 
-    public function create()
+    public function create_usuarios()
     {
         $parameters = [
             'name' => $_POST['nome'],
@@ -31,7 +31,7 @@ class UserController
 
         app::get('database')->insert('users', $parameters);
 
-        header('Location: /lista_usuarios');
+        header('Location: /admin/usuarios');
     }
 
     public function store()
@@ -44,7 +44,7 @@ class UserController
   
     }
 
-    public function update()
+    public function update_usuarios()
     {
         $parameters = [
             'name' => $_POST['nome'],
@@ -54,14 +54,14 @@ class UserController
 
         app::get('database')->edit($_POST['id'], 'users', $parameters);
 
-        header('Location: /lista_usuarios');
+        header('Location: /admin/usuarios');
     }
 
-    public function delete()
+    public function delete_usuarios()
     {
         $id = $_POST['id'];
         app::get('database')->delete('users', $id);
 
-        header('Location: /lista_usuarios');
+        header('Location: /admin/usuarios');
     }
 }

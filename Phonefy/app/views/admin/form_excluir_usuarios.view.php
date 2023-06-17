@@ -1,6 +1,6 @@
 <div id="delete-user-modal" class="delete-user-modal">
 
-    <form class="container" action="delete" method="POST">
+    <form class="container" action="usuarios/delete" method="POST">
         <input type="hidden" name="id" value="" >
 
         <div class="campo-titulo"><h2>Excluir Usuário</h2></div>

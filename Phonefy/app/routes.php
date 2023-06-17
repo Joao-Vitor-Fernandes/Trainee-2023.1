@@ -1,22 +1,32 @@
 <?php
 
 use App\Controllers\ExampleController;
+use App\Controllers\PostController;
 use App\Controllers\UserController;
 use App\Controllers\FrontController;
 use App\Core\Router;
 
-$router->get('index', 'ExampleController@index');
+//--------Admin--------//
+$router->get('admin/dashboard', 'FrontController@dashboard');
+//Posts
+$router->get('admin/posts', 'PostController@preenche_tabela_post');
+$router->post('admin/posts/adicionar', 'PostController@create_tabela_post');
+$router->post('admin/posts/excluir', 'PostController@delete_tabela_post');
+$router->post('admin/posts/editar', 'PostController@editar_tabela_post');
+// Rota para servir imagens
+$router->get('imagens-posts/{filename}', 'PostController@exibirImagem');
 
-$router->get('lista_usuarios', 'UserController@lista_de_usuarios');
+//Users
+$router->get('admin/usuarios', 'UserController@view_usuarios');
+$router->post('admin/usuarios/create', 'UserController@create_usuarios');
+$router->post('admin/usuarios/delete', 'UserController@delete_usuarios');
+$router->post('admin/usuarios/update', 'UserController@update_usuarios');
 
-$router->get('show', 'UserController@show');
+//--------Public--------//
+//Lista-posts
+$router->get('home/lista-posts', 'Lista_postsController@index');
+$router->get('home/lista-posts/search', 'Lista_postsController@search');
 
-$router->post('create', 'UserController@create');
-$router->post('delete', 'UserController@delete');
-$router->post('update', 'UserController@update');
-
-$router->get('dashboard', 'FrontController@dashboard');
-
-$router->get('posts', 'FrontController@posts');
 $router->get('posts/post_individual', 'FrontController@post_individual');
+
 ?> 

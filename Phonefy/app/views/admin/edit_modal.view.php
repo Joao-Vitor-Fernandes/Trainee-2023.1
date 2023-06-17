@@ -1,5 +1,6 @@
 <div id="edit-modal" class="modal">
-    <form class="modal-content">
+    <form class="modal-content" action="posts/editar" enctype="multipart/form-data" method="POST">
+    <input type="hidden" name="id" value="" >
         <div class="modal-header">
             <h1>Editar Post</h1>
         </div>
@@ -14,7 +15,12 @@
             <div class="caixa-autor_data">
                 <div class="caixa-selecao">
                     <label for="autor">Autor:</label>
-                    <input type="text" name="autor" id="autor" value="vagalume.com" required>
+                    <!-- <input type="text" name="autor" id="autor" value="vagalume.com" required> -->
+                    <select name="autor" id="autor" required>
+                        <option value="valor1" selected>Autor 1</option>
+                        <option value="valor2">Autor 2</option>
+                        <option value="valor3">Autor 3</option>
+                    </select>
                 </div>
                 
                 <div class="caixa-selecao">
@@ -24,10 +30,10 @@
             </div>
 
             <fieldset class="fieldset-conteudo">
-                <div class="caixa-conteudo">
-                    <label for="imagem">Imagem:</label>
-                    <input type="file" class="custom-file-input" id="imagem" name="imagem" accept=".jpg, .jpeg, .png, .gif">
-                </div>
+            <div class="caixa-conteudo">
+                <label for="imagem">Imagem:</label>
+                <input type="file" class="custom-file-input" id="imagem" name="imagem" accept=".jpg, .jpeg, .png, .gif">
+            </div>
         
                 <div class="caixa-conteudo">
                     <label for="conteudo">Conteudo:</label>

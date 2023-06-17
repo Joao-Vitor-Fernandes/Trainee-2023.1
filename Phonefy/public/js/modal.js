@@ -1,3 +1,8 @@
+load('../../../app/views/admin/view_modal.view.php', document.getElementsByClassName('load_modal')[0]);
+load('../../../app/views/admin/edit_modal.view.php', document.getElementsByClassName('load_modal')[0]);
+load('../../../app/views/admin/delete_modal.view.php', document.getElementsByClassName('load_modal')[0]);
+load('../../../app/views/admin/add_modal.view.php', document.getElementsByClassName('load_modal')[0]);
+
 function load(url, element)
 {
     req = new XMLHttpRequest();
@@ -7,19 +12,102 @@ function load(url, element)
     element.innerHTML += req.responseText;
 }
 
-function open_modal(b, m, s, i)
-{
-    btn = document.getElementById(b);
+// Indices baseados na sequencia que é chamado as funcoes 'load'
+function modalEdit(m, id, titulo, autor, data, imagem, conteudo, users) {
+    if(m == 'view-modal'){ i = 0;}
+    else if (m == 'edit-modal'){ i = 1;}
+    else {console.log("Erro no indice");}
+
+    //----Preenchendo os valores no modal
+    document.getElementById(m).querySelector("[name='id']").value = id;
+    document.getElementById(m).querySelector("[name='titulo']").value = titulo;
+    document.getElementById(m).querySelector("[name='data']").value = data;
+    document.getElementById(m).querySelector("[name='conteudo']").value = conteudo;
+
+    //----Preenchendo os autores no modal
+    //Se for o modal visualizar
+    if (i == 0) {
+        // Encontrar o nome do autor com base no ID
+        var autorName = '';
+        for (var j = 0; j < users.length; j++) {
+            var user = users[j];
+            if (user.id == autor) {
+                autorName = user.name;
+                break;
+            }
+        }
+        // Atribuir o nome do autor ao campo no modal
+        document.getElementById(m).querySelector("[name='autor']").value = autorName;
+    }
+    
+    //Se for o modal editar
+    else if(i ==1){
+        var autorSelect = document.getElementById(m).querySelector("[name='autor']");
+        autorSelect.innerHTML = ''; // Limpa as opções existentes
+
+        for (var j = 0; j < users.length; j++) {
+            var user = users[j];
+            var option = document.createElement('option');
+            option.value = user.id;
+            option.textContent = user.name;
+            if (user.id == autor) {
+                option.selected = true; // Define a opção selecionada
+            }
+            autorSelect.appendChild(option);
+        }
+    }
+    
+    if(i ==0){
+        // ----Atualizar a imagem no modal visualizar
+        var imagemContainer = document.getElementById(m).querySelector(".imagem-container");
+        var link = imagemContainer.querySelector("a");
+        var imagemPreview = imagemContainer.querySelector("img");
+
+        link.href = "../../" + imagem;
+        imagemPreview.src = "../../" + imagem;   
+    }
+    
+
+
+    open_modal(m,i);
+}
+
+function modalDelete(m, id) {
+    document.getElementById("delete-modal").querySelector("[name='id']").value = id;
+
+    open_modal(m,2);
+}
+
+function modalAdd(m, users) {
+
+    //Preenchendo os autores no modal
+    var autorSelect = document.getElementById(m).querySelector("[name='autor']");
+    autorSelect.innerHTML = ''; // Limpa as opções existentes
+
+    for (var j = 0; j < users.length; j++) {
+        var user = users[j];
+        var option = document.createElement('option');
+        option.value = user.id;
+        option.textContent = user.name;
+        if (user.id == autor) {
+            option.selected = true; // Define a opção selecionada
+        }
+        autorSelect.appendChild(option);
+    }
+
+    open_modal(m,3);
+}
+
+
+function open_modal(m, i)
+{   
     modal = document.getElementById(m);
-    span = document.getElementsByClassName(s)[i];
+    span = document.getElementsByClassName('close')[i];
 
     modal.style.display = "block";
-    console.log('clicou');
 
     span.onclick = function() {
         modal.style.display = "none";
-        console.log('saiu');
-        console.log(span);
     }
 
     window.onclick = function(event) {
@@ -28,8 +116,3 @@ function open_modal(b, m, s, i)
         }
     }
 }
-
-load('../../../app/views/admin/view_modal.html', document.getElementsByClassName('load_modal')[0]);
-load('../../../app/views/admin/add_modal.html', document.getElementsByClassName('load_modal')[0]);
-load('../../../app/views/admin/edit_modal.html', document.getElementsByClassName('load_modal')[0]);
-load('../../../app/views/admin/delete_modal.html', document.getElementsByClassName('load_modal')[0]);
