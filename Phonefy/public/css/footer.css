@@ -46,7 +46,7 @@ footer{
     width: 25%;
 }
 
-h4{
+.row-footer h4{
     font-size: 20px;
     color: white;
     margin-bottom: 5px;
@@ -55,11 +55,11 @@ h4{
     text-transform: uppercase;
 }
 
-ul{
+.row-footer ul{
     list-style: none;
 }
 
-ul li{
+.row-footer ul li{
     /* margin: 10px 0; */
     font-size: 12px;
     color: white;
@@ -68,7 +68,7 @@ ul li{
     display: block;
 }
 
-ul li a{
+.row-footer ul li a{
     font-size: 16px;
     text-transform: capitalize;
     color: white;
@@ -78,7 +78,7 @@ ul li a{
     transition: all 0.3s ease;
 }
 
-ul li a:hover{
+.row-footer ul li a:hover{
     color: #cecdcd;
     padding-left: 10px;
 }
@@ -151,31 +151,31 @@ ul li a:hover{
 
 
 @media (max-width: 870px) {
-    h4{
+    .row-footer h4{
         font-size: 18px;
     }
     
-    ul li{
+    .row-footer ul li{
         font-size: 10px;
     }
 }
 
 @media (max-width: 745px) {
-    h4{
+    .row-footer h4{
         font-size: 15px;
     }
     
-    ul li{
+    .row-footer ul li{
         font-size: 8px;
     }
 }
 
 @media (max-width: 500px) {
-    h4{
+    .footer-col h4{
         font-size: 11px;
     }
     
-    ul li{
+    .footer-col ul li{
         font-size: 6px;
     }
 
