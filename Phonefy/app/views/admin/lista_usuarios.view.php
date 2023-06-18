@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../../../public/css/form_visualizar_usuarios.css">
     <link rel="stylesheet" href="../../../public/css/form_edt_usuarios.css">
     <link rel="stylesheet" href="../../../public/css/form_excluir_usuarios.css">
+    <link rel="stylesheet" href="../../../public/css/pagination.css">
 </head>
 
 
@@ -58,6 +59,7 @@
         </table>
     </div>
 
+    <?php require './app/views/includes/pagination.php' ?>
 
     <!-- Link para o script -->
     <!-- <script src="../../../public/js/add_user_modal.js"></script> -->

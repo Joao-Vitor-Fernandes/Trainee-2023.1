@@ -20,7 +20,7 @@ $router->post('admin/usuarios/create', 'UserController@create_usuarios');
 $router->post('admin/usuarios/delete', 'UserController@delete_usuarios');
 $router->post('admin/usuarios/update', 'UserController@update_usuarios');
 
-$router->get('phonefy/posts', 'SiteController@posts');
+$router->get('home/lista-posts', 'SiteController@posts');
 
 
 ?> 

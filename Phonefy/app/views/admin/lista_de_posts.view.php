@@ -14,6 +14,7 @@
 
     <link rel="stylesheet" href="../../../public/css/modal2.css">
     <link rel="stylesheet" href="../../../public/css/edit_modal.css">
+    <link rel="stylesheet" href="../../../public/css/pagination.css">
 </head>
 
 
@@ -46,25 +47,25 @@
                     <td colspan="6">Nenhum registro encontrado.</td>
                 </tr>
 
-                <?php $loopIndex = 0; ?>
                 <?php foreach ($posts as $post) : ?>
                 <tr class="corpo"> <!--Segunda linha-->
-                    <td><?= $loopIndex + 1 ?></td>
+                    <td><?=$post->id ?></td>
                     <td><?=$post->title?></td>
                     <td><?=$post->author_name?></td>
                     <td><?=$post->created_at?></td>
 
                     <td class="icon">
-                    <button id="view" class="a" onclick="modalEdit('view-modal', <?=$post->id?>, '<?=$post->title?>', <?=$post->author?>, '<?=$post->created_at?>', '<?=$post->image?>', '<?=$post->content?>', <?= htmlspecialchars(json_encode($users)) ?>)"> <i class="fa fa-eye" alt="Visualiar"></i> </button>
-                    <button id="edit" class="a" onclick="modalEdit('edit-modal', <?=$post->id?>, '<?=$post->title?>', <?=$post->author?>, '<?=$post->created_at?>', '<?=$post->image?>', '<?=$post->content?>', <?= htmlspecialchars(json_encode($users)) ?>)"><i class="fa fa-outdent" aria-hidden="true"></i></button>
+                    <button id="view" class="a" onclick="modalEdit('view-modal', <?=$post->id?>, '<?=$post->title?>', <?=$post->author?>, '<?=$post->created_at?>', '<?=$post->image?>', '<?=str_replace(PHP_EOL, "\n", $post->content)?>', <?= htmlspecialchars(json_encode($users)) ?>)"> <i class="fa fa-eye" alt="Visualiar"></i> </button>
+                    <button id="edit" class="a" onclick="modalEdit('edit-modal', <?=$post->id?>, '<?=$post->title?>', <?=$post->author?>, '<?=$post->created_at?>', '<?=$post->image?>', '<?=str_replace(PHP_EOL, "\n", $post->content)?>', <?= htmlspecialchars(json_encode($users)) ?>)"><i class="fa fa-outdent" aria-hidden="true"></i></button>
                     <button id="Deleter" class="a" onclick="modalDelete('delete-modal', <?=$post->id?>)"><i class="fa fa-times" alt="Deletar"></i></button>
                     </td>
                 </tr>
-                    <?php $loopIndex++; ?>
                 <?php endforeach; ?>
             </table>
         </div>
     </div>
+
+    <?php require './app/views/includes/pagination.php' ?>
 </body>
 
 </html>
