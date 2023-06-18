@@ -10,6 +10,8 @@
 
 
     <body>
+        <?php require './app/views/site/navbar.html' ?>
+
         <div class="individual-post">
             <div class="data-post">
                 <div class="date-author">
@@ -95,6 +97,8 @@
             </div>
 
         </div>
+
+        <?php require './app/views/site/footer.html' ?>
 
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
