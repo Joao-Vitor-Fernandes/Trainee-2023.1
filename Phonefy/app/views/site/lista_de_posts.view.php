@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <?php require './app/views/site/navbar.html' ?>
 
     <div class="capsula">
         <div class="contorno">
@@ -51,6 +52,8 @@
 
         </div>
     </div>
+
+    <?php require './app/views/site/footer.html' ?>
 </body>
 
 <!-- Script da Barra de Pesquisa -->
