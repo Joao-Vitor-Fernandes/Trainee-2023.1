@@ -7,6 +7,8 @@
 }
 
 footer{
+    font-family: 'Poppins', sans-serif;
+    
     width: 100vw;
     /* position: fixed;
     bottom: 0; */
@@ -97,8 +99,8 @@ footer{
     transition: all 0.5s ease;
 }
 
-.medias-socias a i{
-    font-size: 20px;
+.medias-socias ion-icon{
+    font-size: 25px;
 }
 
 .footer-col .medias-socias a:hover{
@@ -136,9 +138,9 @@ footer{
 
 .container-footer-down {
     /* background-color: slateblue; */
-    width: 100%;
+    width: 90%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-end;
 }
 
@@ -180,6 +182,7 @@ footer{
     }
 
     .container-footer-down {
+        width: 100%;
         justify-content: center;
     }
 
