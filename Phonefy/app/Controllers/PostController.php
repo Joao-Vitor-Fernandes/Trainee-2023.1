@@ -74,12 +74,6 @@ class PostController
         return null; // Caso o usuário não seja encontrado
     }
 
-    public function view_tabela_post(){
-        // erro de sintaxe
-        // $post = App::get('database')->select('posts', $id);
-        //return view('admin/modal', $post); 
-    }
-
     public function create_tabela_post(){
 
         // Obtenha o nome original da imagem
@@ -179,4 +173,5 @@ class PostController
         echo 'Imagem não encontrada';
     }
 }
+
 }

@@ -99,8 +99,6 @@ class QueryBuilder
             $statement = $this->pdo->prepare($sql);
 
             $statement->execute(compact('id'));
-            //erro de sintaxe
-            //return $stmt->fetchAll(PDO::FETCH_CLASS);
         } catch (Exception $e){
             die("Ocorreu um erro ao tentar buscar do banco de dados: {$e->getMessage()}");
         }
@@ -118,6 +116,25 @@ class QueryBuilder
             return intval($statement->fetch(PDO::FETCH_NUM)[0]);
         } catch (Exception $e) {
             die("An error occurred when trying to count from database: {$e->getMessage()}");
+        }
+    }
+
+    public function buscar($titulo, $table, $pesquisa)
+    {
+        $sql = sprintf(
+            "SELECT * FROM %s WHERE %s LIKE '%%%s%%'",
+            $table,
+            $titulo,
+            $pesquisa
+        );
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
+        } catch (Exception $e) {
+            die("Erro ao fazer busca: {$e->getMessage()}");
         }
     }
 }

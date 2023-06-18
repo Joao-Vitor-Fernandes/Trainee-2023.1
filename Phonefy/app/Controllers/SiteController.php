@@ -17,7 +17,7 @@ class SiteController
 
             if ($page <= 0)
             {
-                return redirect('phonefy/posts');
+                return redirect('home/lista-posts');
             }
         }
 
@@ -26,7 +26,7 @@ class SiteController
         $rows_count = App::get('database')->countAll('posts');
         
         if ($start_limit > $rows_count) {
-            return redirect('phonefy/posts');
+            return redirect('home/lista-posts');
         }
         
         $total_pages = ceil($rows_count / $items_per_page);
@@ -42,6 +42,7 @@ class SiteController
 
         // return view('site/lista_de_posts');
     }
+
     private function getUserById($users, $userId)
     {
         foreach ($users as $user) {

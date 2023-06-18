@@ -10,6 +10,8 @@
 
     <body>
         <div class="dashboard">
+            <button class="sidebar-icon"><ion-icon name="chevron-forward-outline"></ion-icon></button>
+
             <div class="dashboard-nav">
                 <div class="icon-name">
                     <ion-icon name="grid"></ion-icon>
@@ -22,16 +24,16 @@
             </div>
 
             <div class="dashboard-main">
-                    <div class="card-page">
-                        <button class="card-post">
+                    <div class="card-page" >
+                        <a class="card" href="./posts">
                             <ion-icon name="reader-outline"></ion-icon>
                             <h2>Lista de Posts</h2>
-                        </button>
+                        </a>
         
-                        <button class="card-user">
-                            <ion-icon name="person-outline"></ion-icon>
-                            <h2>Lista de Usuários</h2>
-                        </button>
+                        <a class="card" href="./usuarios">
+                                <ion-icon name="person-outline"></ion-icon>
+                                <h2>Lista de Usuários</h2>
+                        </a>
                     </div>
         
                     <div class="lasted-posts">

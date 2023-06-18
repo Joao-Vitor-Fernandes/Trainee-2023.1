@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Lista de Posts</title>
+</head>
+
+<body>
+    <h1 style="text-align:center;">Cadastro de Posts</h1>
+
+    <div id="div_input"> <!--div do formulário-->
+        <form id="inserir_dados">
+            <ul style="list-style-type:none;">
+
+                <li><label type="text" for="nome">Post</label>&nbsp;
+                    <input type="text" id="nome" size="20" required>
+                </li>
+
+                <li><label type="email" for="email">Nome</label>&nbsp;
+                    <input type="email" id="email" size="20" required>
+                </li>
+
+                <li><label type="text" for="idade">Idade: </label>&nbsp;
+                    <input type="number" id="idade" required>
+                <li>
+
+                <li><button type="button" id="botao">Enviar</button></li>
+            </ul>
+        </form>
+    </div> <!--div do formulário-->
+
+
+
+    <div id="tabela"><!--div da tabela-->
+
+        <table>
+            <caption>
+                <h2>DADOS DE CADASTRO</h2>
+            </caption>
+            <thead>
+                <tr>
+                    <td>Posição</td>
+                    <td>Nome</td>
+                    <td>Idade</td>
+                    <td>E-mail</td>
+                </tr>
+            </thead>
+            <tbody id="tabela_de_cadastro">
+
+
+            </tbody>
+
+        </table>
+    </div> <!--div da tabela-->
+
+
+
+    <div id="painel_de_alteracao">
+
+        Nome: &nbsp;<input id='nome_alterar' type="text" size="20" required class="alterar_dados">
+        <br>
+        E-mail:&nbsp;<input id='email_alterar' type="email" size="20" required class="alterar_dados">
+        <br>
+        Idade:&nbsp;&nbsp;&nbsp;<input type="number" id='idade_alterar' required class="alterar_dados">
+        <br>
+        <button type="button" id="botao_alterar">Alterar</button>
+        <button type="button" id="fechar" onclick="fechar_tela()">x</button>
+
+    </div>
+
+    <script type="text/javascript" src="inscricao.js"></script>
+</body>
+
+
+</html>

@@ -7,12 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Phonefy</title>
     <link rel="stylesheet" href="../../../public/css/lista_de_posts.css">
+    <link rel="stylesheet" href="../../../public/css/footer.css">
+    <link rel="stylesheet" href="../../../public/css/navbar.css">
     <link rel="stylesheet" href="../../../public/css/pagination.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
+    <?php require './app/views/site/navbar.html' ?>
 
     <div class="capsula">
         <div class="contorno">
@@ -40,7 +46,7 @@
                             <span> <?=$post->created_at?> by <?=$post->author_name?></span>
                             <a href="https://whiplash.net/materias/news_709/350367-queen.html" target="_blank"
                                 class="blog-title"><?=$post->title?></a>
-                            <p><?=$post->content?></p>
+                            <p><?=nl2br($post->content)?></p>
                             <a href="https://whiplash.net/materias/news_709/350367-queen.html" target="_blank"  class="leia-mais">Leia Mais</a>
                         
                         </div>
@@ -49,11 +55,14 @@
                 </div>
                 <?php endforeach; ?>
             </div>
-
         </div>
         <?php require './app/views/includes/pagination.php' ?>
     </div>
 
+    <?php require './app/views/site/footer.html' ?>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 <!-- Script da Barra de Pesquisa -->
