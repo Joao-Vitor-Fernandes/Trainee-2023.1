@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Phonefy</title>
     <link rel="stylesheet" href="../../../public/css/lista_de_posts.css">
+    <link rel="stylesheet" href="../../../public/css/pagination.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
 
 </head>
@@ -50,9 +51,9 @@
             </div>
 
         </div>
+        <?php require './app/views/includes/pagination.php' ?>
     </div>
 
-    <?php require './app/views/includes/pagination.php' ?>
 </body>
 
 <!-- Script da Barra de Pesquisa -->
