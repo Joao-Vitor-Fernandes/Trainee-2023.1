@@ -29,8 +29,8 @@ body {
     }
 .Phone img
 {
-    width: 120vw;
-    margin-left: -11vw;
+    width: 99vw;
+    margin-left: 0vw;
 }    
 .Som1{
     grid-area: s1;
@@ -54,7 +54,8 @@ width: 100%;
 /*grid-template-columns:repeat(12, 1fr);
 grid-template-rows:repeat(10, 1fr);*/
 grid-template-areas: 
-/* ". . . . . . . . . . . . . . . ." */
+/* Tela padrão  */
+
 ". . . . . . . . . . . . . . . ."
 ". . . . . . . . . . . . . . . ."
 ". . . . p1 p1 . . . . p2 p2 . . . ."
@@ -66,6 +67,17 @@ grid-template-areas:
 ". . . . . . . . . . . . . . . ."
 ;
 
+/* Tela modelo 2 */
+/* ". . . . . . . . . . . . . . . ."
+". . . . . . . . . . . . . . . ."
+". . . . . p1 p1 . . p2 p2 . . . . ."
+". . . . . p1 p1 . . p2 p2 . . . . ."
+". . . . . . . p3 p3 . . . . . . ."
+". . . . p4 p4 . p3 p3 . p5 p5 . . . ."
+". . . . p4 p4 . . . . p5 p5 . . . ."
+". . . . . . . . . . . . . . . ."
+". . . . . . . . . . . . . . . ."
+; */
 }
 
 .Post1{
@@ -81,16 +93,21 @@ grid-template-areas:
 }
 .postimg
 {
-    background-color: #232330;
+    background-color: #EEF0F2;
     /* display: none; */
     width:auto;
     height: auto;
     border-radius: 16px;
+    /* border-top-left-radius: 0px;
+    border-top-right-radius: 0px; */
+    padding-left: 4px;
+    padding-top: 4px;
+    margin: 0px;
 
 }
 .postimg img
 {
-    max-width: 20vw;
+    max-width: 19vw;
     height:40vh;
     /* transform: translate(-15px, -2px); */
     transform: translate(-2px, -1px);
@@ -100,6 +117,14 @@ grid-template-areas:
 
     filter: blur(0.5px);
     filter: brightness(0.9);
+}
+.text{max-width: 20vw;max-height: 4;}
+.text p{
+    text-align: left;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    margin:4px
+    
 }
 /* .Post1 h1{background-color: #EEF0F2;margin: 0px 10px; height: 75px;} */
 .Post2{
