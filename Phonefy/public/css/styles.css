@@ -31,7 +31,7 @@ body {
 .Phone img
 {
     width: 98vw;
-    margin-left: 0vw;
+    margin-left: -0.8vw;
 }    
 .Som1{
     grid-area: s1;
@@ -109,6 +109,7 @@ grid-template-areas:
 .postimg img
 {
     max-width: 19vw;
+    width: 19vw;
     height:40vh;
     /* transform: translate(-15px, -2px); */
     transform: translate(-2px, -1px);
