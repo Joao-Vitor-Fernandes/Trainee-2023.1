@@ -1,7 +1,8 @@
 .pagination {
     background-color: #fff;
     min-width: 20%;
-    margin: 10px 0;
+    max-width: 40%;
+    margin: 10px auto;
     
     border-radius: 16px;
 

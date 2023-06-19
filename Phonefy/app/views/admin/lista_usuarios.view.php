@@ -57,9 +57,9 @@
             </tr>
             <?php endforeach; ?>
         </table>
+        <?php require './app/views/includes/pagination.php' ?>
     </div>
 
-    <?php require './app/views/includes/pagination.php' ?>
 
     <!-- Link para o script -->
     <!-- <script src="../../../public/js/add_user_modal.js"></script> -->

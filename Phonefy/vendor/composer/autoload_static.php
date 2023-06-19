@@ -29,7 +29,6 @@ class ComposerStaticInit0e152b3877f8360e296826d6c79f8fa4
         'App\\Controllers\\FrontController' => __DIR__ . '/../..' . '/app/Controllers/FrontController.php',
         'App\\Controllers\\Lista_postsController' => __DIR__ . '/../..' . '/app/Controllers/Lista_postsController.php',
         'App\\Controllers\\PostController' => __DIR__ . '/../..' . '/app/Controllers/PostController.php',
-        'App\\Controllers\\SiteController' => __DIR__ . '/../..' . '/app/Controllers/SiteController.php',
         'App\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Controllers/UserController.php',
         'App\\Core\\App' => __DIR__ . '/../..' . '/core/App.php',
         'App\\Core\\Database\\Connection' => __DIR__ . '/../..' . '/core/database/Connection.php',
