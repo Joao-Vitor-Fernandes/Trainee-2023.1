@@ -67,9 +67,9 @@
 
 <!-- Script da Barra de Pesquisa -->
 <?php 
-    if (!empty($pesquisa) && empty($posts)):
-        header('Location: /home/lista-posts');
-    endif;
+    // if (!empty($pesquisa) && empty($posts)):
+    //     header('Location: /home/lista-posts');
+    // endif;
 ?>
 
 <script>

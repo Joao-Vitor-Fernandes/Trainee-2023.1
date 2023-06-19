@@ -21,7 +21,7 @@ class SiteController
             }
         }
 
-        $items_per_page = 6;
+        $items_per_page = 3;
         $start_limit = $items_per_page * $page - $items_per_page;
         $rows_count = App::get('database')->countAll('posts');
         

@@ -119,7 +119,27 @@ class QueryBuilder
         }
     }
 
-    public function buscar($titulo, $table, $pesquisa)
+    public function countSearch($titulo, $table, $pesquisa,)
+    {
+        $sql = sprintf(
+            "SELECT COUNT(*) FROM %s WHERE %s LIKE '%%%s%%'",
+            $table,
+            $titulo,
+            $pesquisa
+        );
+
+        try {
+            $statement = $this->pdo->prepare($sql);
+    
+            $statement->execute();
+
+            return intval($statement->fetch(PDO::FETCH_NUM)[0]);
+        } catch (Exception $e) {
+            die("An error occurred when trying to count from database: {$e->getMessage()}");
+        }
+    }
+
+    public function buscar($titulo, $table, $pesquisa, $start_limit = null, $rows_amount = null)
     {
         $sql = sprintf(
             "SELECT * FROM %s WHERE %s LIKE '%%%s%%'",
@@ -127,6 +147,15 @@ class QueryBuilder
             $titulo,
             $pesquisa
         );
+
+        if  ($start_limit >= 0 && $rows_amount > 0)
+        {
+            $sql .= sprintf(" ORDER BY id DESC LIMIT %s, %s",
+            $start_limit,
+            $rows_amount
+            );
+        }
+        // die(var_dump($sql));
 
         try {
             $stmt = $this->pdo->prepare($sql);
