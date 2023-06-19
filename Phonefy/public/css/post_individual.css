@@ -115,8 +115,14 @@ ion-icon {
     text-decoration: none;
 }
 
+.box-image{
+    /* height: 105px; */
+    overflow: hidden;
+}
+
 .veja-tambem img {
-    width: 80%;
+    width: 90%;
+    /* height: 105px; */
     border-radius: 1%;
     padding: 5px;
 }

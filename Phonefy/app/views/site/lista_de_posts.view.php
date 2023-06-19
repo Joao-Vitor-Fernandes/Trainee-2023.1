@@ -39,15 +39,15 @@
                     
                     <div class="blog-image">
                         
-                        <a href="/home/post_individual"><img
+                        <a href="/home/post_individual?id_pag=<?=$post->id?>"><img
                                 src="../../<?=$post->image?>" alt="Icone com imagem"></a>
                         
                         <div class="blog-text">
                             <span> <?=$post->created_at?> by <?=$post->author_name?></span>
-                            <a href="/home/post_individual"
+                            <a href="/home/post_individual?id_pag=<?=$post->id?>"
                                 class="blog-title"><?=$post->title?></a>
                             <p><?=nl2br($post->content)?></p>
-                            <a href="/home/post_individual"  class="leia-mais">Leia Mais</a>
+                            <a href="/home/post_individual?id_pag=<?=$post->id?>"  class="leia-mais">Leia Mais</a>
                         
                         </div>
                     

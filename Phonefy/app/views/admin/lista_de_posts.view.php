@@ -55,9 +55,15 @@
                     <td><?=$post->created_at?></td>
 
                     <td class="icon">
-                    <button id="view" class="a" onclick="modalEdit('view-modal', <?=$post->id?>, '<?=$post->title?>', <?=$post->author?>, '<?=$post->created_at?>', '<?=$post->image?>', '<?=str_replace(PHP_EOL, "\\n", $post->content)?>', <?= htmlspecialchars(json_encode($users)) ?>)"> <i class="fa fa-eye" alt="Visualiar"></i> </button>
-                    <button id="edit" class="a" onclick="modalEdit('edit-modal', <?=$post->id?>, '<?=$post->title?>', <?=$post->author?>, '<?=$post->created_at?>', '<?=$post->image?>', '<?=str_replace(PHP_EOL, "\\n", $post->content)?>', <?= htmlspecialchars(json_encode($users)) ?>)"><i class="fa fa-outdent" aria-hidden="true"></i></button>
-                    <button id="Deleter" class="a" onclick="modalDelete('delete-modal', <?=$post->id?>)"><i class="fa fa-times" alt="Deletar"></i></button>
+                    <button id="view" class="a" onclick="modalEdit('view-modal', <?=$post->id?>, '<?=$post->title?>', <?=$post->author?>, '<?=$post->created_at?>', '<?=$post->image?>', '<?=str_replace(["\\n", "\r\n", "\n", "\"", "'", "&", "<", ">"], ["\\n", "\\n", "\\n", "\\\"", "\\'", "&amp;", "&lt;", "&gt;"], $post->content)?>', <?= htmlspecialchars(json_encode($users)) ?>)">
+                        <i class="fa fa-eye" alt="Visualizar"></i>
+                    </button>
+                    <button id="edit" class="a" onclick="modalEdit('edit-modal', <?=$post->id?>, '<?=$post->title?>', <?=$post->author?>, '<?=$post->created_at?>', '<?=$post->image?>', '<?=str_replace(["\\n", "\r\n", "\n", "\"", "'", "&", "<", ">"], ["\\n", "\\n", "\\n", "\\\"", "\\'", "&amp;", "&lt;", "&gt;"], $post->content)?>', <?= htmlspecialchars(json_encode($users)) ?>)">
+                        <i class="fa fa-outdent" aria-hidden="true"></i>
+                    </button>
+                    <button id="Deleter" class="a" onclick="modalDelete('delete-modal', <?=$post->id?>)">
+                        <i class="fa fa-times" alt="Deletar"></i>
+                    </button>
                     </td>
                 </tr>
                 <?php endforeach; ?>
