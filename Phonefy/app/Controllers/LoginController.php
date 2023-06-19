@@ -25,6 +25,8 @@ class LoginController
     $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_SPECIAL_CHARS);
     // $user = User::where('email', $email)->where('senha', $senha)->first();
     $id = App::get('database')->autenticar('users', $email, $senha);
+    // die(var_dump($id));
+    
     if($id > 0)
     {
         $_SESSION['logado'] = $id;

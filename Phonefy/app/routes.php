@@ -5,8 +5,8 @@ use App\Core\Router;
 
 //Login
 $router->get('login', 'LoginController@index');
-$router->get('logar', 'LoginController@autenticacao');
+$router->post('logar', 'LoginController@autenticacao');
 $router->get('logout', 'LoginController@logout');
 
-$router->get('index', 'LoginController@index');
+// $router->get('index', 'LoginController@index');
 ?> 
