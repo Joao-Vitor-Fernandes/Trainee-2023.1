@@ -77,10 +77,11 @@ grid-template-areas:
     grid-row: 4/6 ;*/
     grid-area: p1;
     max-width: 20vw;
-    max-height: 50vw;
+    max-height: 50vh;
 }
-.img1
+.postimg
 {
+    display: none;
     width:auto;
     height: auto;
     border-radius: 16px;
@@ -103,38 +104,46 @@ grid-template-areas:
 .Post2{
     text-align: center;
     background-color:#EEF0F2 ;
+    border: 6px solid #232330;
+    border-radius: 16px;
     /*grid-column: 5/7 ;
     grid-row: 4/6 ;*/
     grid-area: p2;
     max-width: 20vw;
-    max-height: 50vw;
+    max-height: 50vh;
 }
 .Post3{
     text-align: center;
     background-color:#EEF0F2 ;
+    border: 6px solid #232330;
+    border-radius: 16px;
     /*grid-column: 2/4 ;
     grid-row: 7/9 ;*/
     grid-area: p3;
     max-width: 20vw;
-    max-height: 50vw;
+    max-height: 50vh;
 }
 .Post4{
     text-align: center;
     background-color:#EEF0F2 ;
+    border: 6px solid #232330;
+    border-radius: 16px;
     /*grid-column: 5/7 ;
     grid-row: 7/9 ;*/
     grid-area: p4;
     max-width: 20vw;
-    max-height: 50vw;
+    max-height: 50vh;
 }
 .Post5{
     text-align: center;
     background-color:#EEF0F2 ;
+    border: 6px solid #232330;
+    border-radius: 16px;
    /* grid-column: 7/9 ;
     grid-row: 7/9 ;*/
     grid-area: p5;
     max-width: 20vw;
-    max-height: 50vw;
+    max-height: 50vh;
 
 }
 .button{
@@ -165,11 +174,10 @@ grid-template-areas:
     .Phone{display: none;}
     .home{
     display: grid;
-    height: 160vh;
+    height: 250vh;
     width: 100%;
+    padding: 0;
     grid-template-areas: 
-    ". . . ."
-    ". . . ."
     ". p1 p1 ."
     ". p1 p1 ."
     ". p1 p1 ."
@@ -192,9 +200,40 @@ grid-template-areas:
 
     .Post1
     {   
-        height: 500px; 
+        max-width: 80vw;
+        height: 50vh; 
+        border-radius: 8px;
+        margin: 5px 0px;
+    }
+    .Post2
+    {   
+        margin: 5px 0px;
+        max-width: 80vw;
+        height: 50vh; 
         border-radius: 8px;
     }
+    .Post3
+    {   
+        max-width: 80vw;
+        height: 50vh; 
+        border-radius: 8px;
+        margin: 5px 0px;
+    }
+    .Post4
+    {   
+        max-width: 80vw;
+        height: 50vh; 
+        border-radius: 8px;
+        margin: 5px 0px;
+    }
+    .Post5
+    {   
+        max-width: 80vw;
+        height: 50vh; 
+        border-radius: 8px;
+        margin: 5px 0px;
+    }
+    
 
 }
 
