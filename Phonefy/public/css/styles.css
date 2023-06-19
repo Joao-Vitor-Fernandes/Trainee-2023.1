@@ -25,11 +25,12 @@ body {
 .Phone  
     {
     position: absolute;
+    opacity: 0.85;
 
     }
 .Phone img
 {
-    width: 99vw;
+    width: 98vw;
     margin-left: 0vw;
 }    
 .Som1{
@@ -56,7 +57,7 @@ grid-template-rows:repeat(10, 1fr);*/
 grid-template-areas: 
 /* Tela padrão  */
 
-". . . . . . . . . . . . . . . ."
+/* ". . . . . . . . . . . . . . . ."
 ". . . . . . . . . . . . . . . ."
 ". . . . p1 p1 . . . . p2 p2 . . . ."
 ". . . . p1 p1 . . . . p2 p2 . . . ."
@@ -65,10 +66,10 @@ grid-template-areas:
 ". . . p4 p4 . . . . . . p5 p5 . . ."
 ". . . . . . . . . . . . . . . ."
 ". . . . . . . . . . . . . . . ."
-;
+; */
 
 /* Tela modelo 2 */
-/* ". . . . . . . . . . . . . . . ."
+". . . . . . . . . . . . . . . ."
 ". . . . . . . . . . . . . . . ."
 ". . . . . p1 p1 . . p2 p2 . . . . ."
 ". . . . . p1 p1 . . p2 p2 . . . . ."
@@ -77,7 +78,7 @@ grid-template-areas:
 ". . . . p4 p4 . . . . p5 p5 . . . ."
 ". . . . . . . . . . . . . . . ."
 ". . . . . . . . . . . . . . . ."
-; */
+;
 }
 
 .Post1{
@@ -118,13 +119,18 @@ grid-template-areas:
     filter: blur(0.5px);
     filter: brightness(0.9);
 }
-.text{max-width: 20vw;max-height: 4;}
+.text
+{
+    max-width: 20vw;max-height: 45px;
+    overflow: hidden;
+    /* text-overflow: ellipsis;
+    white-space:normal; */
+}
 .text p{
     text-align: left;
     padding-left: 10px;
     padding-bottom: 5px;
     margin:4px
-    
 }
 /* .Post1 h1{background-color: #EEF0F2;margin: 0px 10px; height: 75px;} */
 .Post2{
@@ -230,7 +236,7 @@ grid-template-areas:
     {   
         max-width: 80vw;
         height: 50vh; 
-        border-radius: 8px;
+        border-radius: 16px;
         margin: 5px 0px;
     }
     .Post2
@@ -238,27 +244,27 @@ grid-template-areas:
         margin: 5px 0px;
         max-width: 80vw;
         height: 50vh; 
-        border-radius: 8px;
+        border-radius: 16px;
     }
     .Post3
     {   
         max-width: 80vw;
         height: 50vh; 
-        border-radius: 8px;
+        border-radius: 16px;
         margin: 5px 0px;
     }
     .Post4
     {   
         max-width: 80vw;
         height: 50vh; 
-        border-radius: 8px;
+        border-radius: 16px;
         margin: 5px 0px;
     }
     .Post5
     {   
         max-width: 80vw;
         height: 50vh; 
-        border-radius: 8px;
+        border-radius: 16px;
         margin: 5px 0px;
     }
 
@@ -289,6 +295,37 @@ grid-template-areas:
 
 }
 
+/* @media (max-width:600px) 
+{
+    .button img 
+{
+  width: 40vw;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  margin-right: 5vw;
+  max-height: 12vh;
+}
+} */
+
+@media (max-width:500px) 
+{
+    .button img 
+{
+  width: 45vw;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  margin-right: 5vw;
+  max-height: 12vh;
+  height: 50px;
+}}
+
+@media (max-width:320px) 
+{
+    .button img 
+{
+  width: 50vw;
+}
+}
 /*CSS Luiz
 {
 .blog-container{
