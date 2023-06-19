@@ -81,7 +81,8 @@ grid-template-areas:
 }
 .postimg
 {
-    display: none;
+    background-color: #232330;
+    /* display: none; */
     width:auto;
     height: auto;
     border-radius: 16px;
@@ -89,8 +90,8 @@ grid-template-areas:
 }
 .postimg img
 {
-    width: 101%;
-    height:398px;
+    max-width: 20vw;
+    height:40vh;
     /* transform: translate(-15px, -2px); */
     transform: translate(-2px, -1px);
     object-fit: cover;
@@ -233,6 +234,12 @@ grid-template-areas:
         border-radius: 8px;
         margin: 5px 0px;
     }
+
+    .postimg img
+{
+    max-width: 80vw;
+    width: 80vw;
+}
     
 
 }
