@@ -16,6 +16,16 @@
     color: #EEF0F2;
 }
 
+.modal-view-footer button {
+    margin-top: 3%;
+    font-size: 14px;
+    height: 38px;
+    width: 140px;
+    border-radius: 15px;
+    background-color: #41B6E6;
+    color: #EEF0F2;
+}
+
 .caixa-titulo{
     margin-left: 10%;
     margin-right: 10%;

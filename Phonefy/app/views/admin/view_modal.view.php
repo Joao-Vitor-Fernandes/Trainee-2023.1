@@ -48,8 +48,8 @@
             </fieldset>
         </div>
         <!-- Botões -->
-        <div class="modal-footer">
-            <button type="submit" onsubmit="">Editar</button>
+        <div class="modal-view-footer">
+            <!-- <button type="submit" onsubmit="">Editar</button> -->
             <button class="close" type="button" onsubmit="">Concluido</button> 
         </div>
     </form>
