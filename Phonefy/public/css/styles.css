@@ -200,9 +200,11 @@ grid-template-areas:
     .Phone{display: none;}
     .home{
     display: grid;
-    height: 250vh;
+    height: 280vh;
     width: 100%;
     padding: 0;
+    margin-left: 4vw;
+    
     grid-template-areas: 
     ". p1 p1 ."
     ". p1 p1 ."
@@ -261,11 +263,29 @@ grid-template-areas:
     }
 
     .postimg img
-{
-    max-width: 80vw;
-    width: 80vw;
+{   
+    padding-top: 5px;
+    max-width: 78vw;
+    width: 78vw;
 }
+
+.text{max-width: 80vw;max-height: 4;}
+.text p{
+    text-align: left;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    margin:4px
     
+}
+
+.button img 
+{
+  width: 30vw;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  margin-right: 5vw;
+  max-height: 10vh;
+}
 
 }
 
