@@ -39,15 +39,15 @@
                     
                     <div class="blog-image">
                         
-                        <a href="https://whiplash.net/materias/news_709/350367-queen.html" target="_blank"><img
+                        <a href="/home/post_individual"><img
                                 src="../../<?=$post->image?>" alt="Icone com imagem"></a>
                         
                         <div class="blog-text">
                             <span> <?=$post->created_at?> by <?=$post->author_name?></span>
-                            <a href="https://whiplash.net/materias/news_709/350367-queen.html" target="_blank"
+                            <a href="/home/post_individual"
                                 class="blog-title"><?=$post->title?></a>
                             <p><?=nl2br($post->content)?></p>
-                            <a href="https://whiplash.net/materias/news_709/350367-queen.html" target="_blank"  class="leia-mais">Leia Mais</a>
+                            <a href="/home/post_individual"  class="leia-mais">Leia Mais</a>
                         
                         </div>
                     
