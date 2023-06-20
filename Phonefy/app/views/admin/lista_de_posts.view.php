@@ -14,6 +14,7 @@
 
     <link rel="stylesheet" href="../../../public/css/modal2.css">
     <link rel="stylesheet" href="../../../public/css/edit_modal.css">
+    <link rel="stylesheet" href="../../../public/css/pagination.css">
 </head>
 
 
@@ -36,10 +37,11 @@
                 <script src="../../../public/js/modal.js"></script>
 
                 <tr class="cabecalho"> <!--Primeira linha-->
-                    <th>#</th>
+                    <!-- <th>#</th> -->
                     <th>Nome</th>
                     <th>Autor</th>
                     <th>Data</th>
+                    <!-- <th>Opções</th> -->
                     <th colspan="2"></th>
                 </tr>
 
@@ -47,25 +49,31 @@
                     <td colspan="6">Nenhum registro encontrado.</td>
                 </tr>
 
-                <?php $loopIndex = 0; ?>
                 <?php foreach ($posts as $post) : ?>
                 <tr class="corpo"> <!--Segunda linha-->
-                    <td><?= $loopIndex + 1 ?></td>
+                    <!-- <td><?=$post->id ?></td>    -->
                     <td><?=$post->title?></td>
                     <td><?=$post->author_name?></td>
                     <td><?=$post->created_at?></td>
 
                     <td class="icon">
-                    <button id="view" class="a" onclick="modalEdit('view-modal', <?=$post->id?>, '<?=$post->title?>', <?=$post->author?>, '<?=$post->created_at?>', '<?=$post->image?>', '<?=str_replace(PHP_EOL, "\\n", $post->content)?>', <?= htmlspecialchars(json_encode($users)) ?>)"> <i class="fa fa-eye" alt="Visualiar"></i> </button>
-                    <button id="edit" class="a" onclick="modalEdit('edit-modal', <?=$post->id?>, '<?=$post->title?>', <?=$post->author?>, '<?=$post->created_at?>', '<?=$post->image?>', '<?=str_replace(PHP_EOL, "\\n", $post->content)?>', <?= htmlspecialchars(json_encode($users)) ?>)"><i class="fa fa-outdent" aria-hidden="true"></i></button>
-                    <button id="Deleter" class="a" onclick="modalDelete('delete-modal', <?=$post->id?>)"><i class="fa fa-times" alt="Deletar"></i></button>
+                    <button id="view" class="a" data-title="Visualizar" onclick="modalEdit('view-modal', <?=$post->id?>, '<?=$post->title?>', <?=$post->author?>, '<?=$post->created_at?>', '<?=$post->image?>', '<?=str_replace(["\\n", "\r\n", "\n", "\"", "'", "&", "<", ">"], ["\\n", "\\n", "\\n", "\\\"", "\\'", "&amp;", "&lt;", "&gt;"], $post->content)?>', <?= htmlspecialchars(json_encode($users)) ?>)">
+                        <i class="fa fa-eye" alt="Visualizar"></i>
+                    </button>
+                    <button id="edit" class="a" data-title="Editar" onclick="modalEdit('edit-modal', <?=$post->id?>, '<?=$post->title?>', <?=$post->author?>, '<?=$post->created_at?>', '<?=$post->image?>', '<?=str_replace(["\\n", "\r\n", "\n", "\"", "'", "&", "<", ">"], ["\\n", "\\n", "\\n", "\\\"", "\\'", "&amp;", "&lt;", "&gt;"], $post->content)?>', <?= htmlspecialchars(json_encode($users)) ?>)">
+                        <i class="fa fa-outdent" aria-hidden="true"></i>
+                    </button>
+                    <button id="Deleter" class="a" data-title="Apagar" onclick="modalDelete('delete-modal', <?=$post->id?>)">
+                        <i class="fa fa-times" alt="Deletar"></i>
+                    </button>
                     </td>
                 </tr>
-                    <?php $loopIndex++; ?>
                 <?php endforeach; ?>
             </table>
         </div>
     </div>
+
+    <?php require './app/views/includes/pagination.php' ?>
 </body>
 
 </html>

@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../../../public/css/form_visualizar_usuarios.css">
     <link rel="stylesheet" href="../../../public/css/form_edt_usuarios.css">
     <link rel="stylesheet" href="../../../public/css/form_excluir_usuarios.css">
+    <link rel="stylesheet" href="../../../public/css/pagination.css">
 </head>
 
 
@@ -56,6 +57,7 @@
             </tr>
             <?php endforeach; ?>
         </table>
+        <?php require './app/views/includes/pagination.php' ?>
     </div>
 
 
