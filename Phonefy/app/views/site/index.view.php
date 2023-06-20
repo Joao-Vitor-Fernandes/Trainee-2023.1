@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="../../../public/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
     <title>Landing Page</title>
+    <link rel="stylesheet" href="../../../public/css/navbar.css" >
+    <link rel="stylesheet" href="../../../public/css/footer.css">
 </head>
 
 <body>
-    <!-- require da navbar -->
+    <?php require './app/views/site/navbar.html' ?>
     <div class="Phone"> <img src="../../../public/assets/phone4r.png"></div>
 
     <div class="home">
@@ -83,8 +85,9 @@
          <img src="../../../public/assets/VerMais.png" alt="Botão ver mais"></a>
     </div>
 
-            <!-- require do footer -->
-            
+    <?php require './app/views/site/footer.html' ?>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>         
             <!-- <div class="Som1"> <img src="../../../public/assets/SomPhonefy.png"> </div>
                  <div class="Som2"> <img src="../../../public/assets/SomPhonefy2.png"> </div> -->
 
