@@ -14,14 +14,6 @@ body {
     #EEF0F2 branco
     */
 }
-
-.navbar{
-    background-color: #232330;
-    /*grid-column: 1/10 ;
-    grid-row: 1/2 ;*/
-    grid-area: nav;
-    display: none;
-}
 .Phone  
     {
     position: absolute;
@@ -31,24 +23,14 @@ body {
 .Phone img
 {
     width: 98vw;
-    margin-left: -0.8vw;
+    /* margin-left: -0.8vw; */
 }    
-.Som1{
-    grid-area: s1;
-   display: none;
-} 
-.Som1 img{width: 100px;height: 200px;}
-.Som2{
-    transform: rotate(180deg);
-    display: none;
-    grid-area: s2;
-} 
-
 .home{
     /* display:none; */
     /*background-image: url=("../../../public/assets/HeadPhonefy.png");*/
     position: relative;
     padding-top: 30vh;
+    justify-content: center;
 display: grid;
 height: 160vh;
 width: 100%;
@@ -192,25 +174,18 @@ grid-template-areas:
     margin-right: 5vw;
     max-height: 10vh;
   }
-
-.footer{
-    background-color: #232330;
-   /* grid-column: 1/10 ;
-    grid-row: 9/10 ;*/
-    grid-area: f;
-    display: none;
-}
-
 @media (max-width:980px) 
 {
 
     .Phone{display: none;}
     .home{
+    justify-content: center;
     display: grid;
     height: 280vh;
     width: 100%;
     padding: 0;
-    margin-left: 4vw;
+    /* margin-left: 5vw;
+    margin-right: 5vw; */
     
     grid-template-areas: 
     ". p1 p1 ."
