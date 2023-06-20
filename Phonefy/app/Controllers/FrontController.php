@@ -7,6 +7,10 @@ use Exception;
 
 class FrontController
 {
+    public function index()
+    {
+        return view('site/index');
+    }
     public function dashboard()
     {
         return view('admin/dashboard');
