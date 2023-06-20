@@ -15,11 +15,12 @@
     <link rel="stylesheet" href="../../../public/css/modal2.css">
     <link rel="stylesheet" href="../../../public/css/edit_modal.css">
     <link rel="stylesheet" href="../../../public/css/pagination.css">
+    <link rel="stylesheet" href="../../../public/css/sidebar2.css"/>
 </head>
 
 
 <body>
-<?php require './app/views/admin/sidebar.html' ?>
+<?php require './app/views/admin/sidebar2.html' ?>
 <div class="load_modal"></div>
     <div class="lista">
         <h1 class="Titulo">Lista de Posts</h1>
@@ -74,6 +75,11 @@
     </div>
 
     <?php require './app/views/includes/pagination.php' ?>
+
+    <script src="../../../public/js/sidebar.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

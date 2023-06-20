@@ -175,6 +175,10 @@ tr:nth-child(even) {
     cursor: pointer;
 }
 
+.sidebar-icon ion-icon {
+    margin-left: -5px;
+}
+
 
 @media (max-width:950px) {
     .dashboard-main {

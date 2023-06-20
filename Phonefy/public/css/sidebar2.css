@@ -30,7 +30,9 @@ ion-icon {
 
 .sidebar-icon ion-icon {
     font-size: 25px;
-    margin-left: -5px;
+    /* margin-left: -5px; */
+    /* margin-right: 1%; */
+    /* margin: 0 auto; */
 }
 
 .sidebar-icon:hover {
@@ -48,6 +50,10 @@ ion-icon {
     height: 100vh;
 
     display: none;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .sidebar-title {

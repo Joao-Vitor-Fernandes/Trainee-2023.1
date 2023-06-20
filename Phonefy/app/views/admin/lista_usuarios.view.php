@@ -16,11 +16,12 @@
     <link rel="stylesheet" href="../../../public/css/form_edt_usuarios.css">
     <link rel="stylesheet" href="../../../public/css/form_excluir_usuarios.css">
     <link rel="stylesheet" href="../../../public/css/pagination.css">
+    <link rel="stylesheet" href="../../../public/css/sidebar2.css"/>
 </head>
 
 
 <body>
-  <?php require './app/views/admin/sidebar.html' ?>
+  <?php require './app/views/admin/sidebar2.html' ?>
     <div class="load_modal"></div>
 
     <h1 class="Titulo">Lista de Usuários</h1>
@@ -64,7 +65,10 @@
     <!-- Link para o script -->
     <!-- <script src="../../../public/js/add_user_modal.js"></script> -->
     <script src="../../../public/js/modais_usuario.js"></script>
+    <script src="../../../public/js/sidebar.js"></script>
 
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
