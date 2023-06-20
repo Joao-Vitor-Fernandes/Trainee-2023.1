@@ -20,6 +20,14 @@ body{
     background: linear-gradient(#232330, #41b6e6);
 }
 
+.result_pesquisa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45px;
+    color: white;
+}
+
 .capsula {
     min-height: 90vh;
     display: flex;
