@@ -91,7 +91,7 @@ grid-template-areas:
 .postimg img
 {
     max-width: 19vw;
-    width: 19vw;
+    width: 18vw;
     height:40vh;
     /* transform: translate(-15px, -2px); */
     transform: translate(-2px, -1px);
@@ -248,7 +248,7 @@ grid-template-areas:
 {   
     padding-top: 5px;
     max-width: 78vw;
-    width: 78vw;
+    width: 74vw;
 }
 
 .text{max-width: 80vw;max-height: 4;}

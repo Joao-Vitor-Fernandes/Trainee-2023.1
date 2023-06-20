@@ -42,8 +42,8 @@
             </fieldset>
         </div>
         <div class="modal-footer">
-                <button class="close" type="button" onsubmit="">Cancelar</button> 
-                <button type="submit" onsubmit="">Salvar</button> 
+            <button class="close" type="button" onsubmit="">Cancelar</button> 
+            <button type="submit" onsubmit="">Salvar</button> 
         </div>
     </form>
 </div>

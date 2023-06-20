@@ -20,6 +20,14 @@
 <body>
     <?php require './app/views/site/navbar.html' ?>
 
+    <!-- Script da Barra de Pesquisa -->
+    <?php if (!empty($pesquisa) && empty($posts)): ?>
+        <div class="result_pesquisa">
+            <h1>Post não encontrado</h1>
+        </div>
+    <?php endif;?>
+    
+
     <div class="capsula">
         <div class="contorno">
             <div class="search-box">
@@ -66,12 +74,6 @@
 </body>
 
 <!-- Script da Barra de Pesquisa -->
-<?php 
-    // if (!empty($pesquisa) && empty($posts)):
-    //     header('Location: /home/lista-posts');
-    // endif;
-?>
-
 <script>
     var search = document.getElementById('pesquisar');
 
