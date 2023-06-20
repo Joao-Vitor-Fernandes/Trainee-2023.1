@@ -49,7 +49,7 @@
         </div>
         <!-- Botões -->
         <div class="modal-footer">
-            <button type="submit" onsubmit="">Editar</button>
+            <button type="submit" onsubmit="">Cancelar</button>
             <button class="close" type="button" onsubmit="">Concluido</button> 
         </div>
     </form>
