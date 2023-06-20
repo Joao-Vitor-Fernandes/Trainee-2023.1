@@ -9,6 +9,7 @@
     </head>
 
     <body>
+    <?php require './app/views/admin/sidebar.html' ?>
         <div class="dashboard">
             <button class="sidebar-icon"><ion-icon name="chevron-forward-outline"></ion-icon></button>
 
