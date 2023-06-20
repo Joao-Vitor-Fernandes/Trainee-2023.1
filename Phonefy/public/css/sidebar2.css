@@ -46,6 +46,8 @@ ion-icon {
     background-image: linear-gradient(#232330, #41b6e6);
     width: 20%;
     height: 100vh;
+
+    display: none;
 }
 
 .sidebar-title {

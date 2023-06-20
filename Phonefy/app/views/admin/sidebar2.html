@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="../../../public/css/sidebar2.css"/>
 </head>
 <body>
-  <!-- <button class="sidebar-icon"><ion-icon name="chevron-forward-outline"></ion-icon></button> -->
-  <div class="sidebar">
+  <button class="sidebar-icon" id="sidebar-icon" onclick="open_sidebar('sidebar', 'sidebar-close', 'sidebar-icon')"><ion-icon name="chevron-forward-outline"></ion-icon></button>
+  <div class="sidebar" id="sidebar">
     <div class="sidebar-title">
         <h2>Administração</h2>
-        <button class="sidebar-close"><ion-icon name="close-outline"></ion-icon></button>
+        <button class="sidebar-close" id="sidebar-close"><ion-icon name="close-outline"></ion-icon></button>
     </div>
     <div class="sidebar-links">
         <!-- <ul> -->
@@ -21,9 +21,6 @@
                     <h3>Dashboard</h3>
                 </button> 
             </a>
-            
-            <!-- <hr className='linhazinha'> -->
-            </hr>
     
             <a href="./posts">
                 <button class="side-options">
@@ -31,9 +28,6 @@
                     <h3>Posts</h3>
                 </button> 
             </a>
-            
-            <!-- <hr className='linhazinha'> -->
-            </hr>
     
             <a href="./usuarios">
                 <button class="side-options">
@@ -41,13 +35,34 @@
                     <h3>Usuários</h3>
                 </button> 
             </a>
-            
-            <!-- <hr className='linhazinha'> -->
-            </hr>
           <!-- </ul> -->
     </div>
 
   </div>
+
+  <script>
+        function open_sidebar(side, close, button)
+        {   
+            sidebar = document.getElementById(side);
+            close = document.getElementById(close);
+            button = document.getElementById(button);
+
+            sidebar.style.display = "block";
+            button.style.display = "none";
+
+            close.onclick = function() {
+                sidebar.style.display = "none";
+                button.style.display = "block";
+            }
+
+            window.onclick = function(event) {
+                if (event.target == sidebar) {
+                    sidebar.style.display = "none";
+                    button.style.display = "block";
+                }
+            }
+        }
+  </script>
 
     <script  type = "module"  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script> 
     <script  nomodule  src = "https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
