@@ -5,6 +5,7 @@ use App\Controllers\PostController;
 use App\Controllers\UserController;
 use App\Controllers\FrontController;
 use App\Controllers\SiteController;
+use App\Controllers\LoginController;
 use App\Core\Router;
 
 //--------Admin--------//
@@ -31,4 +32,10 @@ $router->get('home/lista-posts/search', 'Lista_postsController@search');
 
 $router->get('home/post_individual', 'FrontController@post_individual');
 
+//Login
+$router->get('admin/login', 'LoginController@index');
+$router->post('admin/logar', 'LoginController@autenticacao');
+$router->get('admin/logout', 'LoginController@logout');
+
+// $router->get('index', 'LoginController@index');
 ?> 

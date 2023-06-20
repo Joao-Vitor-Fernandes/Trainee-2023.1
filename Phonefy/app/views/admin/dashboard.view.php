@@ -22,10 +22,12 @@
                     <ion-icon name="grid"></ion-icon>
                     <h3>DASHBOARD</h3>
                 </div>
-                <button class="icon-name-logout">
-                    <h4>LOGOUT</h4>
-                    <ion-icon name="log-out-outline"></ion-icon>
-                </button>
+                <a href="/admin/logout">
+                    <button class="icon-name-logout">
+                        <h4>LOGOUT</h4>
+                        <ion-icon name="log-out-outline"></ion-icon>
+                    </button>
+                </a>
             </div>
 
             <div class="dashboard-main">
