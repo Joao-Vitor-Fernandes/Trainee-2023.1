@@ -18,6 +18,7 @@
 
 
 <body>
+<?php require './app/views/admin/sidebar.html' ?>
 <div class="load_modal"></div>
     <div class="lista">
         <h1 class="Titulo">Lista de Posts</h1>
