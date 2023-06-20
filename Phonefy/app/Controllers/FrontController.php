@@ -9,7 +9,23 @@ class FrontController
 {
     public function index()
     {
-        return view('site/index');
+        $posts = App::get('database')->selectAll('posts');
+        $users = App::get('database')->selectAll('users');
+
+        $count = count($posts);
+        $relatedPosts = [];
+
+        for ($i = $count - 1; $i >= 0 && count($relatedPosts) < 5; $i--) {
+            $relatedPosts[] = $posts[$i];
+        }
+
+        // Associar o nome do autor aos posts relacionados (autor é o id do user)
+        foreach ($relatedPosts as $post) {
+            $author = $this->getUserById($users, $post->author);
+            $post->author_name = $author->name;
+        }
+
+        return view('site/index', compact('relatedPosts'));
     }
     public function dashboard()
     {
@@ -50,7 +66,7 @@ class FrontController
             $selectedPost->author_name = $author->name;
         }
 
-        return view('site/post_individual', compact("selectedPost", "relatedPosts"));
+        return view('site/post_individual', compact("   ", "relatedPosts"));
     }
 
 

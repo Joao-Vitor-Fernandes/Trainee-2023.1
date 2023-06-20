@@ -16,7 +16,19 @@
 
     <div class="home">
 
-        <div class="Post1">
+    <?php $index = 1;?>
+    <?php foreach ($relatedPosts as $post) : ?>
+        <!-- <?= $index?> -->
+        <div class="Post<?= $index?>">
+            <div class="postimg"> <img src="../../<?=$post->image?>"> </div>
+            <div class="text">
+                <p><?=$post->title?></p>
+            </div>
+        </div>
+        <?php $index += 1; ?>
+    <?php endforeach; ?>
+
+        <!-- <div class="Post1">
 
             <div class="postimg"> <img src="../../../public/assets/coachella.jpg"> </div>
             <div class="text">
@@ -64,10 +76,10 @@
             </div>
 
 
-        </div>
+        </div> -->
     </div>    
     <div class="button">
-       <a href="https://www.deezer-blog.com/br/maiores-festivais-de-musica-do-mundo/">
+       <a href="/home/lista-posts">
          <img src="../../../public/assets/VerMais.png" alt="Botão ver mais"></a>
     </div>
 
