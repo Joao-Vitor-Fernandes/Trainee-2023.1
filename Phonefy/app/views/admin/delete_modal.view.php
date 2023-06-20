@@ -8,7 +8,7 @@
             <h2>Deseja realmente excluir este post? Essa ação é definitiva</h2>
         </div>
         <div class="modal-footer-delete">
-            <button class="close" type="button" onsubmit="">Cancelar</button> 
+        <button class="close" type="button" onsubmit="">Cancelar</button> 
             <button type="submit" onsubmit="">Confirmar</button> 
         </div>
     </form>

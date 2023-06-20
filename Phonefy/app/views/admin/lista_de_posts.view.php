@@ -37,7 +37,7 @@
                 <script src="../../../public/js/modal.js"></script>
 
                 <tr class="cabecalho"> <!--Primeira linha-->
-                    <!-- <th>#</th> -->
+                    <th>#</th>
                     <th>Nome</th>
                     <th>Autor</th>
                     <th>Data</th>
@@ -51,16 +51,16 @@
 
                 <?php foreach ($posts as $post) : ?>
                 <tr class="corpo"> <!--Segunda linha-->
-                    <!-- <td><?=$post->id ?></td>    -->
+                    <td><?=$post->id ?></td>   
                     <td><?=$post->title?></td>
                     <td><?=$post->author_name?></td>
                     <td><?=$post->created_at?></td>
 
                     <td class="icon">
-                    <button id="view" class="a" data-title="Visualizar" onclick="modalEdit('view-modal', <?=$post->id?>, '<?=$post->title?>', <?=$post->author?>, '<?=$post->created_at?>', '<?=$post->image?>', '<?=str_replace(["\\n", "\r\n", "\n", "\"", "'", "&", "<", ">"], ["\\n", "\\n", "\\n", "\\\"", "\\'", "&amp;", "&lt;", "&gt;"], $post->content)?>', <?= htmlspecialchars(json_encode($users)) ?>)">
+                    <button id="view" class="a" data-title="Visualizar" onclick="modalEdit('view-modal', <?=$post->id?>, '<?=$post->title?>', <?=$post->author?>, '<?=$post->created_at?>', '<?=$post->image?>', '<?=str_replace(['"', "\\n", "\r\n", "\n", "\"", "'", "&", "<", ">"], ["&quot;", "\\n", "\\n", "\\n", "\\\"", "\\'", "&amp;", "&lt;", "&gt;"], $post->content)?>', <?= htmlspecialchars(json_encode($users)) ?>)">
                         <i class="fa fa-eye" alt="Visualizar"></i>
                     </button>
-                    <button id="edit" class="a" data-title="Editar" onclick="modalEdit('edit-modal', <?=$post->id?>, '<?=$post->title?>', <?=$post->author?>, '<?=$post->created_at?>', '<?=$post->image?>', '<?=str_replace(["\\n", "\r\n", "\n", "\"", "'", "&", "<", ">"], ["\\n", "\\n", "\\n", "\\\"", "\\'", "&amp;", "&lt;", "&gt;"], $post->content)?>', <?= htmlspecialchars(json_encode($users)) ?>)">
+                    <button id="edit" class="a" data-title="Editar" onclick="modalEdit('edit-modal', <?=$post->id?>, '<?=$post->title?>', <?=$post->author?>, '<?=$post->created_at?>', '<?=$post->image?>', '<?=str_replace(['"', "\\n", "\r\n", "\n", "\"", "'", "&", "<", ">"], ["&quot;", "\\n", "\\n", "\\n", "\\\"", "\\'", "&amp;", "&lt;", "&gt;"], $post->content)?>', <?= htmlspecialchars(json_encode($users)) ?>)">
                         <i class="fa fa-outdent" aria-hidden="true"></i>
                     </button>
                     <button id="Deleter" class="a" data-title="Apagar" onclick="modalDelete('delete-modal', <?=$post->id?>)">

@@ -48,9 +48,9 @@
             </fieldset>
         </div>
         <!-- Botões -->
-        <div class="modal-footer">
-            <button type="submit" onsubmit="">Cancelar</button>
-            <button class="close" type="button" onsubmit="">Concluido</button> 
+        <div class="modal-view-footer">
+        <button class="close" type="button" onsubmit="">Concluido</button> 
+            <!-- <button class="close" type="button" onsubmit="">Concluido</button>  -->
         </div>
     </form>
 </div>
