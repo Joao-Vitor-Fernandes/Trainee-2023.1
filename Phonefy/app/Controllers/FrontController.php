@@ -66,7 +66,7 @@ class FrontController
             $selectedPost->author_name = $author->name;
         }
 
-        return view('site/post_individual', compact("   ", "relatedPosts"));
+        return view('site/post_individual', compact("selectedPost", "relatedPosts"));
     }
 
 
