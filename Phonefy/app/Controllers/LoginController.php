@@ -8,11 +8,15 @@ use Exception;
 
 class LoginController 
 {
-    // extends controller
-    // public function __construct()
-    // {
-    //     parent::__construct();
-    // }
+    
+    public function __construct()
+    {
+        parent::__construct();
+          if(!isset($_SESSION['logado'])){
+            return redirect('login');
+            exit();
+          }
+    }
 
     public function index()
     {
