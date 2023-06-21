@@ -58,10 +58,10 @@
                     <td><?=$post->created_at?></td>
 
                     <td class="icon">
-                    <button id="view" class="a" data-title="Visualizar" onclick="modalEdit('view-modal', <?=$post->id?>, '<?=str_replace(['"', "\\n", "\r\n", "\n", "\"", "'", "&", "<", ">"], ["&quot;", "\\n", "\\n", "\\n", "\\\"", "\\'", "&amp;", "&lt;", "&gt;"], $post->title)?>', <?=$post->author?>, '<?=$post->created_at?>', '<?=$post->image?>', '<?=str_replace(['"', "\\n", "\r\n", "\n", "\"", "'", "&", "<", ">"], ["&quot;", "\\n", "\\n", "\\n", "\\\"", "\\'", "&amp;", "&lt;", "&gt;"], $post->content)?>', <?= htmlspecialchars(json_encode($users)) ?>, <?=$_SESSION['logado']?>)">
+                    <button id="view" class="a" data-title="Visualizar" onclick="modalEdit('view-modal', <?=$post->id?>, <?=htmlspecialchars(json_encode($post->title))?>, <?=$post->author?>, '<?=$post->created_at?>', '<?=$post->image?>', <?=htmlspecialchars(json_encode($post->content))?>, <?= htmlspecialchars(json_encode($users)) ?>, <?=$_SESSION['logado']?>)">
                         <i class="fa fa-eye" alt="Visualizar"></i>
                     </button>
-                    <button id="edit" class="a" data-title="Editar" onclick="modalEdit('edit-modal', <?=$post->id?>, '<?=str_replace(['"', "\\n", "\r\n", "\n", "\"", "'", "&", "<", ">"], ["&quot;", "\\n", "\\n", "\\n", "\\\"", "\\'", "&amp;", "&lt;", "&gt;"], $post->title)?>', <?=$post->author?>, '<?=$post->created_at?>', '<?=$post->image?>', '<?=str_replace(['"', "\\n", "\r\n", "\n", "\"", "'", "&", "<", ">"], ["&quot;", "\\n", "\\n", "\\n", "\\\"", "\\'", "&amp;", "&lt;", "&gt;"], $post->content)?>', <?= htmlspecialchars(json_encode($users)) ?>, <?=$_SESSION['logado']?>)">
+                    <button id="edit" class="a" data-title="Editar" onclick="modalEdit('edit-modal', <?=$post->id?>, <?=htmlspecialchars(json_encode($post->title))?>, <?=$post->author?>, '<?=$post->created_at?>', '<?=$post->image?>', <?=htmlspecialchars(json_encode($post->content))?>, <?= htmlspecialchars(json_encode($users)) ?>, <?=$_SESSION['logado']?>)">
                         <i class="fa fa-outdent" aria-hidden="true"></i>
                     </button>
                     <button id="Deleter" class="a" data-title="Apagar" onclick="modalDelete('delete-modal', <?=$post->id?>)">
