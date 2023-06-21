@@ -1,16 +1,16 @@
-body{
+.bodyLogin{
     font-family: Arial, Helvetica, sans-serif;
     background-image: linear-gradient(#232330, #297795);
     background-repeat: no-repeat;
     height: 100vh;
     
 }
-.div1 {
+.divlo1 {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.div2{
+.divlo2{
     
     background-color: #232330;
     position:fixed;
@@ -27,21 +27,18 @@ body{
     text-align: center;
     
 }
-ul{
-    padding:  20px;
-}
-input{
+
+.inplo{
     padding: 10px;
     border: none;
     border-radius: 4px;
     font-size: 13.5px;
 }
 .login{
-    padding-bottom: 1px;
-    padding-top: 1px;
+   
     font-size: 30px;
 }
-.entrar{
+.entrarlo{
     background-color: #1f556b;
     cursor: pointer;
     font-size: 14px;
@@ -52,7 +49,7 @@ input{
     border-radius: 9px;
     border-color:rgba(0, 0, 0, 0);
 }
-.entrar:hover{
+.entrarlo:hover{
     background-color:#173ca4 ;
 }
 .recuperar{
@@ -63,16 +60,16 @@ input{
     padding-top: 4px;
     
 }
-.cadastro{
+.cadastrolo{
     background-color: rgba(0, 0, 0, 0);
     border: none;
     color: #41b6e6;
     cursor: pointer;
     padding-top: 15px;
 }
-.logo{
+.logolo{
     background-color: rgba(0, 0, 0, 0);
-    top: 2%;
+    padding-top: 60px;
 }
 
 
