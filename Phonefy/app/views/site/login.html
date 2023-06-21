@@ -28,7 +28,7 @@
     </script>
     <div class="div1">
         <div class="logo" data-aos="fade-up">
-            <img src="../../../public/assets/logo_circular.png" alt="some text" width="140" height="120">
+            <img src="../../../public/assets/logo_circular.png" alt="some text" width="240" height="100">
         </div>
     <form action="logar" method="POST">
         <div class="div2" data-aos="fade-up">
@@ -37,19 +37,26 @@
             </ul> -->
              <h1 class="login">Login</h1>
                <br>
+               
                <label for="email">Email:</label>
-                <input type="text" name="email" placeholder="E-mail" required>
+               <div class="email8">
+              <input type="text" name="email" placeholder="E-mail" required>
+            </div>
               <!-- <input type="text" id="email" placeholder="E-mail"> -->
-              <br><br>
-              <label for="senha">Senha:</label>
-                <input type="password" name="senha" placeholder="Senha" required>
-              <!-- <input type="password" id="senha" placeholder="Senha"> -->
               <br>
-              <button class="recuperar"><a>Esqueci a minha senha</a></button>
-              <br><br>
-              <button class="entrar" type="submit">Entrar</button>
+              <label for="senha">Senha:</label>
+              <div class="senha8">
+                <input type="password" name="senha" placeholder="Senha" required>
+                <br>
+                <button class="recuperar"><a>Esqueci a minha senha</a></button>
+                </div>
+              <!-- <input type="password" id="senha" placeholder="Senha"> -->
               
+              <br>
+              <div class="cad">
+              <button class="entrar" type="submit">Entrar</button>
               <button class="cadastro"><a>Novo Cadastro</a></button>
+              </div>
     </form>
             <?php session_start(); ?>
 
