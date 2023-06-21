@@ -13,7 +13,7 @@ function load(url, element)
 }
 
 // Indices baseados na sequencia que é chamado as funcoes 'load'
-function modalEdit(m, id, titulo, autor, data, imagem, conteudo, users) {
+function modalEdit(m, id, titulo, autor, data, imagem, conteudo, users, $idUsuario) {
     if(m == 'view-modal'){ i = 0;}
     else if (m == 'edit-modal'){ i = 1;}
     else {console.log("Erro no indice");}
@@ -47,13 +47,14 @@ function modalEdit(m, id, titulo, autor, data, imagem, conteudo, users) {
 
         for (var j = 0; j < users.length; j++) {
             var user = users[j];
-            var option = document.createElement('option');
-            option.value = user.id;
-            option.textContent = user.name;
-            if (user.id == autor) {
+            if (user.id == $idUsuario) {
+                var option = document.createElement('option');
+                option.value = user.id;
+                option.textContent = user.name;
                 option.selected = true; // Define a opção selecionada
+                autorSelect.appendChild(option);
+                break; // Sai do loop após adicionar a opção desejada
             }
-            autorSelect.appendChild(option);
         }
     }
     
@@ -78,21 +79,21 @@ function modalDelete(m, id) {
     open_modal(m,2);
 }
 
-function modalAdd(m, users) {
+function modalAdd(m, users, $idUsuario) {
 
-    //Preenchendo os autores no modal
     var autorSelect = document.getElementById(m).querySelector("[name='autor']");
     autorSelect.innerHTML = ''; // Limpa as opções existentes
 
     for (var j = 0; j < users.length; j++) {
         var user = users[j];
-        var option = document.createElement('option');
-        option.value = user.id;
-        option.textContent = user.name;
-        if (user.id == autor) {
+        if (user.id == $idUsuario) {
+            var option = document.createElement('option');
+            option.value = user.id;
+            option.textContent = user.name;
             option.selected = true; // Define a opção selecionada
+            autorSelect.appendChild(option);
+            break; // Sai do loop após adicionar a opção desejada
         }
-        autorSelect.appendChild(option);
     }
 
     open_modal(m,3);
