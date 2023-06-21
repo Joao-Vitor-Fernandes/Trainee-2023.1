@@ -49,27 +49,22 @@
                                 <th>Data</th>
                                 <th id="details-tam"></th>
                             </tr>
-                            <tr>
+                            <?php foreach ($relatedPosts as $post) : ?>
+                            <tr id="table-th">
+                                <td><?=$post->id?></td>
+                                <td><?=$post->title?></td>
+                                <td><?=$post->author?></td>
+                                <td><?=$post->created_at?></td>
+                                <td id="details"><a href="/home/post_individual?id_pag=<?=$post->id?>" target="blank"><span>Detalhes</span> <ion-icon name="chevron-forward-circle-outline"></ion-icon></a></td>
+                            </tr>
+                            <?php endforeach; ?>
+                            <!-- <tr>
                                 <td>3</td>
                                 <td>Post 3</td>
                                 <td>Maria</td>
                                 <td>25 de abril</td>
                                 <td  id="details"><span>Detalhes</span> <ion-icon name="chevron-forward-circle-outline"></ion-icon></td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Post 2</td>
-                                <td>Maria</td>
-                                <td>25 de abril</td>
-                                <td  id="details"><span>Detalhes</span> <ion-icon name="chevron-forward-circle-outline"></ion-icon></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Post 1</td>
-                                <td>Maria</td>
-                                <td>25 de abril</td>
-                                <td  id="details"><span>Detalhes</span> <ion-icon name="chevron-forward-circle-outline"></ion-icon></td>
-                            </tr>
+                            </tr> -->
                         </table>
                     </div>
 
