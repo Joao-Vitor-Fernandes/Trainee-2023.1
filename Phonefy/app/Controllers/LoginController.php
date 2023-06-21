@@ -21,19 +21,21 @@ class LoginController
 
     public function autenticacao()
     {
-    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
-    $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_SPECIAL_CHARS);
-    // $user = User::where('email', $email)->where('senha', $senha)->first();
-    $id = App::get('database')->autenticar('users', $email, $senha);
-    // die(var_dump($id));
-    
-    if($id > 0)
-    {
-        $_SESSION['logado'] = $id;
-        return redirect('admin/dashboard');
-    }
-    $_SESSION['error_message'] = "E-mail ou senha incorretos.";
-    return redirect('admin/login');
+        $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
+        $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_SPECIAL_CHARS);
+        // $user = User::where('email', $email)->where('senha', $senha)->first();
+        $id = App::get('database')->autenticar('users', $email, $senha);
+        // die(var_dump($id));
+        
+        session_start();
+        if($id > 0)
+        {
+            $_SESSION['logado'] = $id;
+            return redirect('admin/dashboard');
+        }
+        $_SESSION['error_message'] = "E-mail ou senha incorretos.";
+        // die(var_dump($_SESSION['error_message']));
+        return redirect('admin/login');
     }
 
     public function logout()
