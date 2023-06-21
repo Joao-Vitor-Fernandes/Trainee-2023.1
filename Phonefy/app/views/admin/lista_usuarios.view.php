@@ -21,7 +21,7 @@
 
 
 <body>
-  <?php require './app/views/admin/sidebar2.html' ?>
+  <?php require './app/views/admin/sidebar2.view.php' ?>
     <div class="load_modal"></div>
 
     <h1 class="Titulo">Lista de Usuários</h1>

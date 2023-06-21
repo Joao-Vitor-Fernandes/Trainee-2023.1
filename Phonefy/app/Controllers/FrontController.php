@@ -29,6 +29,11 @@ class FrontController
     }
     public function dashboard()
     {
+        session_start();
+        if (!isset($_SESSION['logado'])) {
+            return redirect('admin/login');
+        }
+
         $posts = App::get('database')->selectAll('posts');
         $users = App::get('database')->selectAll('users');
         $relatedPosts = []; //posts relacionados
@@ -45,12 +50,9 @@ class FrontController
             $post->author_name = $author->name;
         }
 
-        session_start();
-        if (!isset($_SESSION['logado'])) {
-            return redirect('admin/login');
-        }
+        $usuarioAdmin = $this->getUserById($users, $_SESSION['logado']);
 
-        return view('admin/dashboard', compact('relatedPosts'));
+        return view('admin/dashboard', compact('relatedPosts', 'usuarioAdmin'));
     }
 
     public function post_individual()

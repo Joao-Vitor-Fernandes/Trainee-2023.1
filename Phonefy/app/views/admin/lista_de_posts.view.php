@@ -20,7 +20,7 @@
 
 
 <body>
-<?php require './app/views/admin/sidebar2.html' ?>
+<?php require './app/views/admin/sidebar2.view.php' ?>
 <div class="load_modal"></div>
     <div class="lista">
         <h1 class="Titulo">Lista de Posts</h1>

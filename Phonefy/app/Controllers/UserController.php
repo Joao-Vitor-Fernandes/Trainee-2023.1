@@ -37,7 +37,10 @@ class UserController
         $total_pages = ceil($rows_count / $items_per_page);
         $users = App::get('database')->selectAll('users', $start_limit, $items_per_page);
 
-        return view('admin/lista_usuarios', compact("users", "page", "total_pages"));
+        $usuarioTotal = App::get('database')->selectAll('users');
+        $usuarioAdmin = $this->getUserById($usuarioTotal, $_SESSION['logado']);
+
+        return view('admin/lista_usuarios', compact("users", "page", "total_pages", 'usuarioAdmin'));
 
         // return view('admin/lista_usuarios', $tables);
     }
@@ -91,5 +94,16 @@ class UserController
         app::get('database')->delete('users', $id);
 
         header('Location: /admin/usuarios');
+    }
+
+    private function getUserById($users, $userId)
+    {
+        foreach ($users as $user) {
+            if ($user->id === $userId) {
+                return $user;
+            }
+        }
+
+        return null; // Caso o usuário não seja encontrado
     }
 }

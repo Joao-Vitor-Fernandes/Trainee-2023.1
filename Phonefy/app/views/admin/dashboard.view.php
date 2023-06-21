@@ -11,7 +11,7 @@
     </head>
 
     <body>
-        <?php require './app/views/admin/sidebar2.html' ?>
+        <?php require './app/views/admin/sidebar2.view.php' ; ?>
         <div class="dashboard">
             <div class="dashboard-nav">
                 <div class="icon-name">

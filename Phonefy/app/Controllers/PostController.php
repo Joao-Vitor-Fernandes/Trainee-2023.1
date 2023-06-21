@@ -48,20 +48,9 @@ class PostController
             $author = $this->getUserById($users, $post->author);
             $post->author_name = $author->name;
         }
+        $usuarioAdmin = $this->getUserById($users, $_SESSION['logado']);
 
-        return view('admin/lista_de_posts', compact("posts", "users", "page", "total_pages"));
-    }
-
-    // Função auxiliar para buscar o usuário pelo ID
-    private function getUserById($users, $userId)
-    {
-        foreach ($users as $user) {
-            if ($user->id === $userId) {
-                return $user;
-            }
-        }
-
-        return null; // Caso o usuário não seja encontrado
+        return view('admin/lista_de_posts', compact("posts", "users", "page", "total_pages", 'usuarioAdmin'));
     }
 
     public function create_tabela_post(){
@@ -111,10 +100,6 @@ class PostController
 
         header('Location: /admin/posts');
     }
-    public function index()
-    {
-        return view('site/teste');
-    }
 
     public function editar_tabela_post()
     {
@@ -162,18 +147,28 @@ class PostController
         header('Location: /admin/posts');
     }
 
-
-
+    // Função auxiliar para buscar o usuário pelo ID
     public function exibirImagem($filename)
-{
-    $path = __DIR__ . '/../imagens-posts/' . $filename;
-    if (file_exists($path)) {
-        header('Content-Type: image/jpeg'); // Defina o tipo de conteúdo correto para o tipo de imagem
-        readfile($path);
-    } else {
-        http_response_code(404); // Retorne um código de resposta 404 se a imagem não for encontrada
-        echo 'Imagem não encontrada';
+    {
+        $path = __DIR__ . '/../imagens-posts/' . $filename;
+        if (file_exists($path)) {
+            header('Content-Type: image/jpeg');
+            readfile($path);
+        } else {
+            http_response_code(404);
+            echo 'Imagem não encontrada';
+        }
     }
-}
+
+    private function getUserById($users, $userId)
+    {
+        foreach ($users as $user) {
+            if ($user->id === $userId) {
+                return $user;
+            }
+        }
+
+        return null;
+    }
 
 }

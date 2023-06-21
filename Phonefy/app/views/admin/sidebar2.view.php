@@ -4,7 +4,9 @@
     </button>
     <div class="sidebar" id="sidebar">
         <div class="sidebar-title">
-            <h2>Administração</h2>
+            <!-- <h2>Administração</h2> -->
+            <!-- <h2><?php echo substr($usuarioAdmin->name, 0, 7); ?></h2> -->
+            <?php echo $usuarioAdmin->name; ?>
             <button class="sidebar-close" id="sidebar-close"><ion-icon name="close-outline"></ion-icon></button>
         </div>
         <div class="sidebar-links">
