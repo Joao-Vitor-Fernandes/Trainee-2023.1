@@ -187,6 +187,10 @@ tr:nth-child(even) {
     margin-left: -5px;
 }
 
+.sidebar-close ion-icon {
+    margin-left: -7.5px;
+}
+
 
 @media (max-width:950px) {
     .dashboard-main {

@@ -7,15 +7,15 @@
     <!-- <meta name="viewport" content="width=devide" charset="utf-8"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../../../public/css/lista_de_posts_admin.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-
+    
     <link rel="stylesheet" href="../../../public/css/modal2.css">
     <link rel="stylesheet" href="../../../public/css/edit_modal.css">
     <link rel="stylesheet" href="../../../public/css/pagination.css">
     <link rel="stylesheet" href="../../../public/css/sidebar2.css"/>
+    <link rel="stylesheet" href="../../../public/css/lista_de_posts_admin.css">
 </head>
 
 

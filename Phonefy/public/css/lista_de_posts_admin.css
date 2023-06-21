@@ -238,3 +238,7 @@ img {
   .a:hover:before {
     opacity: 1;
   }
+
+.sidebar-close ion-icon {
+    margin-left: -2px;
+}
