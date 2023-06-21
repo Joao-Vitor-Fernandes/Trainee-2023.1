@@ -6,9 +6,11 @@
     
 }
 .divlo1 {
-    display: flex;
+    padding-left: 540px;
+    
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 .divlo2{
     
@@ -20,11 +22,12 @@
     /* left: 39.5%; */
     transform: translate(-50%,-50%);
     padding: 55px;
-    padding-top: 35px;
-    padding-bottom: 35px;
+    padding-top: 25px;
+    padding-bottom: 28px;
     border-radius: 14px;
     color: white;
     text-align: center;
+    
     
 }
 
@@ -70,6 +73,7 @@
 .logolo{
     background-color: rgba(0, 0, 0, 0);
     padding-top: 60px;
+    padding-left: 50px;
 }
 
 
