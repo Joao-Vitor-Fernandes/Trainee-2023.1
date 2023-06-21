@@ -60,12 +60,16 @@ ion-icon {
 .sidebar-title {
     width: 90%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding-top: 5%;
     margin-left: 7%;
     margin-bottom: 5%;
     color: #ffffff;
+}
+
+.sidebar-title h2 {
+    text-transform: uppercase;
 }
 
 .sidebar-close {

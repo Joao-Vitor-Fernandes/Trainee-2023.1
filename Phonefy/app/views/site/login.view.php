@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<!-- <?php session_start(); ?> -->
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -22,30 +22,27 @@
     <div class="conteudo-login">
         <?php require './app/views/site/navbar.html' ?>
         <div class="div1">
-            <!-- <div class="logo" data-aos="fade-up">
-                <img src="../../../public/assets/logo_circular.png" alt="some text" width="140" height="120">
-            </div> -->
             <form action="logar" method="POST">
                 <div class="div2" data-aos="fade-up">
-                <!--    <ul>
-                        <img src="logo_circular.png" alt="some text" width="100" height="80">
-                    </ul> -->
                     <h1 class="login">Login</h1>
-                    <br>
-                    <label for="email">Email:</label>
-                        <input type="text" name="email" placeholder="E-mail" required>
-                    <!-- <input type="text" id="email" placeholder="E-mail"> -->
-                    <br><br>
-                    <label for="senha">Senha:</label>
-                        <input type="password" name="senha" placeholder="Senha" required>
-                    <!-- <input type="password" id="senha" placeholder="Senha"> -->
-                    <br>
-                    <button class="recuperar"><a>Esqueci a minha senha</a></button>
-                    <br><br>
+                    <div class="div3">
+                        <label for="email">Email:</label>
+                            <input type="text" name="email" placeholder="E-mail" required>
+
+                        <label for="senha">Senha:</label>
+                            <input type="password" name="senha" placeholder="Senha" required>
+                    </div>
+                    <!-- <button class="recuperar"><a>Esqueci a minha senha</a></button> -->
                     <button class="entrar" type="submit">Entrar</button>
                     
-                    <button class="cadastro"><a>Novo Cadastro</a></button>
-                    <!-- <?= $_SESSION['error_message']; ?> -->
+                    <!-- <button class="cadastro"><a>Novo Cadastro</a></button> -->
+                                        
+                        <?php if(isset($_SESSION['error_message'])) { ?>
+                        <div class="session">
+                            <?= $_SESSION['error_message'] ?>
+                        </div>
+                        <?php unset($_SESSION['error_message']);
+                    } ?>
                 </div>
             </form>
         </div> 
@@ -54,12 +51,6 @@
 
 
 
-    <?php if(isset($_SESSION['error_message'])) { ?>
-        <div>
-            <?php $_SESSION['error_message'] ?>
-        </div>
-        <?php 
-    } ?>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>

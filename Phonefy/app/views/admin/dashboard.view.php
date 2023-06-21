@@ -7,6 +7,7 @@
         <title>Dashboard</title>
         <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous"> -->
         <link rel="stylesheet" href="../../../public/css/sidebar2.css"/>
+        <link rel="stylesheet" href="../../../public/css/navbar_admin.css">
         <link rel="stylesheet" href="../../../public/css/dashboard.css">
     </head>
 
@@ -15,8 +16,10 @@
         <div class="dashboard">
             <div class="dashboard-nav">
                 <div class="icon-name">
-                    <ion-icon name="grid"></ion-icon>
-                    <h3>DASHBOARD</h3>
+                    <a href="/admin/dashboard">
+                        <ion-icon name="grid"></ion-icon>
+                        <h3>DASHBOARD</h3>
+                    </a>
                 </div>
                 <a href="/admin/logout">
                     <button class="icon-name-logout">

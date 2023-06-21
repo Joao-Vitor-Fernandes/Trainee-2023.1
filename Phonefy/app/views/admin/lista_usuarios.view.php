@@ -16,12 +16,27 @@
     <link rel="stylesheet" href="../../../public/css/form_excluir_usuarios.css">
     <link rel="stylesheet" href="../../../public/css/pagination.css">
     <link rel="stylesheet" href="../../../public/css/sidebar2.css"/>
+    <link rel="stylesheet" href="../../../public/css/navbar_admin.css">
     <link rel="stylesheet" href="../../../public/css/lista_usuarios.css">
 </head>
 
 
 <body>
   <?php require './app/views/admin/sidebar2.view.php' ?>
+  <div class="dashboard-nav">
+        <div class="icon-name">
+            <a href="/admin/dashboard">
+                <ion-icon name="grid"></ion-icon>
+                <h3>DASHBOARD</h3>
+            </a>
+        </div>
+        <a href="/admin/logout">
+            <button class="icon-name-logout">
+                <h4>LOGOUT</h4>
+                <ion-icon name="log-out-outline"></ion-icon>
+            </button>
+        </a>
+    </div>
     <div class="load_modal"></div>
 
     <h1 class="Titulo">Lista de Usuários</h1>

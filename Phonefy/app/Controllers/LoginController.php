@@ -16,6 +16,7 @@ class LoginController
 
     public function index()
     {
+        session_start();
         return view('site/login');
     }
 
@@ -33,7 +34,7 @@ class LoginController
             $_SESSION['logado'] = $id;
             return redirect('admin/dashboard');
         }
-        $_SESSION['error_message'] = "E-mail ou senha incorretos.";
+        $_SESSION['error_message'] = "E-mail ou senha incorretos";
         // die(var_dump($_SESSION['error_message']));
         return redirect('admin/login');
     }
