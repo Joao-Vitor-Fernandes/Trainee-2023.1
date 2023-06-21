@@ -29,7 +29,23 @@ class FrontController
     }
     public function dashboard()
     {
-        return view('admin/dashboard');
+        $posts = App::get('database')->selectAll('posts');
+        $users = App::get('database')->selectAll('users');
+        $relatedPosts = []; //posts relacionados
+
+        // Obter os últimos três posts (excluindo o post individual)
+        $count = count($posts);
+        for ($i = $count - 1; $i >= 0 && count($relatedPosts) < 3; $i--) {
+            $relatedPosts[] = $posts[$i];
+        }
+
+        // Associar o nome do autor aos posts relacionados
+        foreach ($relatedPosts as $post) {
+            $author = $this->getUserById($users, $post->author);
+            $post->author_name = $author->name;
+        }
+
+        return view('admin/dashboard', compact('relatedPosts'));
     }
 
     public function post_individual()

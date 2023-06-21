@@ -175,6 +175,14 @@ tr:nth-child(even) {
     cursor: pointer;
 }
 
+#details a {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
 .sidebar-icon ion-icon {
     margin-left: -5px;
 }
@@ -229,6 +237,11 @@ tr:nth-child(even) {
     }
 
     #details span {
+        display: none;
+    }
+
+    #table-th th:first-child,
+    td:first-child{
         display: none;
     }
 }
