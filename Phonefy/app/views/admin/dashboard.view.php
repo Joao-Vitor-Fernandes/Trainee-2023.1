@@ -58,13 +58,7 @@
                                 <td id="details"><a href="/home/post_individual?id_pag=<?=$post->id?>" target="blank"><span>Detalhes</span> <ion-icon name="chevron-forward-circle-outline"></ion-icon></a></td>
                             </tr>
                             <?php endforeach; ?>
-                            <!-- <tr>
-                                <td>3</td>
-                                <td>Post 3</td>
-                                <td>Maria</td>
-                                <td>25 de abril</td>
-                                <td  id="details"><span>Detalhes</span> <ion-icon name="chevron-forward-circle-outline"></ion-icon></td>
-                            </tr> -->
+
                         </table>
                     </div>
 

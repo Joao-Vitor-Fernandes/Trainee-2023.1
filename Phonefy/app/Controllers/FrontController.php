@@ -45,6 +45,11 @@ class FrontController
             $post->author_name = $author->name;
         }
 
+        session_start();
+        if (!isset($_SESSION['logado'])) {
+            return redirect('admin/login');
+        }
+
         return view('admin/dashboard', compact('relatedPosts'));
     }
 

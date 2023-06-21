@@ -40,6 +40,7 @@ class LoginController
 
     public function logout()
     {
+        session_start();
         unset($_SESSION['logado']);
         return redirect('admin/login');
     }

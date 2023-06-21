@@ -8,20 +8,10 @@ use Exception;
 class PostController
 {
     public function preenche_tabela_post(){
-        // $posts = App::get('database')->selectAll('posts');
-        // $users = App::get('database')->selectAll('users');
-        // $tables = [
-        //     'posts' => $posts,
-        //     'users' => $users,
-        // ];
-
-        // // Associar o nome do autor aos posts(autor é o id do user)
-        // foreach ($posts as $post) {
-        // $author = $this->getUserById($users, $post->author);
-        // $post->author_name = $author->name;
-        // }
-
-        // return view('admin/lista_de_posts', $tables);
+        session_start();
+        if (!isset($_SESSION['logado'])) {
+            return redirect('admin/login');
+        }
 
         $page = 1;
 
@@ -75,6 +65,10 @@ class PostController
     }
 
     public function create_tabela_post(){
+        session_start();
+        if (!isset($_SESSION['logado'])) {
+            return redirect('admin/login');
+        }
 
         // Obtenha o nome original da imagem
         $fileName = $_FILES['imagem']['name'];
@@ -107,6 +101,10 @@ class PostController
     }
 
     public function delete_tabela_post(){
+        session_start();
+        if (!isset($_SESSION['logado'])) {
+            return redirect('admin/login');
+        }
         $id = $_POST['id'];
 
         App::get('database')->delete('posts', $id);
@@ -120,6 +118,10 @@ class PostController
 
     public function editar_tabela_post()
     {
+        session_start();
+        if (!isset($_SESSION['logado'])) {
+            return redirect('admin/login');
+        }
         $parameters = [
             'title' => $_POST['titulo'],
             'author' => $_POST['autor'],

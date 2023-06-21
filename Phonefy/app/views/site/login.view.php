@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -44,6 +45,7 @@
                     <button class="entrar" type="submit">Entrar</button>
                     
                     <button class="cadastro"><a>Novo Cadastro</a></button>
+                    <!-- <?= $_SESSION['error_message']; ?> -->
                 </div>
             </form>
         </div> 
@@ -51,7 +53,6 @@
     </div>
 
 
-    <?php session_start(); ?>
 
     <?php if(isset($_SESSION['error_message'])) { ?>
         <div>

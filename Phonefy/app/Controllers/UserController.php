@@ -9,6 +9,11 @@ class UserController
 {
     public function view_usuarios()
     {
+        session_start();
+        if (!isset($_SESSION['logado'])) {
+            return redirect('admin/login');
+        }
+
         $page = 1;
 
         if (isset($_GET['pagina']) && !empty($_GET['pagina']))
@@ -44,6 +49,10 @@ class UserController
 
     public function create_usuarios()
     {
+        session_start();
+        if (!isset($_SESSION['logado'])) {
+            return redirect('admin/login');
+        }
         $parameters = [
             'name' => $_POST['nome'],
             'email' => $_POST['email'],
@@ -57,6 +66,10 @@ class UserController
 
     public function update_usuarios()
     {
+        session_start();
+        if (!isset($_SESSION['logado'])) {
+            return redirect('admin/login');
+        }
         $parameters = [
             'name' => $_POST['nome'],
             'email' => $_POST['email'],
@@ -70,6 +83,10 @@ class UserController
 
     public function delete_usuarios()
     {
+        session_start();
+        if (!isset($_SESSION['logado'])) {
+            return redirect('admin/login');
+        }
         $id = $_POST['id'];
         app::get('database')->delete('users', $id);
 
