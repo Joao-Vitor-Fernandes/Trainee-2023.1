@@ -8,19 +8,20 @@
 
 footer{
     font-family: 'Poppins', sans-serif;
+    background-color: #232330;
     
     width: 100vw;
+    /* height: 18rem; */
     /* position: fixed;
     bottom: 0; */
-    background-color: #232330;
+
     padding-top: 15px;
     padding-bottom: 5px;
-    bottom: 0;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   /* height: 10rem; */
 }
 
 .container-footer{
