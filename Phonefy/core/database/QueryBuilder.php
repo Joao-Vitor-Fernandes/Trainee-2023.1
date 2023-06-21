@@ -14,9 +14,14 @@ class QueryBuilder
         $this->pdo = $pdo;
     }
 
-    public function selectAll($table)
+    public function selectAll($table, $start_limit = null, $rows_amount = null)
     {
         $sql = "select * from {$table}";
+
+        if  ($start_limit >= 0 && $rows_amount > 0)
+        {
+            $sql .= " ORDER BY id DESC LIMIT {$start_limit}, {$rows_amount}";
+        }
 
         try {
             $stmt = $this->pdo->prepare($sql);
@@ -99,7 +104,42 @@ class QueryBuilder
         }
     }
 
-    public function buscar($titulo, $table, $pesquisa)
+    public function countAll($table)
+    {
+        $sql = "SELECT COUNT(*) FROM {$table}";
+
+        try {
+            $statement = $this->pdo->prepare($sql);
+    
+            $statement->execute();
+
+            return intval($statement->fetch(PDO::FETCH_NUM)[0]);
+        } catch (Exception $e) {
+            die("An error occurred when trying to count from database: {$e->getMessage()}");
+        }
+    }
+
+    public function countSearch($titulo, $table, $pesquisa,)
+    {
+        $sql = sprintf(
+            "SELECT COUNT(*) FROM %s WHERE %s LIKE '%%%s%%'",
+            $table,
+            $titulo,
+            $pesquisa
+        );
+
+        try {
+            $statement = $this->pdo->prepare($sql);
+    
+            $statement->execute();
+
+            return intval($statement->fetch(PDO::FETCH_NUM)[0]);
+        } catch (Exception $e) {
+            die("An error occurred when trying to count from database: {$e->getMessage()}");
+        }
+    }
+
+    public function buscar($titulo, $table, $pesquisa, $start_limit = null, $rows_amount = null)
     {
         $sql = sprintf(
             "SELECT * FROM %s WHERE %s LIKE '%%%s%%'",
@@ -108,6 +148,15 @@ class QueryBuilder
             $pesquisa
         );
 
+        if  ($start_limit >= 0 && $rows_amount > 0)
+        {
+            $sql .= sprintf(" ORDER BY id DESC LIMIT %s, %s",
+            $start_limit,
+            $rows_amount
+            );
+        }
+        // die(var_dump($sql));
+
         try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
@@ -115,6 +164,34 @@ class QueryBuilder
             return $stmt->fetchAll(PDO::FETCH_OBJ);
         } catch (Exception $e) {
             die("Erro ao fazer busca: {$e->getMessage()}");
+        }
+    }
+
+    public function autenticar($table, $email, $senha)
+    {
+        // $sql = "select id from {$table} where email = {$email} and senha = {$senha}";
+        // $sql = "select id from {$table} where email = '{$email}' and password = '{$senha}'";
+        $sql = sprintf('select id from %s where %s and %s',
+            $table,
+            "email = :email",
+            "password = :senha"
+        );
+        
+        // die(var_dump($sql));
+        try {
+            $statement = $this->pdo->prepare($sql);
+            $statement->execute(
+                [
+                    'email' => $email,
+                    'senha' => $senha
+                ]
+            );
+            
+            // return $statement->fecthOne(PDO::FETCH_ASSOC);
+            // die(var_dump(intval($statement->fetch(PDO::FETCH_NUM)[0])));
+            return intval($statement->fetch(PDO::FETCH_NUM)[0]);
+        } catch (Exception $e) {
+            die($e->getMessage());
         }
     }
 }

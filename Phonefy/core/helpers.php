@@ -22,3 +22,10 @@ function redirect($path)
 {
     header("Location: /{$path}");
 }
+
+function dd(...$variables) {
+    foreach($variables as $variable) {
+        var_dump($variable);
+    }
+    die();
+}

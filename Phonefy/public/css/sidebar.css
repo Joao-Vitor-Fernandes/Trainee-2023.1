@@ -1,11 +1,5 @@
-body{
-    background-image: linear-gradient(#232330, #297795);
-    background-repeat: no-repeat;
-    height: 100vh;
-     
-    
-}
-.dash{
+
+.dash1{
     
     border: none;
     color: white;
@@ -16,7 +10,7 @@ body{
 
 
 }
-.post{
+.post2{
     border: none;
     color: white;
     background-color: rgba(0, 0, 0, 0);
@@ -24,7 +18,7 @@ body{
     padding-right: 45%;
     padding-top: 5%;
 }
-.usu{
+.usu9{
     border: none;
     color: white;
     background-color: rgba(0, 0, 0, 0);
@@ -42,46 +36,56 @@ body{
     text-align: center;
 }
 
-.imagem{
-   left: 15px;
-}
+
 
 .offcanvas-body{
   /*  background-color: #313147dc; */
   background-image: linear-gradient(#232330, #41b6e6);
 }
-.nome{
+.nome7{
     color: white;
     text-align: center;
     
 }
 .btn-primary{
+    width: 30px;
+    height: 30px;
+
+    position: fixed;
+    top: 110px;
+    left: 2%;
+
     color:#41b6e6;
     background-color:#232330;
-   border-color: #41b6e6;
-   /* border-radius: 3px; */
-   border-top-left-radius: 50%;
-   border-top-right-radius: 50%;
-   border-bottom-left-radius: 50%;
-   border-bottom-right-radius: 50%;
+    border-color: #41b6e6;
+    /* border-radius: 3px; */
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
     
 }
-.dash:hover{
+.btn-primary ion-icon {
+    font-size: 25px;
+    margin-left: -5px;
+}
+
+.dash1:hover{
     background: #161a388a;
     transform: scale(1.1);
 }
-.post:hover{
+.post2:hover{
     background: #161a388a;
     transform: scale(1.1);
 }
-.usu:hover{
+.usu9:hover{
     background: #161a388a;
     transform: scale(1.1);
 }
-.icon{
+.icon5{
     color: white;
 }
-.close{
+.close8{
     color:   white;
     background-color: #232330;
     border-color: white;
@@ -102,7 +106,7 @@ body{
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
 }
-.close:hover{
+.close8:hover{
     background: #f3f7f952;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;

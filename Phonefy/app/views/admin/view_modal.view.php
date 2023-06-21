@@ -41,16 +41,16 @@
                 </div>
         
                 <div class="caixa-conteudo">
-                    <label for="conteudo">Conteudo:</label>
+                    <label for="conteudo">Conteúdo:</label>
                     <textarea rows="6" id="conteudo" name="conteudo" readonly disabled>O aguardado nono álbum do The National acaba de ser lançado e, boa notícia para os fãs, mostra o quinteto em ótima forma. "Firts Two Pages Of Frankenstein" não chega com a banda tentando se reinventar. A música continua melancólica, bela e climática, com a voz de barítiono de Matt Berninger sempre como um destaque. </textarea>
                 </div>
     
             </fieldset>
         </div>
         <!-- Botões -->
-        <div class="modal-footer">
-            <button type="submit" onsubmit="">Editar</button>
-            <button class="close" type="button" onsubmit="">Concluido</button> 
+        <div class="modal-view-footer">
+        <button class="close" type="button" onsubmit="">Concluido</button> 
+            <!-- <button class="close" type="button" onsubmit="">Concluido</button>  -->
         </div>
     </form>
 </div>

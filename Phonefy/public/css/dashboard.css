@@ -33,6 +33,11 @@ ion-icon {
     align-items: center;
 }
 
+.dashboard-nav a {
+    text-decoration: none;
+    margin-right: 2%;
+}
+
 .icon-name {
     display: flex;
     align-items: center;
@@ -45,7 +50,7 @@ ion-icon {
     background-color: #41b6e6;
     display: flex;
     align-items: center;
-    margin-right: 2%;
+    /* margin-right: 2%; */
     opacity: 0.9;
 
     border: none;
@@ -55,8 +60,9 @@ ion-icon {
 }
 
 .icon-name-logout ion-icon {
-    --ionicon-stroke-width : 45px;
+    --ionicon-stroke-width: 45px;
 }
+
 /* .icon-name-logout h4 {
     display: none;
 }
@@ -81,60 +87,34 @@ ion-icon {
 }
 
 .card-page ion-icon {
-    --ionicon-stroke-width : 45px;
+    --ionicon-stroke-width: 45px;
     opacity: 0.9;
 }
 
-.card-post {
+.card {
     width: 25%;
     height: 120px;
     box-shadow: 0px 10px 14px -7px #1f2f47;
-	background:linear-gradient(to bottom, #41b7e6 5%, #0e8fc2 100%);
-	background-color:#41b7e6;
-	border-radius:8px;
-    border:1px solid #1f2f47;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	padding:13px 32px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #283966;
+    background: linear-gradient(to bottom, #41b7e6 5%, #0e8fc2 100%);
+    background-color: #41b7e6;
+    border-radius: 8px;
+    border: 1px solid #1f2f47;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    padding: 13px 32px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #283966;
 }
 
-.card-post:hover {
-	background:linear-gradient(to bottom, #0e8fc2 5%, #41b7e6 100%);
-	background-color:#0e8fc2;
+.card:hover {
+    background: linear-gradient(to bottom, #0e8fc2 5%, #41b7e6 100%);
+    background-color: #0e8fc2;
 }
 
-.card-post:active {
-	position:relative;
-	top:1px;
-}
-
-.card-user {
-    width: 25%;
-    height: 120px;
-    box-shadow: 0px 10px 14px -7px #1f2f47;
-	background:linear-gradient(to bottom, #41b7e6 5%, #0e8fc2 100%);
-	background-color:#41b7e6;
-	border-radius:8px;
-    border:1px solid #1f2f47;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	padding:13px 32px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #283966;
-}
-
-.card-user:hover {
-	background:linear-gradient(to bottom, #0e8fc2 5%, #41b7e6 100%);
-	background-color:#0e8fc2;
-}
-
-.card-user:active {
-	position:relative;
-	top:1px;
+.card:active {
+    position: relative;
+    top: 1px;
 }
 
 .lasted-posts {
@@ -167,7 +147,8 @@ caption {
     padding-bottom: 10px;
 }
 
-th, td {
+th,
+td {
     padding: 8px;
 }
 
@@ -179,7 +160,7 @@ th {
     color: white;
 }
 
-tr:nth-child(even){
+tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
@@ -192,6 +173,22 @@ tr:nth-child(even){
     justify-content: flex-end;
 
     cursor: pointer;
+}
+
+#details a {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.sidebar-icon ion-icon {
+    margin-left: -5px;
+}
+
+.sidebar-close ion-icon {
+    margin-left: -7.5px;
 }
 
 
@@ -207,11 +204,7 @@ tr:nth-child(even){
         width: 95%;
     }
 
-    .card-post {
-        padding: 10px;
-    }
-
-    .card-user {
+    .card {
         padding: 10px;
     }
 
@@ -224,6 +217,7 @@ tr:nth-child(even){
     .dashboard {
         width: 100%;
     }
+
     .icon-name h3 {
         display: none;
     }
@@ -235,29 +229,23 @@ tr:nth-child(even){
     .card-page h2 {
         font-size: 15px;
     }
-    
 
-    .card-post {
+    .card {
         width: 40%;
         height: 90px;
         text-align: center;
     }
 
-    .card-post ion-icon {
-        display: none;
-    }
-
-    .card-user {
-        width: 40%;
-        height: 90px;
-        text-align: center;
-    }
-
-    .card-user ion-icon {
+    .card ion-icon {
         display: none;
     }
 
     #details span {
+        display: none;
+    }
+
+    #table-th th:first-child,
+    td:first-child{
         display: none;
     }
 }

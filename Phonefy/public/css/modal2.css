@@ -43,8 +43,8 @@
     text-align: center;
     margin-left: 5%;
     margin-right: 10%;
-    margin-top: 50px;
-    margin-bottom: 30px;
+    margin-top: 5%;
+    margin-bottom: 3%;
     font-size: 25px;
     letter-spacing: 6px;
     color: #EEF0F2;
@@ -63,6 +63,19 @@
 
     margin-left: 10%;
     margin-right: 10%;
+}
+
+.modal-view-footer{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 5%;
+
+  margin-top: 2%;
+  margin-bottom: 4%;
+
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 /* ----------- CSS DELETE ------------- */

@@ -22,8 +22,8 @@ ion-icon {
     align-items: center;
 
     color: white;
-    margin-top: 200px;
-    margin-bottom: 200px;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
 
     animation-name: individual-post-animation;
     animation-duration: 2s;
@@ -45,6 +45,7 @@ ion-icon {
 
 .data-post h1 {
     text-transform: uppercase;
+    margin: 20px 0;
 }
 
 .data-post img {
@@ -67,8 +68,8 @@ ion-icon {
     margin-top: 60px;
     text-align: center;
 
-    border-color: rgba(255, 255, 255, 0.5);
-    border-style: hidden hidden double hidden;
+    /* border-color: rgba(255, 255, 255, 0.5);
+    border-style: hidden hidden double hidden; */
 }
 
 .post-content div {
@@ -114,8 +115,14 @@ ion-icon {
     text-decoration: none;
 }
 
+.box-image{
+    /* height: 105px; */
+    overflow: hidden;
+}
+
 .veja-tambem img {
-    width: 80%;
+    width: 90%;
+    /* height: 105px; */
     border-radius: 1%;
     padding: 5px;
 }
@@ -194,8 +201,6 @@ ion-icon {
 @media (max-width:1000px) {
     .individual-post {
         position: relative;
-        margin-top: 150px;
-        margin-bottom: 150px;
     }
     .data-post {
         width: 100%;
@@ -217,12 +222,6 @@ ion-icon {
     }
 
     .social-media-icon {
-        position: absolute;
-        bottom: -140px;
+        display: none;
     }
-
-    ion-icon {
-        font-size: 25px;
-    }
-
 }

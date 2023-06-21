@@ -7,11 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Phonefy</title>
     <link rel="stylesheet" href="../../../public/css/lista_de_posts.css">
+    <link rel="stylesheet" href="../../../public/css/footer.css">
+    <link rel="stylesheet" href="../../../public/css/navbar.css">
+    <link rel="stylesheet" href="../../../public/css/pagination.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
+    <?php require './app/views/site/navbar.html' ?>
+
+    <!-- Script da Barra de Pesquisa -->
+    <?php if (!empty($pesquisa) && empty($posts)): ?>
+        <div class="result_pesquisa">
+            <h1>Post não encontrado</h1>
+        </div>
+    <?php endif;?>
+    
 
     <div class="capsula">
         <div class="contorno">
@@ -32,15 +47,15 @@
                     
                     <div class="blog-image">
                         
-                        <a href="https://whiplash.net/materias/news_709/350367-queen.html" target="_blank"><img
+                        <a href="/home/post_individual?id_pag=<?=$post->id?>"><img
                                 src="../../<?=$post->image?>" alt="Icone com imagem"></a>
                         
                         <div class="blog-text">
                             <span> <?=$post->created_at?> by <?=$post->author_name?></span>
-                            <a href="https://whiplash.net/materias/news_709/350367-queen.html" target="_blank"
+                            <a href="/home/post_individual?id_pag=<?=$post->id?>"
                                 class="blog-title"><?=$post->title?></a>
                             <p><?=nl2br($post->content)?></p>
-                            <a href="https://whiplash.net/materias/news_709/350367-queen.html" target="_blank"  class="leia-mais">Leia Mais</a>
+                            <a href="/home/post_individual?id_pag=<?=$post->id?>"  class="leia-mais">Leia Mais</a>
                         
                         </div>
                     
@@ -48,18 +63,17 @@
                 </div>
                 <?php endforeach; ?>
             </div>
-
         </div>
+        <?php require './app/views/includes/pagination.php' ?>
     </div>
+
+    <?php require './app/views/site/footer.html' ?>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 <!-- Script da Barra de Pesquisa -->
-<?php 
-    if (!empty($pesquisa) && empty($posts)):
-        header('Location: /home/lista-posts');
-    endif;
-?>
-
 <script>
     var search = document.getElementById('pesquisar');
 
