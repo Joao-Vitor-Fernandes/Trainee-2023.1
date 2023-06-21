@@ -108,8 +108,8 @@ p:hover{color: #46b6e6;}
 .text
 {
     display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
     max-width: 20vw;max-height: 45px;
     overflow: hidden;
     /* text-overflow: ellipsis;

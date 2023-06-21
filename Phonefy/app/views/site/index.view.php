@@ -22,9 +22,11 @@
     <?php foreach ($relatedPosts as $post) : ?>
         <!-- <?= $index?> -->
         <div class="Post<?= $index?>">
-            <div class="postimg"> <img src="../../<?=$post->image?>"> </div>
+            <div class="postimg"><a href="/home/post_individual?id_pag=<?=$post->id?>"> <img src="../../<?=$post->image?>"></a> </div>
             <div class="text">
+            <a href="/home/post_individual?id_pag=<?=$post->id?>" style="color: #232323;">
                 <p><?=$post->title?></p>
+            </a>
             </div>
         </div>
         <?php $index += 1; ?>
