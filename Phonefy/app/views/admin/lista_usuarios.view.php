@@ -51,9 +51,9 @@
                 <th><?=$user->id?></th>
                 <td><?=$user->name?></td>
                 <td class="icon">
-                    <button id="view" class="a" onclick="modalEdit('modal-view-user', <?=$user->id?>, '<?=$user->name?>', '<?=$user->email?>', '<?=$user->password?>')"> <i class="fa fa-eye" alt="Visualiar"></i> </button>
-                    <button id="edit" class="a" onclick="modalEdit('modal-edit-user', <?=$user->id?>, '<?=$user->name?>', '<?=$user->email?>', '<?=$user->password?>')"><i class="fa fa-outdent" aria-hidden="true"></i></button>
-                    <button id="Deleter" class="a" onclick="modalDelete('delete-user-modal', <?=$user->id?>)"><i class="fa fa-times" alt="Deletar"></i></button>
+                    <button id="view" class="a" data-title="Visualizar" onclick="modalEdit('modal-view-user', <?=$user->id?>, '<?=$user->name?>', '<?=$user->email?>', '<?=$user->password?>')"> <i class="fa fa-eye" alt="Visualiar"></i> </button>
+                    <button id="edit" class="a" data-title="Editar" onclick="modalEdit('modal-edit-user', <?=$user->id?>, '<?=$user->name?>', '<?=$user->email?>', '<?=$user->password?>')"><i class="fa fa-outdent" aria-hidden="true"></i></button>
+                    <button id="Deleter" class="a" data-title="Apagar" onclick="modalDelete('delete-user-modal', <?=$user->id?>)"><i class="fa fa-times" alt="Deletar"></i></button>
                 </td>
             </tr>
             <?php endforeach; ?>
