@@ -2,6 +2,10 @@
     margin: 0px;
     padding: 0px;
   }
+
+  header {
+    width: 100vw;
+  }
   
   .navbar a {
     color: white;
