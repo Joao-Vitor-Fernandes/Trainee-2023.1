@@ -13,7 +13,7 @@ body {
     width: 98vw;
     margin-left: 1vw;
 }  
-.Som{opacity: 0;position: fixed; width: 98vw;}
+.Som{display: none;position: fixed; width: 98vw;}
 .Som img{width:97vw;padding-top:10vw;margin-left: 1.4vw;}  
 .home{
     position: relative;
@@ -150,7 +150,7 @@ p:hover{color: #46b6e6;}
 {
 
     .Phone{display: none;}
-    .Som{opacity: 1;}
+    .Som{display: block;}
     .home{
     justify-content: center;
     display: grid;
