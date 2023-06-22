@@ -5,13 +5,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Dashboard</title>
-        <link rel="stylesheet" href="../../../public/css/sidebar2.css"/>
+        <link rel="stylesheet" href="../../../public/css/sidebar.css"/>
         <link rel="stylesheet" href="../../../public/css/navbar_admin.css">
         <link rel="stylesheet" href="../../../public/css/dashboard.css">
     </head>
 
     <body>
-        <?php require './app/views/admin/sidebar2.view.php' ; ?>
+        <?php require './app/views/admin/sidebar.view.php' ; ?>
         <div class="dashboard">
             <div class="dashboard-nav">
                 <div class="icon-name">

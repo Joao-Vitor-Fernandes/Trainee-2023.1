@@ -13,14 +13,14 @@
     <link rel="stylesheet" href="../../../public/css/modal2.css">
     <link rel="stylesheet" href="../../../public/css/edit_modal.css">
     <link rel="stylesheet" href="../../../public/css/pagination.css">
-    <link rel="stylesheet" href="../../../public/css/sidebar2.css"/>
+    <link rel="stylesheet" href="../../../public/css/sidebar.css"/>
     <link rel="stylesheet" href="../../../public/css/navbar_admin.css">
     <link rel="stylesheet" href="../../../public/css/lista_de_posts_admin.css">
 </head>
 
 
 <body>
-<?php require './app/views/admin/sidebar2.view.php' ?>
+<?php require './app/views/admin/sidebar.view.php' ?>
 <div class="dashboard-nav">
         <div class="icon-name">
             <a href="/admin/dashboard">
