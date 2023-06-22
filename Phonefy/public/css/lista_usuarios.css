@@ -1,7 +1,5 @@
 body{
     background-color: #2B4C63;
-    /*background: rgb(65,182,230);
-    background: radial-gradient(circle, rgba(65,182,230,1) 30%, rgba(47,47,59,1) 80%); */ 
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -19,10 +17,6 @@ h1{
     -webkit-background-clip: text; /*def a área do elem q será preenchida com gradiente de cor*/
     -webkit-text-fill-color: transparent; /*define a cor do texto*/
 }
-
-/* #conteiner {
-    overflow: auto;
-} */
 
 .cabecalho{
     background-color: #369fc9;
@@ -55,7 +49,6 @@ caption{
     display: flex;
     align-items: center;
     margin-top: 10px;
-    /* background-color: yellow; */
 }
 
 .add img{ 
@@ -73,8 +66,6 @@ caption{
 table {
     background-color: antiquewhite;
     width: 90%;
-    /* width: 900px; */
-    /* height: 300px; */
     margin: 0 auto;
     border-collapse: collapse;
     border: none;
@@ -138,10 +129,7 @@ img {
    }
 
    table{
-       /* max-width: 100%; */
-       /* height: 300px;  */
-       /* width: 500px; */
-       width: 100%;
+       width: 95%;
    }
 
    .add{

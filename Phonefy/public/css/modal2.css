@@ -21,12 +21,7 @@
     border: solid #232330;
     border-radius: 8px;
 
-    /* height: auto; */
     width: 700px;
-
-    /* margin-top: 0;
-    margin-bottom: 5%; */
-
     padding-left: 2%;
     padding-right: 2%;
 
@@ -51,8 +46,6 @@
 }
 
 .modal-footer{
-    /* background-color: aqua; */
-
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -101,8 +94,6 @@
 }
 
 .modal-header-delete {
-  /* background-color: aqua; */
-
   margin-left: 5%;
   margin-right: 10%;
 
@@ -120,8 +111,6 @@
 }
 
 .modal-body-delete {
-  /* background-color: red;
-  border: 1px solid blue; */
   margin-left: 10%;
   margin-right: 10%;
 
@@ -140,8 +129,6 @@
 }
 
 .modal-footer-delete {
-  /* background-color: blueviolet; */
-
   display: flex;
   justify-content: right;
   
@@ -152,7 +139,6 @@
 }
 
 .modal-footer-delete button{
-  /* margin-top: 3%; */
   font-size: 14px;
   height: 38px;
   width: 140px;

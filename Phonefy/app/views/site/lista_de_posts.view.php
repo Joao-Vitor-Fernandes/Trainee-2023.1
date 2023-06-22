@@ -20,7 +20,6 @@
 <body>
     <?php require './app/views/site/navbar.html' ?>
 
-    <!-- Script da Barra de Pesquisa -->
     <?php if (!empty($pesquisa) && empty($posts)): ?>
         <div class="result_pesquisa">
             <h1>Post não encontrado</h1>
@@ -41,7 +40,6 @@
         <div id="posts">
             <div class="blog-container">
                 
-                <!-- Box000 -->
                 <?php foreach ($posts as $post) : ?>
                 <div class="blog-box">   
                     
@@ -73,7 +71,6 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
-<!-- Script da Barra de Pesquisa -->
 <script>
     var search = document.getElementById('pesquisar');
 

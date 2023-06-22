@@ -5,7 +5,6 @@ function open_sidebar(side, close, button, teste)
     button = document.getElementById(button);
     teste = document.getElementById(teste);
 
-    console.log(teste);
 
     sidebar.style.display = "block";
     button.style.display = "none";

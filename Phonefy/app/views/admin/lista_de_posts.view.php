@@ -4,7 +4,6 @@
 
 <head>
     <title>Lista de Posts</title>
-    <!-- <meta name="viewport" content="width=devide" charset="utf-8"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,21 +13,35 @@
     <link rel="stylesheet" href="../../../public/css/modal2.css">
     <link rel="stylesheet" href="../../../public/css/edit_modal.css">
     <link rel="stylesheet" href="../../../public/css/pagination.css">
-    <link rel="stylesheet" href="../../../public/css/sidebar2.css"/>
+    <link rel="stylesheet" href="../../../public/css/sidebar.css"/>
+    <link rel="stylesheet" href="../../../public/css/navbar_admin.css">
     <link rel="stylesheet" href="../../../public/css/lista_de_posts_admin.css">
 </head>
 
 
 <body>
-<?php require './app/views/admin/sidebar2.html' ?>
+<?php require './app/views/admin/sidebar.view.php' ?>
+<div class="dashboard-nav">
+        <div class="icon-name">
+            <a href="/admin/dashboard">
+                <ion-icon name="grid"></ion-icon>
+                <h3>DASHBOARD</h3>
+            </a>
+        </div>
+        <a href="/admin/logout">
+            <button class="icon-name-logout">
+                <h4>LOGOUT</h4>
+                <ion-icon name="log-out-outline"></ion-icon>
+            </button>
+        </a>
+    </div>
 <div class="load_modal"></div>
     <div class="lista">
         <h1 class="Titulo">Lista de Posts</h1>
         <div class="conteiner">
             <table>
                 <caption>
-                    <!--Caso queria colocar um caption: insere ele aqui-->
-                    <button id="myBtn" class="add" onclick="modalAdd('add-modal', <?= htmlspecialchars(json_encode($users)) ?>)">
+                    <button id="myBtn" class="add" onclick="modalAdd('add-modal', <?= htmlspecialchars(json_encode($users)) ?>, <?=$_SESSION['logado']?>)">
                         <a href="#"> <img src="../../../public/assets/icon_add.png" alt="Adicionar" height="50"
                                 width="50"></a>
                         <p>Adicionar posts</p>
@@ -37,12 +50,11 @@
 
                 <script src="../../../public/js/modal.js"></script>
 
-                <tr class="cabecalho"> <!--Primeira linha-->
+                <tr class="cabecalho">
                     <th>#</th>
                     <th>Nome</th>
                     <th>Autor</th>
                     <th>Data</th>
-                    <!-- <th>Opções</th> -->
                     <th colspan="2"></th>
                 </tr>
 
@@ -51,17 +63,17 @@
                 </tr>
 
                 <?php foreach ($posts as $post) : ?>
-                <tr class="corpo"> <!--Segunda linha-->
+                <tr class="corpo">
                     <td><?=$post->id ?></td>   
                     <td><?=$post->title?></td>
                     <td><?=$post->author_name?></td>
                     <td><?=$post->created_at?></td>
 
                     <td class="icon">
-                    <button id="view" class="a" data-title="Visualizar" onclick="modalEdit('view-modal', <?=$post->id?>, '<?=str_replace(['"', "\\n", "\r\n", "\n", "\"", "'", "&", "<", ">"], ["&quot;", "\\n", "\\n", "\\n", "\\\"", "\\'", "&amp;", "&lt;", "&gt;"], $post->title)?>', <?=$post->author?>, '<?=$post->created_at?>', '<?=$post->image?>', '<?=str_replace(['"', "\\n", "\r\n", "\n", "\"", "'", "&", "<", ">"], ["&quot;", "\\n", "\\n", "\\n", "\\\"", "\\'", "&amp;", "&lt;", "&gt;"], $post->content)?>', <?= htmlspecialchars(json_encode($users)) ?>)">
+                    <button id="view" class="a" data-title="Visualizar" onclick="modalEdit('view-modal', <?=$post->id?>, <?=htmlspecialchars(json_encode($post->title))?>, <?=$post->author?>, '<?=$post->created_at?>', '<?=$post->image?>', <?=htmlspecialchars(json_encode($post->content))?>, <?= htmlspecialchars(json_encode($users)) ?>, <?=$_SESSION['logado']?>)">
                         <i class="fa fa-eye" alt="Visualizar"></i>
                     </button>
-                    <button id="edit" class="a" data-title="Editar" onclick="modalEdit('edit-modal', <?=$post->id?>, '<?=str_replace(['"', "\\n", "\r\n", "\n", "\"", "'", "&", "<", ">"], ["&quot;", "\\n", "\\n", "\\n", "\\\"", "\\'", "&amp;", "&lt;", "&gt;"], $post->title)?>', <?=$post->author?>, '<?=$post->created_at?>', '<?=$post->image?>', '<?=str_replace(['"', "\\n", "\r\n", "\n", "\"", "'", "&", "<", ">"], ["&quot;", "\\n", "\\n", "\\n", "\\\"", "\\'", "&amp;", "&lt;", "&gt;"], $post->content)?>', <?= htmlspecialchars(json_encode($users)) ?>)">
+                    <button id="edit" class="a" data-title="Editar" onclick="modalEdit('edit-modal', <?=$post->id?>, <?=htmlspecialchars(json_encode($post->title))?>, <?=$post->author?>, '<?=$post->created_at?>', '<?=$post->image?>', <?=htmlspecialchars(json_encode($post->content))?>, <?= htmlspecialchars(json_encode($users)) ?>, <?=$_SESSION['logado']?>)">
                         <i class="fa fa-outdent" aria-hidden="true"></i>
                     </button>
                     <button id="Deleter" class="a" data-title="Apagar" onclick="modalDelete('delete-modal', <?=$post->id?>)">

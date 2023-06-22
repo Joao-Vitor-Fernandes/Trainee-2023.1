@@ -8,18 +8,10 @@ use Exception;
 
 class LoginController 
 {
-    
-    public function __construct()
-    {
-        parent::__construct();
-          if(!isset($_SESSION['logado'])){
-            return redirect('login');
-            exit();
-          }
-    }
 
     public function index()
     {
+        session_start();
         return view('site/login');
     }
 
@@ -27,9 +19,7 @@ class LoginController
     {
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
         $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_SPECIAL_CHARS);
-        // $user = User::where('email', $email)->where('senha', $senha)->first();
         $id = App::get('database')->autenticar('users', $email, $senha);
-        // die(var_dump($id));
         
         session_start();
         if($id > 0)
@@ -37,13 +27,13 @@ class LoginController
             $_SESSION['logado'] = $id;
             return redirect('admin/dashboard');
         }
-        $_SESSION['error_message'] = "E-mail ou senha incorretos.";
-        // die(var_dump($_SESSION['error_message']));
+        $_SESSION['error_message'] = "E-mail ou senha incorretos";
         return redirect('admin/login');
     }
 
     public function logout()
     {
+        session_start();
         unset($_SESSION['logado']);
         return redirect('admin/login');
     }

@@ -15,7 +15,6 @@
             <div class="caixa-autor_data">
                 <div class="caixa-selecao">
                     <label for="autor">Autor:</label>
-                    <!-- <input type="text" name="autor" id="autor" value="vagalume.com" required> -->
                     <select name="autor" id="autor" required>
                         <option value="valor1" selected>Autor 1</option>
                         <option value="valor2">Autor 2</option>

@@ -9,6 +9,11 @@ class UserController
 {
     public function view_usuarios()
     {
+        session_start();
+        if (!isset($_SESSION['logado'])) {
+            return redirect('admin/login');
+        }
+
         $page = 1;
 
         if (isset($_GET['pagina']) && !empty($_GET['pagina']))
@@ -21,7 +26,7 @@ class UserController
             }
         }
 
-        $items_per_page = 1;
+        $items_per_page = 5;
         $start_limit = $items_per_page * $page - $items_per_page;
         $rows_count = App::get('database')->countAll('users');
         
@@ -32,18 +37,19 @@ class UserController
         $total_pages = ceil($rows_count / $items_per_page);
         $users = App::get('database')->selectAll('users', $start_limit, $items_per_page);
 
-        return view('admin/lista_usuarios', compact("users", "page", "total_pages"));
+        $usuarioTotal = App::get('database')->selectAll('users');
+        $usuarioAdmin = $this->getUserById($usuarioTotal, $_SESSION['logado']);
 
-        // return view('admin/lista_usuarios', $tables);
-    }
+        return view('admin/lista_usuarios', compact("users", "page", "total_pages", 'usuarioAdmin'));
 
-    public function show()
-    {
-        
     }
 
     public function create_usuarios()
     {
+        session_start();
+        if (!isset($_SESSION['logado'])) {
+            return redirect('admin/login');
+        }
         $parameters = [
             'name' => $_POST['nome'],
             'email' => $_POST['email'],
@@ -57,6 +63,10 @@ class UserController
 
     public function update_usuarios()
     {
+        session_start();
+        if (!isset($_SESSION['logado'])) {
+            return redirect('admin/login');
+        }
         $parameters = [
             'name' => $_POST['nome'],
             'email' => $_POST['email'],
@@ -70,9 +80,24 @@ class UserController
 
     public function delete_usuarios()
     {
+        session_start();
+        if (!isset($_SESSION['logado'])) {
+            return redirect('admin/login');
+        }
         $id = $_POST['id'];
         app::get('database')->delete('users', $id);
 
         header('Location: /admin/usuarios');
+    }
+
+    private function getUserById($users, $userId)
+    {
+        foreach ($users as $user) {
+            if ($user->id === $userId) {
+                return $user;
+            }
+        }
+
+        return null;
     }
 }

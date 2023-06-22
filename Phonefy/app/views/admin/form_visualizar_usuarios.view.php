@@ -21,9 +21,6 @@
 
         <div class="campo-botoes">
             <button class="close" type="button" onsubmit="">Concluído</button> 
-            <!-- <button class="close" type="button" onsubmit="">Cancelar</button>  -->
-            <!-- <button class="botao" type="button" onsubmit="">Editar</button> -->
-            <!-- <button class="botao" type="button" onsubmit="">Concluído</button>  -->
         </div>
     </form>
 

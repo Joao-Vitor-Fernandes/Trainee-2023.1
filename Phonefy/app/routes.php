@@ -26,6 +26,7 @@ $router->post('admin/usuarios/update', 'UserController@update_usuarios');
 
 //--------Public--------//
 //Lista-posts
+$router->get('', 'FrontController@index');
 $router->get('home', 'FrontController@index');
 $router->get('home/lista-posts', 'Lista_postsController@index');
 $router->get('home/lista-posts/search', 'Lista_postsController@search');
@@ -36,6 +37,4 @@ $router->get('home/post_individual', 'FrontController@post_individual');
 $router->get('admin/login', 'LoginController@index');
 $router->post('admin/logar', 'LoginController@autenticacao');
 $router->get('admin/logout', 'LoginController@logout');
-
-// $router->get('index', 'LoginController@index');
 ?> 

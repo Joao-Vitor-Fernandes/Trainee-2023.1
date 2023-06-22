@@ -46,24 +46,19 @@ body{
 }
 
 .modal-add-user .container-l .titulo-l{
-        /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        margin-top: 15px;
+    margin-top: 15px;
 }
 
 .modal-add-user .container-l h2{
     text-align: center;
     margin-left: 10%;
-    /* margin-top: 10%; */
     margin-right: 10%;
-    /* margin-bottom: 15%; */
-    
-    
+
     font-size: 23px;
     letter-spacing: 5px;
     color: #EEF0F2;
@@ -71,8 +66,6 @@ body{
 }
 
 .modal-add-user .container-l .caixa-selecao-l{
-    /* background-color: red;
-    border: 1px solid blue; */
     margin-left: 15%;
     margin-right: 15%;
     justify-content: center;
@@ -100,8 +93,6 @@ body{
 }
 
 .modal-add-user .container-l .caixa-botao-l{
-    /* background-color: aqua; */
-
     display: flex;
     justify-content:center;
     align-items: center;

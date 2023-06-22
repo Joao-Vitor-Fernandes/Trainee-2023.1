@@ -14,12 +14,9 @@ function open_modal(b, m, s, i)
     span = document.getElementsByClassName(s)[i];
 
     modal.style.display = "block";
-    console.log('clicou');
 
     span.onclick = function() {
         modal.style.display = "none";
-        console.log('saiu');
-        console.log(span);
     }
 
     window.onclick = function(event) {

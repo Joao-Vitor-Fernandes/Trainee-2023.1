@@ -15,37 +15,47 @@
     <link rel="stylesheet" href="../../../public/css/form_edt_usuarios.css">
     <link rel="stylesheet" href="../../../public/css/form_excluir_usuarios.css">
     <link rel="stylesheet" href="../../../public/css/pagination.css">
-    <link rel="stylesheet" href="../../../public/css/sidebar2.css"/>
+    <link rel="stylesheet" href="../../../public/css/sidebar.css"/>
+    <link rel="stylesheet" href="../../../public/css/navbar_admin.css">
     <link rel="stylesheet" href="../../../public/css/lista_usuarios.css">
 </head>
 
 
 <body>
-  <?php require './app/views/admin/sidebar2.html' ?>
+  <?php require './app/views/admin/sidebar.view.php' ?>
+  <div class="dashboard-nav">
+        <div class="icon-name">
+            <a href="/admin/dashboard">
+                <ion-icon name="grid"></ion-icon>
+                <h3>DASHBOARD</h3>
+            </a>
+        </div>
+        <a href="/admin/logout">
+            <button class="icon-name-logout">
+                <h4>LOGOUT</h4>
+                <ion-icon name="log-out-outline"></ion-icon>
+            </button>
+        </a>
+    </div>
     <div class="load_modal"></div>
 
     <h1 class="Titulo">Lista de Usuários</h1>
     <div id="conteiner">
         <table>
             <caption>
-                <!--Caso queria colocar um caption: insere ele aqui-->
                 <button id="myBtn" class="add" onclick="modalAdd('modal-add-user')">
                     <a href="#"> <img src="../../../public/assets/icon_add.png" alt="Adicionar" height="50"
                             width="50"></a>
                     <p>Adicionar Usuário</p>
                 </button>
             </caption>
-            <tr class="cabecalho"> <!--Primeira linha-->
+            <tr class="cabecalho">
                 <th>#</th>
                 <th>Nome</th>
                 <th>Opções</th>
             </tr>
 
             <?php 
-                // require 'form_add_usuarios.view.php';
-                // require 'form_excluir_usuarios.view.php';
-                // require 'form_edt_usuarios.view.php';
-                // require 'form_visualizar_usuarios.view.php';
                 foreach ($users as $user) : ?>
             <tr class="corpo">
                 <th><?=$user->id?></th>
@@ -62,8 +72,6 @@
     </div>
 
 
-    <!-- Link para o script -->
-    <!-- <script src="../../../public/js/add_user_modal.js"></script> -->
     <script src="../../../public/js/modais_usuario.js"></script>
     <script src="../../../public/js/sidebar.js"></script>
 

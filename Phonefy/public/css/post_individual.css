@@ -1,5 +1,4 @@
 body {
-    /* background-color: #6c78b6; */
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     background-image: linear-gradient(#232330, #21b6e6);
@@ -15,7 +14,6 @@ ion-icon {
 
 
 .individual-post {
-    /* background-color: red; */
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -31,7 +29,6 @@ ion-icon {
 
 
 .data-post {
-    /* background-color: green; */
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -54,7 +51,6 @@ ion-icon {
 }
 
 .date-author {
-    /* background-color: darkmagenta; */
     width: 80%;
     display: flex;
     justify-content: space-between;
@@ -63,13 +59,9 @@ ion-icon {
 
 
 .post-content {
-    /* background-color: blue; */
     width: 95%;
     margin-top: 60px;
     text-align: center;
-
-    /* border-color: rgba(255, 255, 255, 0.5);
-    border-style: hidden hidden double hidden; */
 }
 
 .post-content div {
@@ -78,14 +70,12 @@ ion-icon {
 
 
 .left-content {
-    /* background-color: coral; */
     width: 20%;
     padding-right: 20px;
 }
 
 .cute-icon {
     width: 80%;
-    /* background-color: yellowgreen; */
     display: block;
     margin-top: 10px;
     opacity: 50%;
@@ -116,21 +106,16 @@ ion-icon {
 }
 
 .box-image{
-    /* height: 105px; */
     overflow: hidden;
 }
 
 .veja-tambem img {
     width: 90%;
-    /* height: 105px; */
     border-radius: 1%;
     padding: 5px;
 }
 
-
-
 .right-content {
-    /* background-color: blueviolet; */
     width: 70%;
     vertical-align: top;
     text-align: justify;
@@ -146,9 +131,7 @@ ion-icon {
     border-radius: 1%;
 }
 
-
 .coments-post {
-    /* background-color: royalblue; */
     width: 80%;
     margin-top: 20px;
     vertical-align: top;
@@ -160,14 +143,12 @@ ion-icon {
 }
 
 .individual-coment {
-    /* width: 80%; */
     border-style: dotted;
     border-color: white;
     padding-left: 15px;
     line-height: 5px;
     margin-bottom: 20px;
 }
-
 
 .social-media-icon {
     position: fixed;
@@ -178,7 +159,6 @@ ion-icon {
 .social-media-icon ion-icon {
     padding: 10px;
 }
-
 
 @keyframes individual-post-animation {
     0% {
@@ -197,7 +177,6 @@ ion-icon {
 }
 
 
-
 @media (max-width:1000px) {
     .individual-post {
         position: relative;
@@ -213,7 +192,6 @@ ion-icon {
     }
 
     .left-content div {
-        /* visibility: hidden; */
         display: none;
     }
 

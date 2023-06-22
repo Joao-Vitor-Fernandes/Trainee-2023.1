@@ -33,7 +33,6 @@
 }
 
 .caixa-autor_data{
-    /* background-color: rebeccapurple; */
     margin-left: 10%;
     margin-right: 10%;
 
@@ -43,9 +42,6 @@
 }
 
 .caixa-selecao{
-    /* background-color: brown;
-    border: 1px solid yellow; */
-
     margin-top: 1%;
     justify-content: center;
 
@@ -68,13 +64,10 @@ fieldset {
     border: none;
     padding: 0;
     margin: 0;
-    /* margin-bottom: 15px; */
-    /* background-color: plum; */
 }
 
 .fieldset-conteudo{
     margin-top: 2%;
-    /* margin-bottom: 7%; */
 
     display: flex;
     flex-direction: column;
@@ -82,7 +75,6 @@ fieldset {
     justify-content:center;
     align-content: center;
     align-items: left;
-    /* background-color: aquamarine; */
 }
 
 .caixa-conteudo{
@@ -107,8 +99,6 @@ fieldset {
     padding-top: 10px;
     margin-top: 1%;
     border-radius: 0.5em;
-
-    /* color: #EEF0F2; */
 }
 
 label{
@@ -133,13 +123,10 @@ input[type="date"]{
 
 .custom-file-input{
     width: 70%;
-    /* background-color: red; */
-
     align-content: center;
     justify-content: center;
     text-align: center;
 
-    /* margin-left: 10%; */
     margin-right: 10%;
     margin-top: 1%;
     border-radius: 0.5em;
@@ -156,7 +143,6 @@ select {
   padding-left: 2%;
   padding-right: 2%;
   font-size: 14px;
-  /* color: #EEF0F2; */
   background-color: #EEF0F2; /* Defina a cor de fundo desejada */
   border: none;
 }

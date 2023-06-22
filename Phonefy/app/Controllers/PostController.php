@@ -8,20 +8,10 @@ use Exception;
 class PostController
 {
     public function preenche_tabela_post(){
-        // $posts = App::get('database')->selectAll('posts');
-        // $users = App::get('database')->selectAll('users');
-        // $tables = [
-        //     'posts' => $posts,
-        //     'users' => $users,
-        // ];
-
-        // // Associar o nome do autor aos posts(autor é o id do user)
-        // foreach ($posts as $post) {
-        // $author = $this->getUserById($users, $post->author);
-        // $post->author_name = $author->name;
-        // }
-
-        // return view('admin/lista_de_posts', $tables);
+        session_start();
+        if (!isset($_SESSION['logado'])) {
+            return redirect('admin/login');
+        }
 
         $page = 1;
 
@@ -35,7 +25,7 @@ class PostController
             }
         }
 
-        $items_per_page = 3;
+        $items_per_page = 5;
         $start_limit = $items_per_page * $page - $items_per_page;
         $rows_count = App::get('database')->countAll('posts');
         
@@ -53,44 +43,32 @@ class PostController
             'users' => $users,
         ];
 
-        // Associar o nome do autor aos posts(autor é o id do user)
         foreach ($posts as $post) {
             $author = $this->getUserById($users, $post->author);
             $post->author_name = $author->name;
         }
+        $usuarioAdmin = $this->getUserById($users, $_SESSION['logado']);
 
-        return view('admin/lista_de_posts', compact("posts", "users", "page", "total_pages"));
-    }
-
-    // Função auxiliar para buscar o usuário pelo ID
-    private function getUserById($users, $userId)
-    {
-        foreach ($users as $user) {
-            if ($user->id === $userId) {
-                return $user;
-            }
-        }
-
-        return null; // Caso o usuário não seja encontrado
+        return view('admin/lista_de_posts', compact("posts", "users", "page", "total_pages", 'usuarioAdmin'));
     }
 
     public function create_tabela_post(){
+        session_start();
+        if (!isset($_SESSION['logado'])) {
+            return redirect('admin/login');
+        }
 
-        // Obtenha o nome original da imagem
         $fileName = $_FILES['imagem']['name'];
-        // Obtenha a extensão do arquivo
         $fileExtension = pathinfo($fileName, PATHINFO_EXTENSION);
-        // Gere um novo nome para o arquivo usando o título
         $newFileName = $_POST['titulo'] . '_' . $fileName;
 
         
         $imageDirectory = 'imagens-posts/';
         if (!file_exists($imageDirectory)) {
-            mkdir($imageDirectory, 0755, true); // Cria o diretório com permissões adequadas
+            mkdir($imageDirectory, 0755, true);
         }
-        // Defina o caminho completo do novo arquivo
+
         $imagePath = 'imagens-posts/' . $newFileName;
-        // Mova o arquivo temporário para o diretório correto com o novo nome
         move_uploaded_file($_FILES['imagem']['tmp_name'], $imagePath);
 
         $parameters = [
@@ -107,19 +85,23 @@ class PostController
     }
 
     public function delete_tabela_post(){
+        session_start();
+        if (!isset($_SESSION['logado'])) {
+            return redirect('admin/login');
+        }
         $id = $_POST['id'];
 
         App::get('database')->delete('posts', $id);
 
         header('Location: /admin/posts');
     }
-    public function index()
-    {
-        return view('site/teste');
-    }
 
     public function editar_tabela_post()
     {
+        session_start();
+        if (!isset($_SESSION['logado'])) {
+            return redirect('admin/login');
+        }
         $parameters = [
             'title' => $_POST['titulo'],
             'author' => $_POST['autor'],
@@ -161,17 +143,27 @@ class PostController
     }
 
 
-
     public function exibirImagem($filename)
-{
-    $path = __DIR__ . '/../imagens-posts/' . $filename;
-    if (file_exists($path)) {
-        header('Content-Type: image/jpeg'); // Defina o tipo de conteúdo correto para o tipo de imagem
-        readfile($path);
-    } else {
-        http_response_code(404); // Retorne um código de resposta 404 se a imagem não for encontrada
-        echo 'Imagem não encontrada';
+    {
+        $path = __DIR__ . '/../imagens-posts/' . $filename;
+        if (file_exists($path)) {
+            header('Content-Type: image/jpeg');
+            readfile($path);
+        } else {
+            http_response_code(404);
+            echo 'Imagem não encontrada';
+        }
     }
-}
+
+    private function getUserById($users, $userId)
+    {
+        foreach ($users as $user) {
+            if ($user->id === $userId) {
+                return $user;
+            }
+        }
+
+        return null;
+    }
 
 }
