@@ -37,6 +37,4 @@ $router->get('home/post_individual', 'FrontController@post_individual');
 $router->get('admin/login', 'LoginController@index');
 $router->post('admin/logar', 'LoginController@autenticacao');
 $router->get('admin/logout', 'LoginController@logout');
-
-// $router->get('index', 'LoginController@index');
 ?> 

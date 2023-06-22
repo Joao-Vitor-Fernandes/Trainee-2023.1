@@ -10,7 +10,6 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    /* background-image: linear-gradient(#232330, #41b6e6); */
     background-color: #2b4c63;
 }
 
@@ -42,16 +41,11 @@ body{
     height: 240px;
     width: 360px;
 
-    /* margin-top: 10%;
-    margin-bottom: 10%; */
-
     display: grid;
     grid-template-rows: auto 12% auto;
 }
 
 .delete-user-modal .container .campo-titulo{
-    /* background-color: aqua; */
-
     margin-left: 5%;
     margin-right: 5%;
 
@@ -69,8 +63,6 @@ body{
 }
 
 .delete-user-modal .container .campo-texto{
-    /* background-color: red;
-    border: 1px solid blue; */
     margin-left: 10%;
     margin-right: 10%;
 
@@ -90,8 +82,6 @@ body{
 }
 
 .delete-user-modal .container .campo-botoes{
-    /* background-color: blueviolet; */
-
     margin-left: 10%;
     margin-right: 10%;
 

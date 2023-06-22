@@ -99,12 +99,11 @@ body{
 .blog-box{
     display:flexbox;
     height: 600px;
-    /* width: 399px; */
     width: 28%;
     object-position: center;
     background-color: #EEF0F2;
     border: 5px solid #41b6e6;
-    /* margin: 25px; */
+
     margin-top: 25px;
     margin-bottom: 25px;
     border-radius: 16px;
@@ -117,11 +116,9 @@ body{
 }
 
 .blog-image img{
-    /* width:405px; */
     width: 101%;
-    /* height:398px; */
     height:355px;
-    /* transform: translate(-15px, -2px); */
+
     transform: translate(-2px, -1px);
     object-fit: cover;
     object-position: center;

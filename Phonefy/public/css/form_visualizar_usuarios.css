@@ -10,7 +10,6 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    /* background-image: linear-gradient(#232330, #41b6e6); */
     background-color: #2b4c63;
 }
 
@@ -41,16 +40,11 @@ body{
     height: 60vh;
     width: 27vw;
 
-    /* margin-top: 10%;
-    margin-bottom: 10%; */
-
     display: grid;
     grid-template-rows: 15% 21.25% 21.25% 21.25% 21.25%;
 }
 
 .modal-view-user .container .campo-titulo{
-    /* background-color: aqua; */
-
     margin-left: 5%;
     margin-right: 10%;
 
@@ -69,8 +63,6 @@ body{
 }
 
 .modal-view-user .container .caixa-selecao{
-    /* background-color: red;
-    border: 1px solid blue; */
     margin-left: 10%;
     margin-right: 10%;
     justify-content: center;
@@ -89,32 +81,25 @@ body{
 
 .modal-view-user .caixa-selecao input{
     color: #2b4c63;
-    /* background-color: #2F2F3B; */
     font-size: 18px;    
     font-weight: bold;
 
-    /* margin-top: 1%; */
     display: block;
     width: 100%;
     height: 38px;
 	border-radius: 8px;
-    /* margin-bottom: 8%; */
 
     padding: 0px 50px 0 20px;
     font-size: 14px;
 }
 
 .modal-view-user .container .campo-botoes{
-    /* background-color: blueviolet; */
-
     display: flex;
     justify-content:flex-end;
     align-items: center;
-    /* margin-bottom: 20px; */
 
     margin-left: 1%;
     margin-right: 10%;
-
     gap: 7%;
 }
 

@@ -1,8 +1,6 @@
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    /* background-image: linear-gradient(#232330, #21b6e6);
-    background-repeat: no-repeat; */
     background-color: #2b4c63;
 }
 
@@ -12,7 +10,6 @@ ion-icon {
 }
 
 .dashboard {
-    /* background-color: blue; */
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -23,23 +20,11 @@ ion-icon {
     margin-bottom: 200px;
 }
 
-
-
-/* .icon-name-logout h4 {
-    display: none;
-}
-.icon-name-logout:hover h4{
-    display: block;
-} */
-
-
 .dashboard-main {
-    /* background-color: red; */
     width: 90%;
 }
 
 .card-page {
-    /* background-color: blueviolet; */
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -82,14 +67,12 @@ ion-icon {
 .lasted-posts {
     background-color: #ffffff;
     text-align: center;
-    /* color: #2a7494; */
     color: #2b4c63;
     padding-top: 1px;
 }
 
 .lasted-posts ion-icon {
     font-size: 20px;
-    /* color: #2a7494; */
     color: #2b4c63;
     display: inline-block;
     margin-left: 5px;
