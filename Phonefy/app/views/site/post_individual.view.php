@@ -48,56 +48,24 @@
                                 <li><a href="/home/post_individual?id_pag=<?=$post->id?>"><?=$post->title?>
                                 <img src="../../<?=$post->image?>"></a></li>
                             <?php endforeach; ?>
-
-                            <!-- <li><a href="https://www.youtube.com/watch?v=W-w3WfgpcGg">Bruno Mars - It Will Rain
-                                <img src="../../../public/assets/img/bruno_mars_guitar.jpeg"></a></li>
-                            <li><a href="https://www.youtube.com/watch?v=W-w3WfgpcGg">Bruno Mars - It Will Rain
-                                <img src="../../../public/assets/img/bruno_mars_guitar.jpeg"></a></li>
-                            <li><a href="https://www.youtube.com/watch?v=W-w3WfgpcGg">Bruno Mars - It Will Rain
-                                <img src="../../../public/assets/img/bruno_mars_guitar.jpeg"></a></li> -->
                         </ul>
                     </div>                    
                 </div>
 
                 <div class="right-content">
-                <?php
-                    $lines = explode(PHP_EOL, $selectedPost->content);
-                    foreach ($lines as $line) {
-                        if (trim($line) === '') {
-                            echo "<br>"; // Pula uma linha
-                        } else {
-                            echo "<p>$line</p>"; // <p>Linha<\p>
+                    <?php
+                        $lines = explode(PHP_EOL, $selectedPost->content);
+                        foreach ($lines as $line) {
+                            if (trim($line) === '') {
+                                echo "<br>";
+                            } else {
+                                echo "<p>$line</p>";
+                            }
                         }
-                    }
-                ?>
-
-                    <!-- <ul>
-                        <li>2LP 45 RPM remasterizados nos Abbey Road Studios</li>
-                        <li>Picture discs individuais de 7″:</li>
-                        <li>“He Is Your Brother” / “Santa Rosa”</li>
-                        <li>“People Need Love” / “Merry-Go-Round”</li>
-                        <li>“Ring Ring (English)” / “She’s My Kind of Girl”</li>
-                        <li>“Ring Ring (Swedish)”, “Åh, vilka tider”</li>
-                        <li>“Love Isn’t Easy (But It Sure Is Hard Enough” / “I Am Just A Girl”</li>
-                    </ul> -->
+                    ?>
                 </div>
 
             </div>
-
-            <!-- <div class="coments-post">
-                <h2>COMENTÁRIOS</h2>
-
-                <div class="individual-coment">
-                    <h4>Maria A.</h4>
-                    <h6>18 de abril</h6>
-                    <h3>Adorei o post!</h3>
-                </div>
-                <div class="individual-coment">
-                    <h4>Maria A.</h4>
-                    <h6>18 de abril</h6>
-                    <h3>Adorei o post!</h3>
-                </div>
-            </div> -->
 
             <div class="social-media-icon">
                 <a href="./post_individual.html" target="_blank" alt="Link para Compartilhamento"><ion-icon name="share-social"></ion-icon></a>

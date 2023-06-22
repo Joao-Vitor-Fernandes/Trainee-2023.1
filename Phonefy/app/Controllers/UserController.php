@@ -42,12 +42,6 @@ class UserController
 
         return view('admin/lista_usuarios', compact("users", "page", "total_pages", 'usuarioAdmin'));
 
-        // return view('admin/lista_usuarios', $tables);
-    }
-
-    public function show()
-    {
-        
     }
 
     public function create_usuarios()
@@ -104,6 +98,6 @@ class UserController
             }
         }
 
-        return null; // Caso o usuário não seja encontrado
+        return null;
     }
 }

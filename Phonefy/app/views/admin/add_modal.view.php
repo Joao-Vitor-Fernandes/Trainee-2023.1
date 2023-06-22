@@ -16,7 +16,6 @@
                 
             <div class="caixa-selecao">
                 <label for="autor">Autor:</label>
-                <!-- <input type="text" name="autor" id="autor" readonly disabled> -->
                 <select name="autor" id="autor" required class="custom-option" required>
                     <option value="valor1" selected>Autor 1</option>
                     <option value="valor2">Autor 2</option>
@@ -31,7 +30,6 @@
     
             </div>
     
-            <!-- Conteúdo -->
             <fieldset class="fieldset-conteudo">
     
                 <div class="caixa-conteudo">

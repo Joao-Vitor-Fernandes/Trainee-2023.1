@@ -31,7 +31,7 @@ class Lista_postsController
         $total_pages = ceil($rows_count / $items_per_page);
         $posts = App::get('database')->selectAll('posts', $start_limit, $items_per_page);
         $users = App::get('database')->selectAll('users');
-        // Associar o nome do autor aos posts(autor é o id do user)
+
         foreach ($posts as $post) {
             $author = $this->getUserById($users, $post->author);
             $post->author_name = $author->name;
@@ -72,7 +72,6 @@ class Lista_postsController
             $rows_count = App::get('database')->countSearch('title', 'posts', $pesquisa);
             $total_pages = ceil($rows_count / $items_per_page);
 
-            // Associar o nome do autor aos posts(autor é o id do user)
             foreach ($tableReultados['posts'] as $post) {
                 $author = $this->getUserById($users, $post->author);
                 $post->author_name = $author->name;
@@ -82,7 +81,6 @@ class Lista_postsController
    
             return view('site/lista_de_posts', compact("total_pages", "page", "posts" , "pesquisa"));
         } else {
-            // Redirecionar para a página principal de listagem de posts
             header('Location: /home/lista-posts');
             exit();
         }
@@ -97,7 +95,7 @@ class Lista_postsController
             }
         }
 
-        return null; // Caso o usuário não seja encontrado
+        return null;
     }
 
 }

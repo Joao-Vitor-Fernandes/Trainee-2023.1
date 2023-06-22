@@ -19,7 +19,6 @@
 
         button{
             margin-top: 3%;
-            /* margin-left: 3%; */
             font-size: 14px;
             height: 38px;
             width: 140px;
@@ -37,8 +36,6 @@
     <script src="../../../public/js/modal.js"></script>
 
 
-    <!-- TABELA  -->
-    <?php // require 'add_modal.view.php' ?>
     <style>
     table {
         border-collapse: collapse;
@@ -65,7 +62,6 @@
         </tr>
     </thead>
     <tbody>
-        <?php // require 'add_modal.view.php' ?>
 
         <?php foreach ($posts as $post) : ?>
         <tr class="corpo">
@@ -75,7 +71,7 @@
             <button id="view" class="a" onclick="modalEdit('view-modal', <?=$post->id?>, '<?=$post->title?>', <?=$post->author?>, '<?=$post->created_at?>', '<?=$post->image?>', '<?=$post->content?>', <?= htmlspecialchars(json_encode($users)) ?>)">Visualizar Post</button>
                 <button id="edit" class="a" onclick="modalEdit('edit-modal', <?=$post->id?>, '<?=$post->title?>', <?=$post->author?>, '<?=$post->created_at?>', '<?=$post->image?>', '<?=$post->content?>', <?= htmlspecialchars(json_encode($users)) ?>)">Editar Post</button>
                 <button id="Deleter" class="a" onclick="modalDelete('delete-modal', <?=$post->id?>)">Excluir Post</button>
-                <br> <!-- Quebra de linha adicionada -->
+                <br>
             </td>
         </tr>
         <?php endforeach; ?>

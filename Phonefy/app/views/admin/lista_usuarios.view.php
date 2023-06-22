@@ -43,24 +43,19 @@
     <div id="conteiner">
         <table>
             <caption>
-                <!--Caso queria colocar um caption: insere ele aqui-->
                 <button id="myBtn" class="add" onclick="modalAdd('modal-add-user')">
                     <a href="#"> <img src="../../../public/assets/icon_add.png" alt="Adicionar" height="50"
                             width="50"></a>
                     <p>Adicionar Usuário</p>
                 </button>
             </caption>
-            <tr class="cabecalho"> <!--Primeira linha-->
+            <tr class="cabecalho">
                 <th>#</th>
                 <th>Nome</th>
                 <th>Opções</th>
             </tr>
 
             <?php 
-                // require 'form_add_usuarios.view.php';
-                // require 'form_excluir_usuarios.view.php';
-                // require 'form_edt_usuarios.view.php';
-                // require 'form_visualizar_usuarios.view.php';
                 foreach ($users as $user) : ?>
             <tr class="corpo">
                 <th><?=$user->id?></th>
@@ -77,8 +72,6 @@
     </div>
 
 
-    <!-- Link para o script -->
-    <!-- <script src="../../../public/js/add_user_modal.js"></script> -->
     <script src="../../../public/js/modais_usuario.js"></script>
     <script src="../../../public/js/sidebar.js"></script>
 

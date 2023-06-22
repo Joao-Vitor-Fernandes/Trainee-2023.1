@@ -43,7 +43,6 @@ class PostController
             'users' => $users,
         ];
 
-        // Associar o nome do autor aos posts(autor é o id do user)
         foreach ($posts as $post) {
             $author = $this->getUserById($users, $post->author);
             $post->author_name = $author->name;
@@ -59,21 +58,17 @@ class PostController
             return redirect('admin/login');
         }
 
-        // Obtenha o nome original da imagem
         $fileName = $_FILES['imagem']['name'];
-        // Obtenha a extensão do arquivo
         $fileExtension = pathinfo($fileName, PATHINFO_EXTENSION);
-        // Gere um novo nome para o arquivo usando o título
         $newFileName = $_POST['titulo'] . '_' . $fileName;
 
         
         $imageDirectory = 'imagens-posts/';
         if (!file_exists($imageDirectory)) {
-            mkdir($imageDirectory, 0755, true); // Cria o diretório com permissões adequadas
+            mkdir($imageDirectory, 0755, true);
         }
-        // Defina o caminho completo do novo arquivo
+
         $imagePath = 'imagens-posts/' . $newFileName;
-        // Mova o arquivo temporário para o diretório correto com o novo nome
         move_uploaded_file($_FILES['imagem']['tmp_name'], $imagePath);
 
         $parameters = [
@@ -147,7 +142,7 @@ class PostController
         header('Location: /admin/posts');
     }
 
-    // Função auxiliar para buscar o usuário pelo ID
+
     public function exibirImagem($filename)
     {
         $path = __DIR__ . '/../imagens-posts/' . $filename;

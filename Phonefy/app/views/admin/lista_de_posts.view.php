@@ -4,7 +4,6 @@
 
 <head>
     <title>Lista de Posts</title>
-    <!-- <meta name="viewport" content="width=devide" charset="utf-8"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,7 +41,6 @@
         <div class="conteiner">
             <table>
                 <caption>
-                    <!--Caso queria colocar um caption: insere ele aqui-->
                     <button id="myBtn" class="add" onclick="modalAdd('add-modal', <?= htmlspecialchars(json_encode($users)) ?>, <?=$_SESSION['logado']?>)">
                         <a href="#"> <img src="../../../public/assets/icon_add.png" alt="Adicionar" height="50"
                                 width="50"></a>
@@ -52,12 +50,11 @@
 
                 <script src="../../../public/js/modal.js"></script>
 
-                <tr class="cabecalho"> <!--Primeira linha-->
+                <tr class="cabecalho">
                     <th>#</th>
                     <th>Nome</th>
                     <th>Autor</th>
                     <th>Data</th>
-                    <!-- <th>Opções</th> -->
                     <th colspan="2"></th>
                 </tr>
 
@@ -66,7 +63,7 @@
                 </tr>
 
                 <?php foreach ($posts as $post) : ?>
-                <tr class="corpo"> <!--Segunda linha-->
+                <tr class="corpo">
                     <td><?=$post->id ?></td>   
                     <td><?=$post->title?></td>
                     <td><?=$post->author_name?></td>

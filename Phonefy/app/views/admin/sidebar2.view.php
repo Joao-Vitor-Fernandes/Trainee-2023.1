@@ -8,7 +8,6 @@
             <button class="sidebar-close" id="sidebar-close"><ion-icon name="close-outline"></ion-icon></button>
         </div>
         <div class="sidebar-links">
-            <!-- <ul> -->
             <a href="./dashboard">
                 <button class="side-options">
                     <ion-icon class="icon5" name="construct-outline"></ion-icon>
@@ -29,7 +28,6 @@
                     <h3>Usuários</h3>
                 </button>
             </a>
-            <!-- </ul> -->
         </div>
     
     </div>

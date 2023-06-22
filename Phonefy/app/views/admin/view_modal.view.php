@@ -27,12 +27,9 @@
     
             </div>
     
-            <!-- Conteúdo -->
             <fieldset class="fieldset-conteudo">
     
                 <div class="caixa-conteudo">
-                    <!-- <label for="imagem">Imagem:</label> -->
-                    <!-- <input type="file" class="custom-file-input" id="imagem" name="imagem" accept=".jpg, .jpeg, .png, .gif"> -->
                     <div class="imagem-container">
                         <a href="" target="_blank">
                             <img id="imagem-preview" src="" alt="Imagem" readonly disabled>
@@ -47,10 +44,8 @@
     
             </fieldset>
         </div>
-        <!-- Botões -->
         <div class="modal-view-footer">
-        <button class="close" type="button" onsubmit="">Concluido</button> 
-            <!-- <button class="close" type="button" onsubmit="">Concluido</button>  -->
+            <button class="close" type="button" onsubmit="">Concluido</button> 
         </div>
     </form>
 </div>

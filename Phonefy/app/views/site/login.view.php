@@ -1,4 +1,3 @@
-<!-- <?php session_start(); ?> -->
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -6,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <!-- <link rel="stylesheet" href="login.css"/> -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <link rel="stylesheet" href="../../../public/css/footer.css">
@@ -32,11 +30,7 @@
                         <label for="senha">Senha:</label>
                             <input type="password" name="senha" placeholder="Senha" required>
                     </div>
-                    <!-- <button class="recuperar"><a>Esqueci a minha senha</a></button> -->
-                    <button class="entrar" type="submit">Entrar</button>
-                    
-                    <!-- <button class="cadastro"><a>Novo Cadastro</a></button> -->
-                                        
+                    <button class="entrar" type="submit">Entrar</button>           
                         <?php if(isset($_SESSION['error_message'])) { ?>
                         <div class="session">
                             <?= $_SESSION['error_message'] ?>
