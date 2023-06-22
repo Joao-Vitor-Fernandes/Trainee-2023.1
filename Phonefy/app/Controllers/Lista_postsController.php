@@ -20,7 +20,7 @@ class Lista_postsController
             }
         }
 
-        $items_per_page = 3;
+        $items_per_page = 6;
         $start_limit = $items_per_page * $page - $items_per_page;
         $rows_count = App::get('database')->countAll('posts');
         
@@ -56,7 +56,7 @@ class Lista_postsController
                 }
             }
             
-            $items_per_page = 3;
+            $items_per_page = 6;
             $start_limit = $items_per_page * $page - $items_per_page;
             
             

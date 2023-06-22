@@ -26,6 +26,7 @@ $router->post('admin/usuarios/update', 'UserController@update_usuarios');
 
 //--------Public--------//
 //Lista-posts
+$router->get('', 'FrontController@index');
 $router->get('home', 'FrontController@index');
 $router->get('home/lista-posts', 'Lista_postsController@index');
 $router->get('home/lista-posts/search', 'Lista_postsController@search');

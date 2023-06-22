@@ -119,7 +119,7 @@ class QueryBuilder
         }
     }
 
-    public function countSearch($titulo, $table, $pesquisa,)
+    public function countSearch($titulo, $table, $pesquisa)
     {
         $sql = sprintf(
             "SELECT COUNT(*) FROM %s WHERE %s LIKE '%%%s%%'",

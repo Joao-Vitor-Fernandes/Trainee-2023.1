@@ -26,7 +26,7 @@ class UserController
             }
         }
 
-        $items_per_page = 1;
+        $items_per_page = 5;
         $start_limit = $items_per_page * $page - $items_per_page;
         $rows_count = App::get('database')->countAll('users');
         
