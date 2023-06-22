@@ -17,14 +17,14 @@
     
             <a href="./posts">
                 <button class="side-options">
-                    <ion-icon class="icon5" name="construct-outline"></ion-icon>
+                    <ion-icon class="icon5" name="reader-outline"></ion-icon>
                     <h3>Posts</h3>
                 </button>
             </a>
     
             <a href="./usuarios">
                 <button class="side-options">
-                    <ion-icon class="icon5" name="construct-outline"></ion-icon>
+                    <ion-icon class="icon5" name="person-outline"></ion-icon>
                     <h3>Usuários</h3>
                 </button>
             </a>
