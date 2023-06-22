@@ -12,7 +12,6 @@ function load(url, element)
     element.innerHTML += req.responseText;
 }
 
-// Indices baseados na sequencia que é chamado as funcoes 'load'
 function modalEdit(m, id, userName, email, password) {
     if(m == 'modal-view-user'){ i = 0;}
     else if (m == 'modal-edit-user'){ i = 1;}
