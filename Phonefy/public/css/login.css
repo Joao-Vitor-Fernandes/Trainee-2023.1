@@ -1,0 +1,111 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(#232330, #297795);
+    background-repeat: no-repeat;
+}
+.conteudo-login {
+    position: relative;
+}
+.div1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 4rem 0;
+}
+
+.div1 form {
+    width: 25%;
+}
+
+.div2{
+    background-color: #232330;
+    transform: translate(-50%,-50%);
+    padding: 50px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    border-radius: 14px;
+    color: white;
+    text-align: center;
+}
+
+.div3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin: 2rem 0;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 13.5px;
+    margin-bottom: 15px;
+}
+.login{
+    padding-bottom: 1px;
+    padding-top: 1px;
+    font-size: 30px;
+}
+.entrar{
+    background-color: #1f556b;
+    cursor: pointer;
+    font-size: 14px;
+    color: white;
+    width: 100%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 9px;
+    border-color:rgba(0, 0, 0, 0);
+}
+.entrar:hover{
+    background-color:#173ca4 ;
+}
+.recuperar{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: #41b6e6;
+    cursor: pointer;
+    padding-top: 4px;
+    
+}
+.cadastro{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: #41b6e6;
+    cursor: pointer;
+    padding-top: 15px;
+}
+.logo{
+    background-color: rgba(0, 0, 0, 0);
+    top: 2%;
+}
+
+.session {
+    margin-top: 7%;
+    color: red;
+}
+
+@media(max-width:1100px) {
+    .div1 form {
+        width: 40%;
+    }
+}
+@media(max-width:750px) {
+    .div1 form {
+        width: 50%;
+    }
+}
+@media(max-width:600px) {
+    .div1 form {
+        width: 70%;
+    }
+}
+@media(max-width:400px) {
+    .div1 form {
+        width: 95%;
+    }
+}

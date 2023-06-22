@@ -14,45 +14,58 @@ body{
     background-color: #2b4c63;
 }
 
-.container{
+.modal-add-user {
+
+    all: initial;
+    contain: content;
+
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-add-user .container-l{
     background-color: #2F2F3B;
     margin: 0 auto;
     border: solid #232330;
     border-radius: 8px;
 
-    height: 73vh;
+    height: 60vh;
     width: 25vw;
-
-    margin-top: 10%;
-    margin-bottom: 10%;
 
     display: grid;
     grid-template-rows: 15% 21.25% 21.25% 21.25% 21.25%;
 }
 
-.container .titulo{
-    /* background-color: aqua; */
-
+.modal-add-user .container-l .titulo-l{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+
+    margin-top: 15px;
 }
 
-.container h1{
+.modal-add-user .container-l h2{
     text-align: center;
     margin-left: 10%;
-    margin-top: 10%;
     margin-right: 10%;
-    
-    
+
     font-size: 23px;
-    letter-spacing: 6px;
+    letter-spacing: 5px;
     color: #EEF0F2;
+    background-color: #2F2F3B;
 }
 
-.container .caixa-selecao{
-    /* background-color: red;
-    border: 1px solid blue; */
+.modal-add-user .container-l .caixa-selecao-l{
     margin-left: 15%;
     margin-right: 15%;
     justify-content: center;
@@ -62,13 +75,13 @@ body{
     gap: 10px;
 }
 
-.caixa-selecao label{
+.modal-add-user .caixa-selecao-l label{
     font-size: 14px;
     display: block;
     color: #EEF0F2;
 }
 
-.caixa-selecao input{
+.modal-add-user .caixa-selecao-l input{
     display: block;
     width: 100%;
     height: 38px;
@@ -79,13 +92,11 @@ body{
     font-size: 14px;
 }
 
-.container .caixa-botao{
-    /* background-color: aqua; */
-
+.modal-add-user .container-l .caixa-botao-l{
     display: flex;
-    justify-content:left;
-    /* align-items: center; */
-    margin-bottom: 5%;
+    justify-content:center;
+    align-items: center;
+    margin-bottom: 20px;
 
     margin-left: 15%;
     margin-right: 15%;
@@ -93,12 +104,11 @@ body{
     gap: 7%;
 }
 
-.caixa-botao .botao{
-    margin-top: 10%;
-    font-size:100%;
+.modal-add-user .caixa-botao-l button{
+    font-size: 14px;    
     height: 38px;
     width: 140px;
-    border-radius: 8px;
+    border-radius: 15px;
     background-color: #41B6E6;
     color: #EEF0F2;
 }
@@ -106,48 +116,48 @@ body{
 
 /* Responsividade */
 @media screen and (max-width: 1190px){
-    .container{
+    .modal-add-user .container-l{
         width: 40%;
     }
 
-    .container h1{
+    .modal-add-user .container-l h2{
         margin-left: 0;
         margin-right: 0;
     }
 }
 
 @media screen and (max-width: 1090px) {
-    .container{
+    .modal-add-user .container-l{
         width: 50%;
     }
 }
 
 @media screen and (max-width: 990px) {
-    .container{
+    .modal-add-user .container-l{
         width: 60%;
     }
 }
 
 @media screen and (max-width: 890px) {
-    .container{
+    .modal-add-user .container-l{
         width: 70%;
     }
 }
 
 @media screen and (max-width: 790px) {
-    .container{
+    .modal-add-user .container-l{
         width: 80%;
     }
 }
 
 @media screen and (max-width: 690px) {
-    .container{
+    .modal-add-user .container-l{
         width: 90%;
     }
 }
 
 @media screen and (max-width: 590px) {
-    .container{
+    .modal-add-user .container-l{
         width: 100%;
     }
 }

@@ -1,4 +1,7 @@
 .modal {
+    all: initial;
+    contain: content;
+
     display: none; 
     position: fixed; 
     z-index: 1; 
@@ -18,12 +21,7 @@
     border: solid #232330;
     border-radius: 8px;
 
-    /* height: auto; */
     width: 700px;
-
-    /* margin-top: 0;
-    margin-bottom: 5%; */
-
     padding-left: 2%;
     padding-right: 2%;
 
@@ -40,16 +38,14 @@
     text-align: center;
     margin-left: 5%;
     margin-right: 10%;
-    margin-top: 50px;
-    margin-bottom: 30px;
+    margin-top: 5%;
+    margin-bottom: 3%;
     font-size: 25px;
     letter-spacing: 6px;
     color: #EEF0F2;
 }
 
 .modal-footer{
-    /* background-color: aqua; */
-
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -60,6 +56,19 @@
 
     margin-left: 10%;
     margin-right: 10%;
+}
+
+.modal-view-footer{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 5%;
+
+  margin-top: 2%;
+  margin-bottom: 4%;
+
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 /* ----------- CSS DELETE ------------- */
@@ -85,8 +94,6 @@
 }
 
 .modal-header-delete {
-  /* background-color: aqua; */
-
   margin-left: 5%;
   margin-right: 10%;
 
@@ -104,8 +111,6 @@
 }
 
 .modal-body-delete {
-  /* background-color: red;
-  border: 1px solid blue; */
   margin-left: 10%;
   margin-right: 10%;
 
@@ -124,8 +129,6 @@
 }
 
 .modal-footer-delete {
-  /* background-color: blueviolet; */
-
   display: flex;
   justify-content: right;
   
@@ -133,6 +136,15 @@
   align-items: center;
 
   gap: 10%;
+}
+
+.modal-footer-delete button{
+  font-size: 14px;
+  height: 38px;
+  width: 140px;
+  border-radius: 15px;
+  background-color: #41B6E6;
+  color: #EEF0F2;
 }
 
 

@@ -1,0 +1,200 @@
+body{
+    background-color: #2B4C63;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+    color: white;
+    font-family: 'Monteserrat', sans-serif;
+    font-size: 60px;
+    margin-top: 80px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /*add sombra ao texto*/
+    background: linear-gradient(to right, #ffffff, #faf8f6); 
+    background-clip: border-box;
+    -webkit-background-clip: text; /*def a área do elem q será preenchida com gradiente de cor*/
+    -webkit-text-fill-color: transparent; /*define a cor do texto*/
+}
+
+.cabecalho{
+    background-color: #369fc9;
+    color: white;
+    position: sticky; /*fixar cabeçalho - deixar colado*/
+    top: -1px;
+
+    height: 40px;
+}
+
+.corpo{
+    color: #2B4C63;
+}
+
+.corpo td {
+    padding: 20px; /* Defina o valor de preenchimento desejado */
+}
+
+caption{ 
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    /* background-color: antiquewhite; */
+}
+
+.add{
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.add img{ 
+    vertical-align: middle;
+}
+
+.add p{
+    color: white;
+    font-size: 15px;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+
+table {
+    background-color: antiquewhite;
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: none;
+    position: relative; /*fixar cabeçalho */
+}
+
+table td, th{
+    padding: 8px;
+    text-align: center;
+}
+
+
+
+tbody tr:nth-child(2n){ /*Efeito zebrado na tabela*/
+    background-color:  rgb(216, 202, 202);
+}
+
+
+
+/* Alterações dos icones */
+.icon {
+    margin-top: 30px;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.icon .a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    margin: 0 10px 10px 0;
+    text-decoration: none;
+    border-radius: 50%;
+    color: #2B4C63;
+    border: 1px solid #2B4C63;
+    transition: all 0.5s ease;
+}
+
+img {
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.icon .a:hover{
+    color: #41b6e6;
+    background-color: white;
+    border: 1px solid  white;
+}
+
+.sidebar-close ion-icon {
+    margin-left: -2px;
+}
+
+/* Responsividade */
+@media (max-width:1100px){
+   h1{
+       font-size: 30px;;
+   }
+
+   table{
+       width: 95%;
+   }
+
+   .add{
+       float: none;
+       text-align: center;
+   }
+}  
+
+@media (max-width:730px){
+    .corpo td {
+        padding: 0px; /* Defina o valor de preenchimento desejado */
+    }
+}
+
+@media (max-width:390px){
+    .corpo .icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/*TOOLTIPS*/
+.a {
+    text-decoration: none;
+    color: #2B4C63;
+    border: 1px solid #2B4C63;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    transition: all 0.5s ease;
+    -webkit-transition: all .5s ease;
+    padding: 0px;
+    position: relative;
+  }
+  .a:before {
+    content: attr(data-title);
+    background-color: #232330;
+    color: white;
+    font-size: 13px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    right: 0;
+    bottom: -30px;
+    width: 100px;
+    opacity: 0;
+    border-radius: 10px;
+    transition: all .5s ease;
+  }
+  .a:after {
+    content: "";
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    right: 5px;
+    bottom: -16px;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #232330 transparent;
+    transition: all .4s ease;
+  }
+  .a:hover:after,
+  .a:hover:before {
+    opacity: 1;
+  }

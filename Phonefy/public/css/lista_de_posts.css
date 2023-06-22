@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(#232330, #41b6e6);
+}
+
+.result_pesquisa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45px;
+    color: white;
+}
+
+.capsula {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#posts {
+    width: 90%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contorno {
+    width: 90%;
+    position: absolute;
+    top: 11rem;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search-box{
+    padding: 1px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #41b6e6;
+}
+
+.search-txt::-webkit-search-cancel-button {
+    appearance: none;
+    display: none;
+}
+
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    color: #EEF0F2;
+    font-size: 16px;
+    line-height: 40px;
+    width: 0px;
+}
+
+.search-btn{
+    margin: 0;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.blog-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 110px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.blog-box{
+    display:flexbox;
+    height: 600px;
+    width: 28%;
+    object-position: center;
+    background-color: #EEF0F2;
+    border: 5px solid #41b6e6;
+
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-radius: 16px;
+}
+
+.blog-image{
+    width: auto;
+    height: auto;
+    border-radius: 16px;
+}
+
+.blog-image img{
+    width: 101%;
+    height:355px;
+
+    transform: translate(-2px, -1px);
+    object-fit: cover;
+    object-position: center;
+    border-radius: 16px;
+
+    filter: blur(0.5px);
+    filter: brightness(0.9);
+}
+
+.blog-text{
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-text span{
+    color: #41b6e6;
+    font-size: 0.9rem;
+    padding-top: 8  px;
+    padding-bottom: 8px;
+}
+
+.blog-text .blog-title{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #2f2f3b;
+}
+
+
+.blog-text p{
+    color: #2f2f3b;
+    font-size: 0.9rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 12px 0;
+
+}
+
+.blog-text a{
+    color: #232330;
+}
+
+/* Hover */
+
+.search-box:hover > .search-txt,
+.search-box > .search-txt:focus {
+  padding-left: 15px;
+  width: 300px;
+  transition: 1s;
+}
+
+.blog-text a:hover{
+    color: #41b6e6;
+    transition: all ease 0.3s;
+}
+
+.blog-text .blog-title:hover{
+    color: #41b6e6;
+    transition: all ease 0.3s;
+}
+
+.blog-box:hover{
+    transform: scale(1.02);
+    transition: all ease 1s;
+}
+
+.blog-box:hover > .blog-image:hover > .blog-text > .blog-title{
+    color: #41b6e6;
+    transition: all ease 0.3s;
+}
+
+.blog-box:hover > .blog-image:hover > .blog-text > .leia-mais{
+    color: #41b6e6;
+    transition: all ease 0.3s;
+}
+
+.blog-box:hover > .blog-image{
+    filter: none;
+    transition: all ease 0.3s;
+}
+
+@media (max-width:1200px)
+{
+    .blog-box {
+        width: 40%;
+    }
+}
+
+@media (max-width:950px)
+{
+    .contorno {
+        width: 60%;
+    }
+    #posts {
+        width: 100%;
+    }
+    .blog-container {
+        justify-content: center;
+    }
+    .blog-box {
+        width: 60%;
+    }
+}
+
+@media (max-width:500px) {
+    .contorno {
+        width: 80%;
+    }
+    .blog-box {
+        width: 80%;
+    }
+}
+
+@media (max-width:380px) {
+    .contorno {
+        width: 90%;
+    }
+    .blog-box {
+        width: 90%;
+    }
+}
